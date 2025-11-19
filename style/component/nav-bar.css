@@ -1,0 +1,58 @@
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: background-color .3s ease;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+}
+.nav-bar .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    transition: height .5s ease;
+}
+.nav-bar .nav img{
+    width: 195px;
+    transition: width .5s ease;
+}
+.nav-bar.scrolled .nav{
+    height: 60px;
+}
+.nav-bar.scrolled img{
+    width: 135px;
+}
+.page-btn{
+    display: flex;
+}
+.page-btn ul{
+    display: inline-flex;
+    margin-right: 0px;
+    height: 40px;
+    align-items: center;
+}
+.nav-bar ul a{
+    padding: 6px 10px;
+    text-decoration: none;
+    color: var(--color-neutral-800);
+    letter-spacing: 1px;
+}
+.nav-bar ul a:hover{
+    border-bottom: 2px solid var(--color-accent-green-700);
+}
+.nav-bar ul a.active{
+    color: var(--color-accent-green-700); 
+    font-weight:600;
+    border-bottom: 2px solid var(--color-accent-green-700);
+}
+.page-btn li{
+    list-style-type: none;
+    margin-right: 12px;
+}
+
+.page-btn .btn-group{
+    display: flex;
+    gap: 10px;
+}

@@ -1,0 +1,507 @@
+/* 切換頁面的開關 */
+.hidden{
+    display: none;
+}
+
+/* tour-guide label按鈕 */
+.label .col-12{
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.label-btn{
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    font-family: var(--font-main); font-weight:400; 
+    font-size: 20px;
+    line-height: 150%;
+    transition: width .3s;
+}
+.label-btn span{
+    font-size: 40px;
+}
+.label-btn.active{
+    width: 315px;
+    height: 160px;
+    border-radius: 80px;
+    font-family: var(--font-main);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-ch);
+    font-weight:500;
+    font-size: 24px;
+    transition: width .3s;
+}
+.label-btn.active::after{
+    content: "";
+    width: 24px;
+    height: 12px;
+    border-radius: 12px 12px 0 0;
+    position: absolute;
+    bottom: -62px;
+    left: 145.5px;
+    /* transition: .3s; */
+}
+
+/* label pink */
+.label-btn.pink{
+    border: 1px solid var(--color-secondary-pink-700);
+    background-color: var(--color-white);
+}
+.label-btn.pink:hover{
+    background-color: var(--color-secondary-pink-100);
+    color: var(--color-secondary-pink-700);
+    transition: .3s;
+}
+.label-btn.pink:hover span{
+    color: var(--color-secondary-pink-700);
+}
+.label-btn.pink.active span{
+    font-size: 65px;
+    color: var(--color-secondary-pink-700);
+}
+.label-btn.active.pink{
+    border: 1px solid var(--color-secondary-pink-700);
+    color: var(--color-secondary-pink-700);
+    background-color: var(--color-secondary-pink-100);
+}
+/* label小圓點 */
+.label-btn.active.pink::after{
+    background-color: var(--color-secondary-pink-700);
+}
+
+/* label orange */
+.label-btn.orange{
+    border: 1px solid var(--color-secondary-orange-700);
+    background-color: var(--color-white);
+}
+.label-btn.orange:hover{
+    background-color: var(--color-secondary-orange-100);
+    color: var(--color-secondary-orange-700);
+    transition: .3s;
+}
+.label-btn.orange:hover span{
+    color: var(--color-secondary-orange-700);
+}
+.label-btn.orange.active span{
+    font-size: 65px;
+    color: var(--color-secondary-orange-700);
+}
+.label-btn.active.orange{
+    border: 1px solid var(--color-secondary-orange-700);
+    color: var(--color-secondary-orange-700);
+    background-color: var(--color-secondary-orange-100);
+}
+/* label小圓點 */
+.label-btn.active.orange::after{
+    background-color: var(--color-secondary-orange-700);
+}
+
+/* label purple */
+.label-btn.purple{
+    border: 1px solid var(--color-secondary-purple-700);
+    background-color: var(--color-white);
+}
+.label-btn.purple:hover{
+    background-color: var(--color-secondary-purple-100);
+    color: var(--color-secondary-purple-700);
+    transition: .3s;
+}
+.label-btn.purple:hover span{
+    color: var(--color-secondary-purple-700);
+}
+.label-btn.purple.active span{
+    font-size: 65px;
+    color: var(--color-secondary-purple-700);
+}
+.label-btn.active.purple{
+    border: 1px solid var(--color-secondary-purple-700);
+    color: var(--color-secondary-purple-700);
+    background-color: var(--color-secondary-purple-100);
+}
+/* label小圓點 */
+.label-btn.active.purple::after{
+    background-color: var(--color-secondary-purple-700);
+}
+
+/* 大區塊 */
+.content-wrapper{
+    padding: 60px 0 100px 0;
+    position: relative;
+}
+.content-wrapper .outer-frame{
+    padding: 60px;
+    background-color: var(--color-white);
+    max-width: 1440px;
+    margin: 0 auto;
+    border-radius: 40px;
+}
+.content-wrapper img:last-child{
+    position: absolute;
+    z-index: -1;
+    bottom: -20px;
+}
+/* pink */
+.content-wrapper .outer-frame.pink{
+    border: 1px solid var(--color-secondary-pink-700);
+}
+/* orange */
+.content-wrapper .outer-frame.orange{
+    border: 1px solid var(--color-secondary-orange-700);
+}
+/* purple */
+.content-wrapper .outer-frame.purple{
+    border: 1px solid var(--color-secondary-purple-700);
+}
+
+
+/* 控制卡片行間距 */
+.outer-frame.good-books .row:nth-of-type(-n+2){
+    display: flex;
+    margin-bottom: 80px;
+}
+.outer-frame.student-activity .row:nth-of-type(-n+2){
+    display: flex;
+    margin-bottom: 50px;
+}
+.outer-frame .row:nth-of-type(4){
+    justify-content: end;
+}
+.outer-frame .page-btn{
+    display: flex;
+    justify-content: end;
+}
+
+/* pink purple reading card */
+/* 行間距 */
+.outer-frame.reading .row:nth-of-type(-n+2){
+    display: flex;
+    margin-bottom: 50px;
+}
+.reading .card{
+    border: 1px solid var(--color-neutral-500);
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.reading .card img{
+    border-radius: 14px 14px 0 0;
+    width: 100%;
+    display: block;
+}
+.reading .card .title{
+    text-align: center;
+    margin: 12px 0;
+}
+
+/* mask */
+.reading .card-mask{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+}
+.reading .card-mask::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    transition: opacity .7s ease;
+    opacity: 0;
+}
+
+.reading .card-mask .detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    z-index: 2;
+    transition: opacity .7s ease;
+    font-size: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+.reading .card-mask .detail p{
+    color: var(--color-white);
+}
+.reading .card-mask .detail .tag{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.reading .card-mask .tag span{
+    background-color: var(--color-white);
+    display: inline-block;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.reading .card-mask .arrow{
+    z-index: 2;
+    color: var(--color-white);
+    position: absolute;
+    font-size: 1.5rem;
+    transform: translate(5px, -5px);
+    top: 16px;
+    right: 16px;
+    opacity: 0;
+}
+/* hover */
+.reading .card:hover .card-mask::before, 
+.reading .card:hover .card-mask .detail, 
+.reading .card:hover .card-mask .detail .arrow{
+    opacity: 1;
+}
+/* card hover pink */
+.reading.pink .card:hover{
+    border: 1px solid var(--color-secondary-pink-700);
+    background-color: var(--color-secondary-pink-100);
+    transition: .3s;
+}
+/* card hover purple */
+.reading.purple .card:hover{
+    border: 1px solid var(--color-secondary-purple-700);
+    background-color: var(--color-secondary-purple-100);
+    transition: .3s;
+}
+
+/* pink learning */
+.kid-learning .card{
+    border: 1px solid var(--color-neutral-500);
+    border-radius: 20px;
+    display: flex;
+    padding: 24px;
+    height:100%;
+}
+.kid-learning .card img{
+    border-radius: 12px;
+    margin-right: 24px;;
+}
+.kid-learning .card h5{
+    color: var(--color-secondary-pink-700);
+}
+.kid-learning .card .detail{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.kid-learning .card:hover{
+    border: 1px solid var(--color-secondary-pink-700);
+    background-color: var(--color-secondary-pink-100);
+    transition: all .3s;
+}
+/* pink learning card */
+/* 行間距 */
+.outer-frame.kid-learning .row:nth-of-type(-n+4){
+    display: flex;
+    margin-bottom: 30px;
+}
+
+/* orange advanced-course */
+.star .fa-star{
+    color: var(--color-neutral-200);
+}
+.star .active{
+    color: var(--color-accent-yellow-500);
+}
+
+/* orange paper card */
+/* 行間距 */
+.outer-frame.paper .row:nth-of-type(-n+3){
+    display: flex;
+    margin-bottom: 50px;
+}
+.paper .card{
+    border: 1px solid var(--color-neutral-500);
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 36px;
+}
+.paper .card:hover{
+    border: 1px solid var(--color-secondary-orange-700);
+    background-color: var(--color-secondary-orange-100);
+    transition: .3s;
+}
+.paper .card .tool{
+    display: flex;
+    justify-content: space-between;
+}
+.paper .card .tool input{
+    width: 30px;
+    height: 30px;
+}
+.paper .card .star{
+    font-size: 20px;
+}
+
+.paper .card .title{
+    margin-top: 20px;
+}
+.paper .card .statistics{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.paper .card .statistics .stat-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 32px 0 0;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+.paper .card .statistics a{
+    flex-grow: 0; 
+    flex-shrink: 1;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: end;
+    align-items: center;
+    color: var(--color-secondary-orange-700);
+}
+.paper .card .statistics a span{
+    margin-right: 10px;
+    color: var(--color-secondary-orange-700);
+}
+.paper .card .statistics a:hover{
+    border-bottom: 2px solid var(--color-secondary-orange-700);
+    font-weight: 500;
+    transition: .3s;
+}
+
+/* orange financial */
+.financial img{
+    border-radius: 20px;
+    display: block;
+    width: 100%;
+}
+
+.financial .card{
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+.financial .card:hover img{
+    scale: 1.2;
+    transition: .3s;
+}
+.financial .card-mask{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    width: 100%;
+    padding: 32px;
+    bottom: 0;
+    left:0;
+    z-index: 1;
+}
+.financial .card-mask h5, 
+.financial .card-mask p{
+    color: var(--color-white);
+    z-index: 2;
+    gap:6px;
+}
+.financial .card-mask div{
+    display: flex;
+    justify-content: space-between;
+}
+.financial ul{
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+}
+.financial li {
+    margin-bottom: 12px; 
+}
+.financial li a{
+    text-decoration: none;
+}
+.recommend-list .title{
+    margin:50px 0 20px 0;
+}
+.recommend-list ul{
+    list-style: none;
+}
+.recommend-list li{
+    border: 1px solid var(--color-neutral-500);
+    padding: 16px;
+    text-align: center;
+    border-radius: 20px;
+}
+.recommend-list li:hover{
+    background-color: var(--color-secondary-orange-100);
+    border: 1px solid var(--color-secondary-orange-700);
+}
+
+.medical .card{
+    border: 1px solid var(--color-neutral-500);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    margin-top: 20px;
+}
+.medical .card img{
+    margin-right: 24px;
+    border-radius: 14px;
+}
+.medical .card .detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+}
+.medical .card .detail h5{
+    color: var(--color-secondary-purple-700);
+}
+.medical .card:hover{
+    background-color: var(--color-secondary-purple-100);
+    border: 1px solid var(--color-secondary-purple-700);
+    transition: .3s;
+    cursor: pointer;
+}
+.medical .card:hover span{
+    background-color: var(--color-white);
+}
+.medical .card .tag span{
+    margin-top: 24px;
+}
+.medical ul{
+    margin-top: 20px;
+    border: 1px solid var(--color-neutral-500);
+    border-radius: 20px;
+    padding: 20px;
+    list-style: none;
+}
+.medical ul li{
+    padding: 20px;
+    border-bottom: 1px solid var(--color-neutral-500);
+}
+.medical ul li a{
+    text-decoration: none;
+}
+.medical ul li a:hover{
+    color: var(--color-secondary-purple-700);
+}
+.medical ul li:last-child{
+    border-bottom: none;
+}

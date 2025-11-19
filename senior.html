@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樂齡學習專區 | 公共圖書館</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="container nav">
+                <div class="logo">
+                    <img src="images/library-logo.png" alt="公共圖書館">
+                </div>
+                <div class="page-btn">
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="about.html">關於圖書館</a></li>
+                        <li><a href="activity.html">活動總覽</a></li>
+                        <li><a href="search.html">館藏查詢</a></li>
+                        <li><a href="newbooks.html">最新書籍</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="#" class="little-btn yellow">導覽服務</a>
+                        <a href="#"class="little-btn green"><span class="material-symbols-outlined">login</span>我的帳戶</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="title-area purple">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 reveal-item">
+                        <span class="h1-eg-medium">Senior Learning</span>
+                        <h1 class="h1-ch">樂齡學習專區</h1>
+                        <div class="bread">
+                            <span><a href="index.html">首頁</a></span>
+                            <span>></span>
+                            <span><a href="#">導覽服務</a></span>
+                            <span>></span>
+                            <span><a href="#">樂齡學習專區</a></span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="text-overlay reveal-fadein">
+                            <h5 class="h5-ch-medium">學習沒有年齡限制</h5>
+                            <div class="line"></div>
+                            <p class="p2">提供健康保健、生活休閒、旅遊與興趣培養等主題館藏，陪伴長輩快樂學習、活力生活。不定期舉辦健康講座與數位課程，協助輕鬆掌握新科技。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/bg/tour-guide-purple01.png" alt="tour-guide-purple">
+            
+        </section>
+        <div class="font-scale">
+            <p>字體</p>
+            <button class="p1" data-size="small">小</button>
+            <button class="p1 active" data-size="medium">中</button>
+            <button class="p1" data-size="large">大</button>
+        </div>
+    </header>
+    <main>
+        
+        <section class="label">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="label-btn purple active reveal-item"><span class="material-symbols-outlined ">book_3</span>樂活好書</div>
+                        <div class="label-btn purple reveal-item"><span class="material-symbols-outlined">medical_services</span>醫療保健</div>
+                        <div class="label-btn purple reveal-item"><span class="material-symbols-outlined">face_4</span>樂齡學習</div>
+                        <div class="label-btn purple reveal-item"><span class="material-symbols-outlined">wall_art</span>展覽活動</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content-wrapper">
+            <!-- 頁面一 樂活好書 -->
+            <div class="container outer-frame purple good-books">
+                <div class="row">
+                    <div class="col-12 btn-group purple reveal-right">
+                        <ul>
+                            <li class="active"><a href="">全部</a></li>
+                            <li><a href="">觀光旅遊</a></li>
+                            <li><a href="">社會福利</a></li>
+                            <li><a href="">生活嗜好</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks02.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">日本小說</div>
+                            <div class="bookname p1">罪惡的終結</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 page-btn purple reveal-fadein">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 頁面二 醫療保健 -->
+            <div class="container outer-frame purple medical hidden">
+                <div class="row">
+                    <div class="col-8">
+                        <h4 class="h4-ch">圖表懶人包></h4>
+                        <div class="card">
+                            <img src="images/senior/senior-medical01.png" alt="senior-medical01">
+                            <div class="detail">
+                                <p class="p2">衛生局衛教中心</p>
+                                <h5 class="h5-ch-medium">三高與慢性病照護生活指南</h5>
+                                <p class="p2">一張圖搞懂高血壓、高血糖、高血脂的日常飲食與運動禁忌，輕鬆控管健康</p>
+                                <div class="tag">
+                                    <span>慢性病</span>
+                                    <span>飲食控制</span>
+                                    <span>三高</span>
+                                    <span>預防醫學</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/senior/senior-medical02.png" alt="senior-medical02">
+                            <div class="detail">
+                                <p class="p2">醫院藥劑部 (製作)</p>
+                                <h5 class="h5-ch-medium">長者用藥安全：藥袋標示與重複用藥檢視</h5>
+                                <p class="p2">認識藥袋上的重要資訊，避免重複用藥或錯誤搭配食物，確保用藥安全</p>
+                                <div class="tag">
+                                    <span>用藥安全</span>
+                                    <span>藥物管</span>
+                                    <span>健康常識</span>
+                                    <span>預防醫學</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/senior/senior-medical03.png" alt="senior-medical03">
+                            <div class="detail">
+                                <p class="p2">失智症協會 (協作)</p>
+                                <h5 class="h5-ch-medium">失智症初期徵兆與社區資源地圖</h5>
+                                <p class="p2">釐清失智症的十大警訊，並提供民眾早期篩檢與社區關懷據點聯繫資訊</p>
+                                <div class="tag">
+                                    <span>失智症</span>
+                                    <span>認知功能</span>
+                                    <span>社會資源</span>
+                                    <span>照護</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/senior/senior-medical04.png" alt="senior-medical04">
+                            <div class="detail">
+                                <p class="p2">衛生局衛教中心</p>
+                                <h5 class="h5-ch-medium">預防骨質疏鬆：鈣質與維生素 D 攝取建議</h5>
+                                <p class="p2">圖解說明每日應攝取的鈣質和維生素 D 含量，列出高鈣食物與日曬建議</p>
+                                <div class="tag">
+                                    <span>用藥安全</span>
+                                    <span>藥物管</span>
+                                    <span>健康常識</span>
+                                    <span>預防醫學</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="images/senior/senior-medical05.png" alt="senior-medical05">
+                            <div class="detail">
+                                <p class="p2">眼科/耳鼻喉科醫師 (審閱)</p>
+                                <h5 class="h5-ch-medium">視力與聽力保健：自我檢測與輔具選擇</h5>
+                                <p>提供簡易的視力/聽力自我檢測方法並比較常見老花眼鏡與助聽器的優缺點</p>
+                                <div class="tag">
+                                    <span>視力保健</span>
+                                    <span>聽力輔具</span>
+                                    <span>眼疾</span>
+                                    <span>老化</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 page-btn purple">
+                                <span class="btn-sm active">1</span>
+                                <span class="btn-sm">2</span>
+                                <span class="btn-sm">3</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-4">
+                        <h4 class="h4-ch">相關書單導讀></h4>
+                        <ul class="aside">
+                            <li class="p1"><a href="#">《銀髮族肌力訓練：運動醫學專家帶你預防跌倒》</a></li>
+                            <li class="p1"><a href="#">《中醫養生入門：二十四節氣食補》</a></li>
+                            <li class="p1"><a href="#">《長照與健保：你該知道的福利權益》</a></li>
+                            <li class="p1"><a href="#">《安寧與善終：與生命對話的藝術》</a></li>
+                            <li class="p1"><a href="#">《樂活心理學：打造退休黃金時代》</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 頁面三 樂齡學習 -->
+            <div class="container outer-frame purple reading hidden">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning01.png" alt="樂齡學習01">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">專業營養師講解如何運用當季在地食材，輕鬆製作符合樂齡族群的均衡營養餐點。</p>
+                                    <div class="tag">
+                                        <span class="p2">營養學</span>
+                                        <span class="p2">飲食健康</span>
+                                        <span class="p2">食譜</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《養生達人教你吃：在地食材與健康飲食》</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning02.png" alt="樂齡學習02">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">專為退休族設計的月刊，內容涵蓋休閒旅遊、園藝蒔花、理財規劃與第二人生經營。</p>
+                                    <div class="tag">
+                                        <span class="p2">休閒旅遊</span>
+                                        <span class="p2">園藝蒔花</span>
+                                        <span class="p2">生活美學</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《熟年生活家:懂得享受人生》</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning03.png" alt="樂齡學習03">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">透過經典老歌的歷史背景與故事，帶領長者重溫臺灣早期社會的文化與集體回憶。</p>
+                                    <div class="tag">
+                                        <span class="p2">臺灣歷史</span>
+                                        <span class="p2">懷舊音樂</span>
+                                        <span class="p2">文化回憶</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《臺灣老歌金曲故事：那些年我們聽的歌》</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning04.png" alt="樂齡學習04">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">擷取《今周刊》中關於醫療趨勢、最新健康觀念、名醫專訪等專題，提供專業資訊。</p>
+                                    <div class="tag">
+                                        <span class="p2">醫療趨勢</span>
+                                        <span class="p2">專業知識</span>
+                                        <span class="p2">健康檢查</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《今周刊：健康特輯》</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning05.png" alt="樂齡學習05">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">彙整關於高齡社會的科技創新、長照新模式、智慧醫療等議題，掌握社會脈動。</p>
+                                    <div class="tag">
+                                        <span class="p2">創新科技</span>
+                                        <span class="p2">社會趨勢</span>
+                                        <span class="p2">高齡化</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《遠見雜誌：高齡創新專欄》</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning06.png" alt="樂齡學習06">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">精心錄製的世界各地知名古蹟、自然景觀介紹，讓長者在圖書館就能進行一場聽覺旅行。</p>
+                                    <div class="tag">
+                                        <span class="p2">世界遺產</span>
+                                        <span class="p2">歷史文化</span>
+                                        <span class="p2">廣播劇</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《世界遺產之旅：輕鬆聽遍五大洲》</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning07.png" alt="樂齡學習07">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">精選全球勵志、幽默、生活小品文章，內容廣泛且簡短，適合輕鬆閱讀。</p>
+                                    <div class="tag">
+                                        <span class="p2">輕鬆閱讀</span>
+                                        <span class="p2">趣味故事</span>
+                                        <span class="p2">心靈勵志</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《讀者文摘 (中文版)》</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning08.png" alt="樂齡學習08">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">講解遺產繼承、財產信託、防範詐騙與消費者權益等長者必備的法律基礎知識。</p>
+                                    <div class="tag">
+                                        <span class="p2">法律常識</span>
+                                        <span class="p2">權益保護</span>
+                                        <span class="p2">銀髮安全</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《生活法律常識：銀髮族必學法律保護自己》</div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card">
+                            <a href="#" class="card-mask">
+                                <img src="images/senior/senior-learning09.png" alt="樂齡學習09">
+                                <div class="detail">
+                                    <span class="material-symbols-outlined arrow">north_east</span>
+                                    <p class="p2">選擇與日常生活相關的科普文章，如氣候變遷、大腦科學、醫療新知，保持對新事物的學習熱情。</p>
+                                    <div class="tag">
+                                        <span class="p2">科學普及</span>
+                                        <span class="p2">新知學習</span>
+                                        <span class="p2">資訊素養</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="title p1">《科學人雜誌：科普生活化》</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 page-btn purple">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 頁面四 展覽活動 -->
+            <div class="container outer-frame purple activity hidden">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card purple">
+                            <div class="card-mask">
+                                <div class="detail">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <p class="h5-ch-medium">常設展</p>
+                                    <p class="p1">無需報名<br>每日14:00–16:00歡迎參觀</p>
+                                </div>
+                                <img src="images/senior/senior-activity01.png" alt="樂齡活動01">
+                                <div class="tag btn-sm">常設展</div>
+                            </div>
+                            
+                            <div class="detail">
+                                <div class="day">
+                                    <span class="date strong-number-lg-blod">11.15</span>
+                                    <span class="week">六</span>
+                                    <span class="date strong-number-lg-blod">-11.30</span>
+                                    <span class="week">六</span>
+                                    
+                                </div>
+                                <div class="detail">
+                                    <h5 class="title h5-ch-medium">「手心的溫暖」樂齡手機攝影展</h5>
+                                    <p  class="p2">展示長者手機拍攝的精彩作品，並進行交流分享與導覽。歡迎參觀。</p>
+                                </div>
+                                <!-- <a class="btn-mid-bold"  style="line-height: 120%;">線上<br>報名</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card purple">
+                            <div class="card-mask">
+                                <div class="detail">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <p class="h5-ch-medium">報名時間</p>
+                                    <p class="p1">2025.11.05 09:00<br>至<br>2025.11.17 23:59</p>
+                                    <p class="p1">截止</p>
+                                </div>
+                                <img src="images/senior/senior-activity02.png" alt="樂齡活動02">
+                                <div class="tag btn-sm">當日活動</div>
+                            </div>
+                            
+                            <div class="detail">
+                                <div class="day">
+                                    <span class="date strong-number-lg-blod">11.20</span>
+                                    <span class="week">三</span>
+                                    <span class="time p1">10:00 - 11:30</span>
+                                </div>
+                                <div class="detail">
+                                    <h5 class="title h5-ch-medium">懷舊時光：黑膠唱片賞析會</h5>
+                                    <p  class="p2">聆聽經典黑膠音樂，回味舊日情懷，沉浸在美好時光中。擁抱青春時期熟悉的記憶。</p>
+                                </div>
+                                <a class="btn-mid-bold"  style="line-height: 120%;">線上<br>報名</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card purple">
+                            <div class="card-mask">
+                                <div class="detail">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <p class="h5-ch-medium">報名時間</p>
+                                    <p class="p1">2025.11.05 09:00<br>至<br>2025.11.23 23:59</p>
+                                    <p class="p1">截止</p>
+                                </div>
+                                <img src="images/senior/senior-activity03.png" alt="樂齡活動03">
+                                <div class="tag btn-sm">當日活動</div>
+                            </div>
+                            <div class="detail">
+                                <div class="day">
+                                    <span class="date strong-number-lg-blod">11.26</span>
+                                    <span class="week">二</span>
+                                    <span class="time p1">10:00-11:30</span>
+                                </div>
+                                <div class="detail">
+                                    <h5 class="title h5-ch-medium">慢活藝術：禪繞畫體驗工作坊</h5>
+                                    <p  class="p2">學習用重複線條創造療癒圖案，訓練專注力與手眼協調。享受沉靜與藝術的薰陶。</p>
+                                </div>
+                                <a class="btn-mid-bold"  style="line-height: 120%;">線上<br>報名</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card purple">
+                            <div class="card-mask">
+                                <div class="detail">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <p class="h5-ch-medium">常設展</p>
+                                    <p class="p1">無需報名<br>每日09:00-17:00歡迎參觀</p>
+                                </div>
+                                <img src="images/senior/senior-activity04.png" alt="樂齡活動04">
+                            <div class="tag btn-sm">常設展</div>
+                            </div>
+                            
+                            <div class="text-area">
+                                <div class="day">
+                                    <span class="date strong-number-lg-blod">12.01</span>
+                                    <span class="week">六</span>
+                                    <span class="date strong-number-lg-blod">-12.10</span>
+                                    <span class="week">六</span>
+                                </div>
+                                <div class="detail">
+                                    <h5 class="title h5-ch-medium">桌遊設計大賽：創造專屬桌遊</h5>
+                                    <p  class="p2">挑戰邏輯思考與團隊合作，從零開始設計一套結合閱讀主題的專屬原創桌遊。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card purple">
+                            <div class="card-mask">
+                                <div class="detail">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <p class="h5-ch-medium">報名時間</p>
+                                    <p class="p1">2025.12.10 09:00<br>至<br>2025.12.18 23:59</p>
+                                    <p class="p1">截止</p>
+                                </div>
+                                <img src="images/senior/senior-activity05.png" alt="樂齡活動05">
+                                <div class="tag btn-sm">當日活動</div>
+                            </div>
+                            
+                            <div class="text-area">
+                                <div class="day">
+                                    <span class="date strong-number-lg-blod">12.21</span>
+                                    <span class="week">日</span>
+                                    <span class="time p1">14:00-17:00</span>
+                                </div>
+                                <div class="detail">
+                                    <h5 class="title h5-ch-medium">節慶花藝：聖誕乾燥花圈 DIY</h5>
+                                    <p  class="p2">親手製作獨特的聖誕花圈，感受節慶氣氛，培養手作樂趣。親子一同參加樂趣更加分。</p>
+                                </div>
+                                <a class="btn-mid-bold"  style="line-height: 120%;">線上<br>報名</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card purple">
+                            <div class="card-mask">
+                                <div class="detail">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <p class="h5-ch-medium">常設展</p>
+                                    <p class="p1">無需報名<br>每日10:00 - 17:00歡迎參觀</p>
+                                </div>
+                                <img src="images/senior/senior-activity06.png" alt="樂齡活動06">
+                            <div class="tag btn-sm">常設展</div>
+                            </div>
+                            
+                            <div class="text-area">
+                                <div class="day">
+                                    <span class="date strong-number-lg-blod">12.20</span>
+                                    <span class="week">六</span>
+                                    <span class="date strong-number-lg-blod">-12.31</span>
+                                    <span class="week">三</span>
+                                </div>
+                                <div class="detail">
+                                    <h5 class="title h5-ch-medium">「書寫人生」長者生命故事展</h5>
+                                    <p  class="p2">展出多位長者親筆撰寫的生命故事手稿，感受他們豐富的人生經歷與智慧。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 page-btn purple">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+            </div>
+            <img src="images/bg/tour-guide-purple02.png" alt="tour-guide-purple">
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    
+                    <div class="nav-list">
+                        <img src="images/library-logo-white.png" alt="公共圖書館">
+                        <ul class="btn-sm">
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="about.html">關於圖書館</a></li>
+                            <li><a href="activity.html">活動總覽</a></li>
+                            <li><a href="search.html">館藏查詢</a></li>
+                            <li><a href="newbooks.html">最新書籍</a></li>
+                            <li><a href="contact.html">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="tour-guide-group">
+                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="info">
+                        <p class="p2">公共圖書館</p>
+                        <p class="p2">通訊地址：新竹縣竹北市智惠街888號</p>
+                        <p class="p2">電話：03-666-8888</p>
+                        <p class="p2">更新日期：2025.10.22</p>
+                    </div>
+                </div>
+                <p class="source">參考資料來源: 博客來: http://xn--books-9c3ht2uuqs.com.tw/?srsltid=AfmBOoq2Y_y7kdHy_gMNaupda3pu3Lo6NsjaiSWDwKtxbmgR8aTGuEtt | Pinterest:https://www.pinterest.com/ | 新竹縣公共圖書館官網: https://hcplibrary.hchcc.gov.tw/wSite/mp?mp=1</p>
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/font-size-switch.js"></script>
+    <script src="javascript/script.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+</body>
+</html>

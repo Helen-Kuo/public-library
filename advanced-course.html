@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>研究與進修專區 | 公共圖書館</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="container nav">
+                <div class="logo">
+                    <img src="images/library-logo.png" alt="公共圖書館">
+                </div>
+                <div class="page-btn">
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="about.html">關於圖書館</a></li>
+                        <li><a href="activity.html">活動總覽</a></li>
+                        <li><a href="search.html">館藏查詢</a></li>
+                        <li><a href="newbooks.html">最新書籍</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="#" class="little-btn yellow">導覽服務</a>
+                        <a href="#"class="little-btn green"><span class="material-symbols-outlined">login</span>我的帳戶</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="title-area orange">
+            <div class="container">
+                <div class="row">
+                    <div class="col-8 reveal-item">
+                        <span class="h1-eg-medium">Advanced Course</span>
+                        <h1 class="h1-ch">研究與進修專區</h1>
+                        <div class="bread">
+                            <span><a href="index.html">首頁</a></span>
+                            <span>></span>
+                            <span><a href="#">導覽服務</a></span>
+                            <span>></span>
+                            <span><a href="#">研究與進修專區</a></span>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="text-overlay reveal-fadein">
+                            <h5 class="h5-ch-medium">為想持續成長的您而打造</h5>
+                            <div class="line"></div>
+                            <p class="p2">無論你正在為課業努力、探索專業技能或尋找新知識，都能在這裡找到可靠資訊。搭配安靜舒適的自修空間、專業館員協助與數位資源服務，讓你專注學習、事半功倍。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/bg/tour-guide-orange01.png" alt="tour-guide-orange">
+        </section>
+        <div class="font-scale">
+            <p>字體</p>
+            <button class="p1" data-size="small">小</button>
+            <button class="p1 active" data-size="medium">中</button>
+            <button class="p1" data-size="large">大</button>
+        </div>
+    </header>
+    <main>
+        <section class="label">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="label-btn orange active reveal-item"><span class="material-symbols-outlined">book_3</span>好書推薦</div>
+                        <div class="label-btn orange reveal-item"><span class="material-symbols-outlined">local_activity</span>論文期刊</div>
+                        <div class="label-btn orange reveal-item"><span class="material-symbols-outlined">child_hat</span>職場理財</div>
+                        <div class="label-btn orange reveal-item"><span class="material-symbols-outlined">emoji_objects</span>研習課程</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-wrapper">
+            <!-- 頁面一 好書推薦 -->
+            <div class="container outer-frame orange good-books">
+                <div class="row">
+                    <div class="col-12 btn-group orange reveal-right">
+                        <ul>
+                            <li class="active"><a href="">全部</a></li>
+                            <li><a href="#">資深閱職人推薦</a></li>
+                            <li><a href="#">職人精神秘訣</a></li>
+                            <li><a href="#">選擇職人方向</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks02.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">日本小說</div>
+                            <div class="bookname p1">罪惡的終結</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname p1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 page-btn orange reveal-fadein">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 頁面二 論文期刊 -->
+            <div class="container outer-frame orange paper hidden">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="btn-group orange">
+                            <ul>
+                                <li class="active"><a href="#">全部</a></li>
+                                <li><a href="#">論文</a></li>
+                                <li><a href="#">期刊</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="tool">
+                                <input type="checkbox">
+                                <div class="star">
+                                    <span class="p1">3</span>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="p1">(10)</span>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5 class="h5-ch-medium">地方圖書館視覺識別系統設計應用與研究</h5>
+                                <p class="p2">國立交通大學／傳播研究所／113／碩士／傳播學門／設計藝術學類</p>
+                                <p class="p2">研究生: 林語晴／指導教授: 陳思宇／論文種類: 學術論文</p>
+                            </div>
+                            <div class="statistics">
+                                <div class="stat-item">
+                                    <span class="label p2">被引用</span>
+                                    <span class="value p1">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">點閱</span>
+                                    <span class="value p1">33</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">下載</span>
+                                    <span class="value p1">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">書目收藏</span>
+                                    <span class="value p1">0</span>
+                                </div>
+                                <a href="#" class="p1"><span class="material-symbols-outlined">menu_book</span>電子全文</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="tool">
+                                <input type="checkbox">
+                                <div class="star">
+                                    <span class="p1">2</span>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="p1">(10)</span>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5 class="h5-ch-medium">新竹地區客家聚落空間與文化轉譯之研究</h5>
+                                <p class="p2">國立清華大學／歷史研究所／112／碩士／歷史學門／文化資產學類</p>
+                                <p class="p2">研究生: 張詠恩／指導教授: 李雅婷／論文種類: 碩士論文</p>
+                            </div>
+                            <div class="statistics">
+                                <div class="stat-item">
+                                    <span class="label p2">被引用</span>
+                                    <span class="value p1">2</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">點閱</span>
+                                    <span class="value p1">18</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">下載</span>
+                                    <span class="value p1">5</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">書目收藏</span>
+                                    <span class="value p1">0</span>
+                                </div>
+                                <a href="#" class="p1"><span class="material-symbols-outlined">menu_book</span>電子全文</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="tool">
+                                <input type="checkbox">
+                                <div class="star">
+                                    <span class="p1">4</span>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="p1">(12)</span>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5 class="h5-ch-medium">AI智能推薦系統於公共圖書館館藏調撥之效能探討</h5>
+                                <p class="p2">國立臺灣大學／資訊工程學系／114／博士／資訊學門／圖書資訊學類</p>
+                                <p class="p2">研究生: 林語晴／指導教授: 陳思宇／論文種類: 博士論文</p>
+                            </div>
+                            <div class="statistics">
+                                <div class="stat-item">
+                                    <span class="label p2">被引用</span>
+                                    <span class="value p1">0</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">點閱</span>
+                                    <span class="value p1">20</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">下載</span>
+                                    <span class="value p1">7</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">書目收藏</span>
+                                    <span class="value p1">0</span>
+                                </div>
+                                <a href="#" class="p1"><span class="material-symbols-outlined">menu_book</span>電子全文</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="tool">
+                                <input type="checkbox">
+                                <div class="star">
+                                    <span class="p1">4</span>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="p1">(13)</span>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5 class="h5-ch-medium">青少年虛擬社群參與對其閱讀動機影響之研究</h5>
+                                <p class="p2">國立政治大學／教育學系／113／碩士／教育學門／圖書資訊學類</p>
+                                <p class="p2">研究生: 許芳瑜／指導教授: 王建德／論文種類: 碩士論文</p>
+                            </div>
+                            <div class="statistics">
+                                <div class="stat-item">
+                                    <span class="label p2">被引用</span>
+                                    <span class="value p1">2</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">點閱</span>
+                                    <span class="value p1">14</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">下載</span>
+                                    <span class="value p1">8</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">書目收藏</span>
+                                    <span class="value p1">1</span>
+                                </div>
+                                <a href="#" class="p1"><span class="material-symbols-outlined">menu_book</span>電子全文</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="tool">
+                                <input type="checkbox">
+                                <div class="star">
+                                    <span class="p1">3</span>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star "></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <span class="p1">(6)</span>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5 class="h5-ch-medium">日治時期臺灣公共圖書館建築風格與其現代性意涵</h5>
+                                <p class="p2">國立成功大學／建築學系／112／碩士／藝術學門／建築設計學類</p>
+                                <p class="p2">研究生: 鄭凱文／指導教授: 楊博鈞／論文種類: 碩士論文</p>
+                            </div>
+                            <div class="statistics">
+                                <div class="stat-item">
+                                    <span class="label p2">被引用</span>
+                                    <span class="value p1">2</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">點閱</span>
+                                    <span class="value p1">10</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">下載</span>
+                                    <span class="value p1">2</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">書目收藏</span>
+                                    <span class="value p1">7</span>
+                                </div>
+                                <a href="#" class="p1"><span class="material-symbols-outlined">menu_book</span>電子全文</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="tool">
+                                <input type="checkbox">
+                                <div class="star">
+                                    <span class="p1">5</span>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <i class="fa-solid fa-star active"></i>
+                                    <span class="p1">(2)</span>
+                                </div>
+                            </div>
+                            <div class="title">
+                                <h5 class="h5-ch-medium">銀髮族數位閱讀障礙與介面設計優化之探討</h5>
+                                <p class="p2">輔仁大學／心理學系／114／碩士／心理學門／行為科學學類</p>
+                                <p class="p2">研究生: 蕭逸柔／指導教授: 趙佩玲／論文種類: 碩士論文</p>
+                            </div>
+                            <div class="statistics">
+                                <div class="stat-item">
+                                    <span class="label p2">被引用</span>
+                                    <span class="value p1">5</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">點閱</span>
+                                    <span class="value p1">7</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">下載</span>
+                                    <span class="value p1">2</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="label p2">書目收藏</span>
+                                    <span class="value p1">0</span>
+                                </div>
+                                <a href="#" class="p1"><span class="material-symbols-outlined">menu_book</span>電子全文</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 page-btn orange">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 頁面三 職場理財 -->
+            <div class="container outer-frame orange financial hidden">
+                <div class="row">
+                    <div class="col-6">
+                        <h4 class="h4-ch">財經新聞與趨勢></h4>
+                        <div class="card">
+                            <img src="images/advanced-financial01.png" alt="advanced-financial01">
+                            <div class="card-mask">
+                                <h5 class="h5-ch-medium">央行升息衝擊：房貸族如何調整年度財務規劃</h5>
+                                <div>
+                                    <p class="p2">利率政策, 房地產, 家庭理財 | 閱讀時間: 4分鐘</p>
+                                    <p class="p2">2025.10.30</p>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="p1">
+                            <li class="h5-ch"><a href="#">竹科新趨勢：半導體人才高薪下的理財盲區</a></li>
+                            <li class="h5-ch"><a href="#">ETF 懶人投資法：小資族穩健累積資產策略</a></li>
+                            <li class="h5-ch"><a href="#">退休金缺口警報：如何評估勞退自提與商業年金</a></li>
+                            <li class="h5-ch"><a href="#">綠色金融浪潮：ESG 投資如何為你帶來雙重效益</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <h4 class="h4-ch">專家影音講座></h4>
+                        <div class="card">
+                            <img src="images/advanced-financial02.png" alt="advanced-financial02">
+                            <div class="card-mask">
+                                <h5 class="h5-ch-medium">【職場必備】從零開始看懂財務報表</h5>
+                                <div>
+                                    <p class="p2">謝明哲 (會計師) | 影片時長: 90 分鐘</p>
+                                    <p class="p2">2025.09.15</p>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="p1">
+                            <li class="h5-ch"><a href="#">高效率存錢法：月光族到百萬存款的秘訣</a></li>
+                            <li class="h5-ch"><a href="#">青年的第一桶金：房產投資的入門與迷思</a></li>
+                            <li class="h5-ch"><a href="#">避險與保障：家庭保險配置的黃金法則</a></li>
+                            <li class="h5-ch"><a href="#">跨國投資策略：全球資產配置與匯率風險管理</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row recommend-list">
+                    <div class="col-12 title">
+                        <h4 class="h4-ch">其他主題推薦></h4>
+                    </div>
+                    <div class="col-6">
+                        <ul class="btn-mid">
+                            <li>個人與家庭理財 Personal Finance</li>
+                            <li>投資與資產配置 Investment & Assets</li>
+                            <li>房地產與信貸 Real Estate & Credit</li>
+                            <li>退休與保障 Retirement & Security</li>
+                            <li>宏觀經濟與政策 Macro & Policy</li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <ul class="btn-mid">
+                            <li>理財入門與基礎 Beginner/Fundamentals</li>
+                            <li>進階投資策略 Advanced Strategies</li>
+                            <li>職涯與財富增長 Career & Wealth Building</li>
+                            <li>專題法律與稅務 Legal & Tax Focus</li>
+                            <li>金融科技與趨勢 FinTech & Future</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 頁面四 研習課程 -->
+            <div class="container outer-frame orange course hidden">
+                <table>
+                    <tr>
+                        <th>課程代碼</th>
+                        <th>課程類別</th>
+                        <th>課程名稱</th>
+                        <th>開課時間</th>
+                        <th>總堂數</th>
+                        <th>指導老師</th>
+                        <th>研習費用</th>
+                        <th>報名人數</th>
+                        <th>開課狀態</th>
+                        <th></th>
+                    </tr>
+                    <tr class="p2">
+                        <td>RD101</td>
+                        <td>資料檢索</td>
+                        <td>SCI/SSCI 核心資料庫高效檢索技巧</td>
+                        <td>12/05 (四) 14:00-17:00</td>
+                        <td>1 堂</td>
+                        <td>李宜靜 博士</td>
+                        <td>500</td>
+                        <td>40</td>
+                        <td>額滿</td>
+                        <td><a href="#" class="little-btn gray">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>WR205</td>
+                        <td>學術寫作</td>
+                        <td>學位論文研究方法與架構規劃</td>
+                        <td>01/10 起 (每週五)</td>
+                        <td>4 堂</td>
+                        <td>陳浩然 教授</td>
+                        <td>2,800</td>
+                        <td>30</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>DT302</td>
+                        <td>數位工具</td>
+                        <td>R 語言與統計分析基礎入門</td>
+                        <td>11/23 (六) 09:00-16:00</td>
+                        <td>2 堂</td>
+                        <td>吳志偉 講師</td>
+                        <td>1,200</td>
+                        <td>25</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>LP103</td>
+                        <td>法律與倫理</td>
+                        <td>學術倫理與智慧財產權規範</td>
+                        <td>12/12 (四) 19:00-21:30</td>
+                        <td>1 堂</td>
+                        <td>林佳儀 律師</td>
+                        <td>300</td>
+                        <td>50</td>
+                        <td>額滿</td>
+                        <td><a href="#" class="little-btn gray">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>CU401</td>
+                        <td>文化研究</td>
+                        <td>新竹在地客家歷史文獻解讀</td>
+                        <td>11/30 (六) 14:00-17:00</td>
+                        <td>1 堂</td>
+                        <td>葉俊傑 研究員</td>
+                        <td>450</td>
+                        <td>35</td>
+                        <td>額滿</td>
+                        <td><a href="#" class="little-btn gray">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>DA506</td>
+                        <td>資料分析</td>
+                        <td>Python 文本探勘與數據視覺化</td>
+                        <td>01/18 起 (每週六)</td>
+                        <td>6 堂</td>
+                        <td>許文斌 工程師</td>
+                        <td>4,500</td>
+                        <td>20</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>RD210</td>
+                        <td>資料檢索</td>
+                        <td>中日韓文獻檢索與圖書館資源利用</td>
+                        <td>12/19 (四) 14:00-16:00</td>
+                        <td>1 堂</td>
+                        <td>王思平 博士</td>
+                        <td>200</td>
+                        <td>45</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>WR312</td>
+                        <td>學術寫作</td>
+                        <td>論文引用格式 (APA/MLA) 規範實務</td>
+                        <td>01/24 (五) 19:00-21:00</td>
+                        <td>1 堂</td>
+                        <td>高莉莉 編輯</td>
+                        <td>400</td>
+                        <td>30</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>AR405</td>
+                        <td>藝術設計</td>
+                        <td>數位典藏與文化資產數位化方法</td>
+                        <td>12/07 起 (每週六)</td>
+                        <td>3 堂</td>
+                        <td>趙敏軒 教授</td>
+                        <td>2,100</td>
+                        <td>25</td>
+                        <td>額滿</td>
+                        <td><a href="#" class="little-btn gray">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>SM501</td>
+                        <td>社會研究</td>
+                        <td>質性研究訪談法與資料分析</td>
+                        <td>02/08 (六) 09:00-17:00</td>
+                        <td>2 堂</td>
+                        <td>顏文德 副教授</td>
+                        <td>1,800</td>
+                        <td>20</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>TM601</td>
+                        <td>專案管理</td>
+                        <td>敏捷式研究專案管理實務</td>
+                        <td>01/04 (六) 09:30-16:30</td>
+                        <td>2 堂</td>
+                        <td>蔡英傑 顧問</td>
+                        <td>2,500</td>
+                        <td>40</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>TE702</td>
+                        <td>教育科技</td>
+                        <td>E-Portfolio 數位學習歷程檔案建置</td>
+                        <td>11/27 (三) 19:00-21:00</td>
+                        <td>1 堂</td>
+                        <td>彭家豪 講師</td>
+                        <td>350</td>
+                        <td>40</td>
+                        <td>額滿</td>
+                        <td><a href="#" class="little-btn gray">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>RD115</td>
+                        <td>資料檢索</td>
+                        <td>學位論文與政府出版品檢索專題</td>
+                        <td>12/26 (四) 14:00-16:30</td>
+                        <td>1 堂</td>
+                        <td>許惠如 博士</td>
+                        <td>300</td>
+                        <td>50</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>EN803</td>
+                        <td>環境科學</td>
+                        <td>永續發展目標 (SDGs) 與地方實踐</td>
+                        <td>01/11 (六) 14:00-17:00</td>
+                        <td>1 堂</td>
+                        <td>廖婉君 研究員</td>
+                        <td>500</td>
+                        <td>35</td>
+                        <td>額滿</td>
+                        <td><a href="#" class="little-btn gray">我要報名</a></td>
+                    </tr>
+                    <tr class="p2">
+                        <td>LP204</td>
+                        <td>法律與倫理</td>
+                        <td>個資保護法與學術研究資料處理</td>
+                        <td>12/06 (五) 19:30-21:30</td>
+                        <td>1 堂</td>
+                        <td>鄭裕昌 律師</td>
+                        <td>400</td>
+                        <td>40</td>
+                        <td>招生中</td>
+                        <td><a href="#" class="little-btn green-line">我要報名</a></td>
+                    </tr>
+                </table>
+                <div class="row">
+                    <div class="col-12 page-btn orange">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+            </div>
+            <img src="images/bg/tour-guide-orange02.png" alt="tour-guide-orange">
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    
+                    <div class="nav-list">
+                        <img src="images/library-logo-white.png" alt="公共圖書館">
+                        <ul class="btn-sm">
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="about.html">關於圖書館</a></li>
+                            <li><a href="activity.html">活動總覽</a></li>
+                            <li><a href="search.html">館藏查詢</a></li>
+                            <li><a href="newbooks.html">最新書籍</a></li>
+                            <li><a href="contact.html">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="tour-guide-group">
+                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="info">
+                        <p class="p2">公共圖書館</p>
+                        <p class="p2">通訊地址：新竹縣竹北市智惠街888號</p>
+                        <p class="p2">電話：03-666-8888</p>
+                        <p class="p2">更新日期：2025.10.22</p>
+                    </div>
+                </div>
+                <p class="source">參考資料來源: 博客來: http://xn--books-9c3ht2uuqs.com.tw/?srsltid=AfmBOoq2Y_y7kdHy_gMNaupda3pu3Lo6NsjaiSWDwKtxbmgR8aTGuEtt | Pinterest:https://www.pinterest.com/ | 新竹縣公共圖書館官網: https://hcplibrary.hchcc.gov.tw/wSite/mp?mp=1</p>
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/font-size-switch.js"></script>
+    <script src="javascript/script.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+</body>
+</html>

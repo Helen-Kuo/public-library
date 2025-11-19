@@ -1,0 +1,9 @@
+.activity-page{
+    position: relative;
+}
+.activity .activity-bg2{
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    z-index: -1;
+}

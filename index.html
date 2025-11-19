@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公共圖書館</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="container nav">
+                <div class="logo">
+                    <img src="images/library-logo.png" alt="公共圖書館">
+                </div>
+                <div class="page-btn">
+                    <ul>
+                        <li><a href="#" class="active">首頁</a></li>
+                        <li><a href="about.html">關於圖書館</a></li>
+                        <li><a href="activity.html">活動總覽</a></li>
+                        <li><a href="search.html">館藏查詢</a></li>
+                        <li><a href="newbooks.html">最新書籍</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="#" class="little-btn yellow">導覽服務</a>
+                        <a href="#"class="little-btn green"><span class="material-symbols-outlined">login</span>我的帳戶</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="hero">
+            <div class="search-bar">
+                <div class="tab-btns">
+                    <a href="#" class="tab-btn active">館藏查詢</a>
+                    <a href="#" class="tab-btn">資源整合查詢</a>
+                    <a href="#" class="tab-btn">電子期刊</a>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="請輸入關鍵字">
+                    <button type="submit" class="search-icon-btn">
+                        <span class="material-symbols-outlined">search</span>
+                    </button>
+                </div>
+            </div>
+            <div class="swiper" id="hero-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="images/hero-library1.png" alt="公共圖書館">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/hero-library2.png" alt="公共圖書館">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/hero-library3.png" alt="公共圖書館">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/hero-library4.png" alt="公共圖書館">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/hero-library5.png" alt="公共圖書館">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <div class="font-scale">
+            <p>字體</p>
+            <button class="p1" data-size="small">小</button>
+            <button class="p1 active" data-size="medium">中</button>
+            <button class="p1" data-size="large">大</button>
+        </div>
+    </header>
+    <main>
+        <!-- 導覽服務 -->
+        <section class="tour-guide">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 title reveal-left">
+                        <h3 class="h3-ch"><span class="h2-eg">Tour Guide</span><br>導覽服務</h3>
+                        <p class="paragraphs1">幫助您快速尋找到您需要的服務內容</p>
+                    </div>
+                    <div class="col-9 cards-group">
+                        <a href="student.html" class="reveal-item">
+                            <div class="card pink">
+                                <span class="material-symbols-outlined arrow">north_east</span>
+                                <div class="card-content">
+                                    <span class="material-symbols-outlined">menu_book</span>
+                                    <h4 class="h4-ch">兒童與青少年專區</h4>
+                                    <span class="h3-eg">Kid & Teenager</span>
+                                    <div class="btn-sm-group ">
+                                        <div class="btn-sm">好書推薦</div>
+                                        <div class="btn-sm">主題活動</div>
+                                        <div class="btn-sm">親子共讀</div>
+                                        <div class="btn-sm">學習資源</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="advanced-course.html" class="reveal-item">
+                            <div class="card orange">
+                            <span class="material-symbols-outlined arrow">north_east</span>
+                            <div class="card-content">
+                                <span class="material-symbols-outlined">flag</span>
+                                <h4 class="h4-ch">研究與進修專區</h4>
+                                <span class="h3-eg">Advanced Course</span>
+                                <div class="btn-sm-group ">
+                                    <div class="btn-sm">好書推薦</div>
+                                    <div class="btn-sm">期刊論文</div>
+                                    <div class="btn-sm">職場理財</div>
+                                    <div class="btn-sm">研習課程</div>
+                                </div>
+                            </div>
+                        </div>
+                        </a>
+                        <a href="senior.html" class="reveal-item">
+                            <div class="card purple">
+                                <span class="material-symbols-outlined arrow">north_east</span>
+                                <div class="card-content">
+                                    <span class="material-symbols-outlined">person_play</span>
+                                    <h4 class="h4-ch">樂齡學習專區</h4>
+                                    <span class="h3-eg">Senior Learning</span>
+                                    <div class="btn-sm-group ">
+                                        <div class="btn-sm">好書推薦</div>
+                                        <div class="btn-sm">主題活動</div>
+                                        <div class="btn-sm">親子共讀</div>
+                                        <div class="btn-sm">學習資源</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <img src="images/bg/index-bg1.png" alt="">
+        </section>
+        <!-- 最新公告 -->
+        <section class="news">
+            <img src="images/bg/index-bg2.png" alt="bg">
+            <div class="container">
+                <div class="title reveal-left">
+                    <span class="h1-eg-medium">News</span>
+                    <h2 class="h2-ch">最新公告</h2>
+                </div>
+                <div class="row news-group">
+                    <div class="col-10 news-list reveal-right">
+                        <div class="btn-group green">
+                            <ul>
+                                <li class="active"><a href="">全部</a></li>
+                                <li><a href="">新聞稿</a></li>
+                                <li><a href="">公告</a></li>
+                                <li><a href="">各館花絮</a></li>
+                                <li><a href="">藝文活動</a></li>
+                                <li><a href="">未分類</a></li>
+                            </ul>
+                        </div>
+                        <div class="news-item">
+                            <div class="date">
+                                <p>2025</p>
+                                <p cla>10.28<span class="p2">二</span></p>
+                            </div>
+                            <div class="news-title">
+                                <p class="paragraphs1">【綜合活動】114年圖書館滿意度調查填問卷抽好禮活動上線囉!</p>
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="date">
+                                <p>2025</p>
+                                <p>10.28<span class="p2">二</span></p>
+                            </div>
+                            <div class="news-title">
+                                <p class="paragraphs1">114年新竹縣閱讀節活動開跑! 11/1-12/20，閱讀方程式，邀請您一起成為一級玩家!</p>
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="date">
+                                <p>2025</p>
+                                <p>10.26<span class="p2">日</span></p>
+                            </div>
+                            <div class="news-title">
+                                <p class="paragraphs1">【綜合活動】114年11月份爹地媽咪說故事活動來囉！</p>
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="date">
+                                <p>2025</p>
+                                <p>10.23<span class="p2">四</span></p>
+                            </div>
+                            <div class="news-title">
+                                <p class="paragraphs1">【芎林館活動】萬聖節搞什麼鬼~不給糖就借書，114年10月26日(星期日)-10月31日，歡迎小朋友及親子家庭一起來參加。</p>
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <div class="date">
+                                <p>2025</p>
+                                <p>10.17<span class="p2">五</span></p>
+                            </div>
+                            <div class="news-title">
+                                <p class="paragraphs1">【轉知】：文化部115年度「推動實體書店發展補助作業」收件資訊相關事宜</p>
+                                <span class="material-symbols-outlined">arrow_right_alt</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 page-btn green">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+            </div>
+            
+            <img src="images/bg/index-bg3.png" alt="">
+        </section>
+        <!-- 新書推薦 -->
+        <section class="newbooks">
+            <img src="images/bg/index-bg4.png" alt="index-bg4">
+            <div class="container">
+                <div class="title reveal-left">
+                    <span class="h1-eg-medium">New Books</span>
+                    <h2 class="h2-ch">新書推薦</h2>
+                </div>
+                <div class="row">
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks01.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname paragraphs1">低成本生活 : 不用努力工作, 生活依然從容不迫!</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks02.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">日本小說</div>
+                            <div class="bookname paragraphs1">罪惡的終結</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks03.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">生活指導</div>
+                            <div class="bookname paragraphs1">慢慢活成自己喜歡的樣子 : 走過十大自我洞察階段...</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-3 books-list reveal-item">
+                        <img src="images/newbooks/newbooks04.png" alt="newbooks01">
+                        <div class="detail">
+                            <div class="tag p2">日本小說</div>
+                            <div class="bookname paragraphs1">魔女的原罪</div>
+                            <a class="little-btn collect">
+                                <i class="fa-solid fa-heart"></i>
+                                加入收藏
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <a href="newbooks.html" class="btn-mid-bold dark big-btn right">全部新書<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 熱門活動 -->
+        <section class="hot-activity">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 title reveal-left">
+                        <span class="h1-eg-medium">Activity</span>
+                        <h2 class="h2-ch">熱門活動</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-11">
+                        <div class="card">
+                            <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
+                            <div class="detail">
+                                <div class="day">
+                                    <span class="week strong-number-sm-blod">六</span>
+                                    <span class="date strong-number-lg-blod">12.07</span>
+                                    <span class="time p1">10:00-12:00</span>
+                                </div>
+                                <div class="activity-name">
+                                    <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
+                                    <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
+                                    <div class="sign-up">
+                                        <p class="p2">報名時間</p>
+                                        <p class="btn-sm">2025.
+                                        <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <div class="card">
+                            <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
+                            <div class="detail">
+                                <div class="day">
+                                    <span class="week strong-number-sm-blod">六</span>
+                                    <span class="date strong-number-lg-blod">12.07</span>
+                                    <span class="time p1">10:00-12:00</span>
+                                </div>
+                                <div class="activity-name">
+                                    <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
+                                    <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
+                                    <div class="sign-up">
+                                        <p class="p2">報名時間</p>
+                                        <p class="btn-sm">2025.
+                                        <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-11">
+                        <div class="card">
+                            <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
+                            <div class="detail">
+                                <div class="day">
+                                    <span class="week strong-number-sm-blod">六</span>
+                                    <span class="date strong-number-lg-blod">12.07</span>
+                                    <span class="time p1">10:00-12:00</span>
+                                </div>
+                                <div class="activity-name">
+                                    <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
+                                    <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
+                                    <div class="sign-up">
+                                        <p class="p2">報名時間</p>
+                                        <p class="btn-sm">2025.
+                                        <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 page-btn green">
+                        <span class="btn-sm active">1</span>
+                        <span class="btn-sm">2</span>
+                        <span class="btn-sm">3</span>
+                    </div>
+                </div>
+                <img src="./images/bg/index-bg5.png" alt="" class="bg">
+            </div>
+        </section>
+        <section class="best-moments">
+            <div class="main-image">
+                <img src="images/best-moments/best-moments01.png" alt="Best Moments Main Image">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-7"></div>
+                    <div class="col-4">
+                        <div class="text-overlay">
+                            <div class="title reveal-right">
+                                <span class="h2-eg">Best Moments</span>
+                                <h2 class="h2-ch">活動剪影</h2>
+                                <span class="h5-ch-medium">每個開心的精彩時刻</span>
+                            </div>
+                            <div class="line reveal-right"></div>
+                            <p class="p2 reveal-right">從創意手作、閱讀闖關到熱鬧的主題活動，每張照片都記錄著笑容與驚喜。這裡不只有書香，還有大家一起參與、學習、玩樂的溫暖回憶。快來看看自己是不是也在其中，與我們一起感受圖書館的活力與歡樂！</p>
+                            <a href="./activity.html" class="dark big-btn btn-mid-bold right reveal-right">更多活動<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        </div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                
+            </div>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <img src="images/best-moments/best-moments-s-01.png" alt="best-moments-01">
+                    <img src="images/best-moments/best-moments-s-02.png" alt="best-moments-02">
+                    <img src="images/best-moments/best-moments-s-03.png" alt="best-moments-03">
+                    <img src="images/best-moments/best-moments-s-04.png" alt="best-moments-04">
+                    <img src="images/best-moments/best-moments-s-05.png" alt="best-moments-05">
+                    <img src="images/best-moments/best-moments-s-06.png" alt="best-moments-06">
+                    <img src="images/best-moments/best-moments-s-07.png" alt="best-moments-07">
+                </div>
+            </div>
+            <img src="images/bg/index-bg6.png" alt="index-bg6" class="bg">       
+        </section>
+        
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    <div class="nav-list">
+                        <img src="images/library-logo-white.png" alt="公共圖書館">
+                        <ul class="btn-sm">
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="about.html">關於圖書館</a></li>
+                            <li><a href="activity.html">活動總覽</a></li>
+                            <li><a href="search.html">館藏查詢</a></li>
+                            <li><a href="newbooks.html">最新書籍</a></li>
+                            <li><a href="contact.html">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="tour-guide-group">
+                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="info">
+                        <p class="p2">公共圖書館</p>
+                        <p class="p2">通訊地址：新竹縣竹北市智惠街888號</p>
+                        <p class="p2">電話：03-666-8888</p>
+                        <p class="p2">更新日期：2025.10.22</p>
+                    </div>
+                </div>
+                <p class="source">參考資料來源: 博客來: http://xn--books-9c3ht2uuqs.com.tw/?srsltid=AfmBOoq2Y_y7kdHy_gMNaupda3pu3Lo6NsjaiSWDwKtxbmgR8aTGuEtt | Pinterest:https://www.pinterest.com/ | 新竹縣公共圖書館官網: https://hcplibrary.hchcc.gov.tw/wSite/mp?mp=1</p>
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/font-size-switch.js"></script>
+    <script src="javascript/script.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+</body>
+</html>

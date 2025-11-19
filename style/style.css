@@ -1,0 +1,770 @@
+@import url("./style-guideline.css");
+@import url("./grid.css");
+
+@import url("./page/tour-guide-page.css");
+@import url("./page/activity.css");
+@import url("./page/activity.css");
+@import url("./page/search.css");
+@import url("./page/about.css");
+@import url("./page/books-detail.css");
+@import url("./page/newbooks.css");
+@import url("./page/contact.css");
+
+@import url("./component/nav-bar.css");
+@import url("./component/title-area.css");
+@import url("./component/button.css");
+@import url("./component/activity-cards.css");
+@import url("./component/footer.css");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--color-neutral-800);
+}
+
+
+/* hero */
+.hero{
+    overflow: hidden;
+}
+.hero .swiper{
+    position: relative;
+    z-index: -1;
+}
+.hero .swiper-slide img{
+    width:100%;
+}
+.hero .swiper-pagination-bullet{
+    background-color: var(--color-neutral-100);
+}
+.hero .swiper-pagination-bullet-active{
+    background-color: var(--color-accent-green-700);
+}
+.swiper-pagination{
+    position: absolute;
+    bottom: 200px;
+}
+
+.search-bar{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 910px;
+    min-width: 90%;
+    z-index: 2;
+}
+.search-bar:has(input:focus) .search-box,
+.search-title:has(input:focus) .search-box{
+    border: 2px solid var(--color-accent-green-700);
+}
+.tab-btns{
+    display: flex;
+    gap: 10px;
+}
+.search-box{
+    height: 80px;
+    width: 910px;
+    border-radius: 40px;
+    border: 1px solid var(--color-neutral-500);
+    overflow: hidden;
+    display: flex;
+    margin: 0 auto;
+}
+.search-box input{
+    flex-grow: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 40px;
+}
+.tab-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 40px;
+    background-color: var(--color-white);
+    border-radius: 20px;
+
+    position: relative;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    color: var(--color-neutral-800);
+    letter-spacing: 2px;
+}
+.tab-btn::after{
+    content: "";
+    width: 60%;
+    height: 4px;
+    background-color: var(--color-accent-green-700);
+    position: absolute;
+
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -9px;
+    border-radius: 4px 4px 0 0;
+
+    transition: opacity .3s ease, transform .3s ease;
+    opacity: 0;
+}
+.tab-btn:hover{
+    border: 1px solid var(--color-accent-green-700);
+    background-color: var(--color-accent-green-200);
+    color: var(--color-accent-green-700);
+    font-weight: 500;
+}
+.tab-btn.active::after, .tab-btn:hover::after{
+    opacity: 1;
+}
+.tab-btn.active{
+    background-color: var(--color-accent-green-700);
+    color: var(--color-white);
+}
+.tab-btn.active:hover{
+    background-color: var(--color-accent-green-800);
+}
+/* search icon */
+.search-icon-btn{
+    background: none;
+    background-color: var(--color-white);
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 80px;
+    padding-right: 0;
+    flex-shrink: 0;
+
+    position: relative;
+    z-index: 2;
+}
+.search-icon-btn .material-symbols-outlined{
+    font-size: 1.8rem;
+    color: var(--color-neutral-800);
+    position: relative;
+}
+
+
+/* tour guide */
+.tour-guide{
+    width: 100%;
+    display: flex;
+    padding: 120px 0;
+    flex-direction: column;
+    position: relative;
+}
+.tour-guide a{
+    text-decoration: none;
+}
+.tour-guide .cards-group{
+    display: flex;
+    gap: 20px;
+}
+.tour-guide img{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+.tour-guide .card{
+    text-align: center;
+    padding: 50px 0 50px;
+
+    border: 1px solid var(--color-neutral-500);
+    background-color: var(--color-white);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    transition: all .3s ease-in-out;
+    
+    min-height: 370px;
+}
+.tour-guide .card .arrow{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 30px;
+    color: var(--color-neutral-800);
+}
+.tour-guide .card:hover .arrow{
+    font-size: 35px;
+    right: 10px;
+    top: 10px;
+    transition: .3s;
+}
+
+.tour-guide .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tour-guide .card-content span:nth-child(1){
+    font-size: 6rem;
+    color: var(--color-accent-green-700);
+}
+.tour-guide .card h4{
+    color: var(--color-accent-green-700);
+    margin: 8px 0 12px 0;
+}
+.tour-guide .card .btn-sm{
+    background-color: var(--color-white);
+}
+
+
+.tour-guide .card .h3-eg{
+    opacity: 0;
+    height: 0;
+    margin: 0;
+    transform: translateY(10px);
+}
+.tour-guide .card:hover .h3-eg{
+    opacity: 1;
+    transform: translateY(0);
+    transition: .3s ease;
+}
+.tour-guide .card:hover{
+    transition: .3s;
+    transform: translateY(-5px);
+    opacity: 1;
+}
+.tour-guide .card .btn-sm-group{
+    transition: opacity .3s ease, visiblity 1s ease, height 1 ease;
+}
+.tour-guide .card:hover .btn-sm-group{
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    margin: 0;
+}
+
+
+/* 分眾一hover效果設定 */
+.tour-guide .card.pink:hover{
+    background-color: var(--color-secondary-pink-100);
+    border: 1px solid var(--color-secondary-pink-700);
+}
+.tour-guide .card.pink:hover span, .tour-guide .card.pink:hover h4{
+    color: var(--color-secondary-pink-700);
+}
+.tour-guide .card.pink:hover .h3-eg{
+    color: var(--color-secondary-pink-700);
+}
+
+/* 分眾二hover效果設定 */
+.tour-guide .card.orange:hover{
+    background-color: var(--color-secondary-orange-100);
+    border: 1px solid var(--color-secondary-orange-700);
+}
+.tour-guide .card.orange:hover span, .tour-guide .card.orange:hover h4{
+    color: var(--color-secondary-orange-700);
+}
+.tour-guide .card.orange:hover .h3-eg{
+    color: var(--color-secondary-orange-700);
+}
+
+/* 分眾三hover效果設定 */
+.tour-guide .card.purple:hover{
+    background-color: var(--color-secondary-purple-100);
+    border: 1px solid var(--color-secondary-purple-700);
+}
+.tour-guide .card.purple:hover span, .tour-guide .card.purple:hover h4{
+    color: var(--color-secondary-purple-700);
+}
+.tour-guide .card.purple:hover .h3-eg{
+    color: var(--color-secondary-purple-700);
+}
+
+
+.tour-guide .title{
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+.btn-sm-group{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 12px;
+    width: 90%;
+}
+.tour-guide .btn-sm-group > .btn-sm{
+    border: 1px solid var(--color-accent-green-700);
+    border-radius: 25px;
+    padding: 5px 24px;
+}
+
+/* news */
+.news{
+    position: relative;
+
+}
+.news .title{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.news .title span{
+    margin-bottom: -20px;
+}
+.news .title .h1-eg-medium{
+    color: var(--color-accent-green-700);
+}
+.news .container{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 100px 0 0 0;
+}
+.news img:nth-of-type(1){
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.news img:nth-of-type(2){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.news-group{
+    display: flex;
+    justify-content: end;
+}
+.news-item{
+    display: flex;
+    flex-grow: 1;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-neutral-500);
+}
+.news-list .news-item:nth-child(6){
+    border-bottom: 1px solid var(--color-neutral-500);
+}
+.news-list{
+    display: flex;
+    flex-direction: column;
+}
+.news-item .date p{
+    font-size: 1rem;
+    font-family: var(--font-main);
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: var(--color-accent-green-700);
+}
+.news-item .date p:nth-child(2){
+    font-size: 1.5rem;
+    font-family: var(--font-eg);
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0;
+    color: var(--color-accent-green-700);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.news-item .date p:nth-child(2) span{
+    background-color: var(--color-accent-green-700);
+    color: var(--color-white);
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 36px 0 6px;
+}
+.news-item .date{
+    border-right: 1px solid var(--color-neutral-500);
+}
+.news-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+}
+.news-title p{
+    margin: 0 36px;
+}
+.news-title:hover span{
+    transform: translateX(10px);
+    transition: .3s ease-out;
+}
+.news-title:hover p{
+    color: var(--color-accent-green-700);
+    cursor: pointer;
+}
+
+/* news裡的page-btn定位 */
+.news .page-btn{
+    margin-top: 30px;
+    justify-content: end;
+}
+
+
+/* newbooks */
+.newbooks{
+    position: relative;
+    background: url('../images/asfalt-dark0.6.png') ,  #EDEDED;
+    /* z-index: -2; */
+}
+.newbooks .container{
+    padding: 125px 10px;
+    z-index: 1;
+}
+.newbooks > img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    /* z-index: -1; */
+}
+.newbooks .title{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+.newbooks .title span{
+    color: var(--color-accent-green-700);margin-bottom: -20px;
+}
+.newbooks .books-list:nth-child(even){
+    margin-top: 134px;
+}
+.newbooks .col-12{
+    display: flex;
+    justify-content: right;
+    margin-top: 60px;
+}
+
+
+/* 書籍展示共用設定 */
+.books-list .tag{
+    color: var(--color-accent-green-700);
+}
+.books-list .bookname{
+    margin-bottom: 10px;
+}
+.books-list{
+    text-align: center;
+}
+.books-list .detail{
+    max-width: 80%;
+    text-align: left;
+    margin: auto;
+}
+
+/* hot-activity */
+.hot-activity{
+    position: relative;
+    padding: 85px 0 0 0;
+    overflow: hidden;
+}
+.hot-activity .row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.hot-activity .row .col-11{
+    width: 65vw;
+    flex-shrink: 0;
+}
+.hot-activity img.bg{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index:-1;
+}
+
+.hot-activity .container .title{
+    margin-bottom: 80px;
+}
+.hot-activity .title{
+    display: flex;
+    flex-direction: column;
+}
+.hot-activity .container .title span{
+    color: var(--color-accent-green-700);
+    margin-bottom: -20px;
+}
+
+.hot-activity .cards-wrapper{
+    display: flex;
+    gap: 20px;
+}
+.hot-activity .card img{
+    border-radius: 30px;
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+}
+.hot-activity .card{
+    position: relative;
+}
+
+.hot-activity .card .detail{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 30px;
+    display: flex;
+    padding: 24px;
+}
+.hot-activity .card .detail a{
+    position: absolute;
+    right: 65px;
+    bottom: 130px;
+    background-color: var(--color-accent-yellow-500);
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+.hot-activity .card .day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    height:150px;
+    border: 1px solid var(--color-white);
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    padding: 10px;
+}
+.hot-activity .card .day span{
+    color: var(--color-white);
+}
+.hot-activity .card .day{
+    text-align: center;
+    margin-right: 20px;
+    text-shadow: 4px 4px 10px var(--color-neutral-800);
+}
+.hot-activity .card .day .date{
+    color: var(--color-accent-yellow-500);
+}
+.hot-activity .card .day .time{
+    letter-spacing: 0;
+}
+.hot-activity .card .day .week{
+    border: 1px solid var(--color-white);
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin-left: auto;
+}
+.hot-activity .card .activity-name *{
+    color: var(--color-white);
+    text-shadow: 4px 4px 10px var(--color-neutral-800);
+}
+.hot-activity .card .activity-name{
+    padding: 10px 0;
+}
+.hot-activity .card .sign-up{
+    display: flex;
+    margin-top: 8px;
+}
+.hot-activity .card .sign-up p:first-child{
+    display: flex;
+    margin: 8px 8px 0 0;
+}
+/* 單獨設定間距與位置 */
+.hot-activity .page-btn{
+    margin-top: 0;
+    margin-bottom: 95px;
+    justify-content: start;
+}
+
+.best-moments{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.best-moments .main-image img{
+    /* width: 100%; */
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.best-moments .text-overlay{
+    padding: 0;
+    margin: 100px 0 120px 0;
+}
+.best-moments .text-overlay h2{
+    margin-bottom: 50px;
+}
+.best-moments .text-overlay p{
+    margin-bottom: 24px;
+}
+.best-moments .swiper-wrapper{
+    display: flex;
+    justify-content: end;
+    z-index: 2;
+    font-size: 0;
+}
+.best-moments .swiper-wrapper img{
+    border: 1px solid var(--color-white);
+}
+.best-moments .swiper{
+    position: absolute;
+    bottom: 0;
+}
+.best-moments .bg{
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+/* ============================================ */
+/* login signup */
+
+#modal-overlay{
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    /* display: none; */
+}
+form{
+    width: 80%;
+}
+.form-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+.form-panel form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.form-panel button{
+    align-self: flex-end;
+    background: none;
+}
+.form-panel .h2-eg-medium{
+    color: var(--color-accent-green-700);
+    width: 80%;
+}
+#form-slider{
+    display: flex;
+}
+#modal-content{
+    position: absolute;
+    background-color: var(--color-white);
+    padding: 60px 0;
+    border-radius: 20px;
+    width: 75%;
+    margin-top: 10%;
+    align-items: center;
+    justify-content: center;
+}
+#modal-content h2{
+    margin-bottom: 30px;
+    width: 80%;
+}
+#modal-content input{
+    border:none;
+    
+    padding: 10px 50px 10px 10px;
+}
+form label{
+    border-bottom: 1px solid var(--color-neutral-500);
+}
+label:has(input:focus){
+    border-bottom: 1px solid var(--color-black);
+}
+input:focus{
+    outline: none;
+}
+.form-panel a{
+    text-decoration: none;
+}
+.form-panel a:hover{
+    color:var(--color-accent-green-700);
+}
+#switch-signup a:hover span{
+    color:var(--color-accent-green-700);
+    transform: translateX(6px);
+    transition: .3s;
+}
+#switch-login a:hover span{
+    color:var(--color-accent-green-700);
+    transform: translateX(-6px);
+    transition: .3s;
+}
+#switch-signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+}
+#switch-login{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 10px;
+}
+#switch-signup *,#switch-login *{
+    display: flex;
+    align-items: center;
+}
+.close-btn{
+    width:40px;
+    height: 40px;
+    border: 2px solid var(--color-accent-green-700);
+    border-radius: 50%;
+    position: relative;
+    background-color: var(--color-white);
+    position: absolute;
+    top: -60px;
+}
+.close-btn:hover{
+    background-color: var(--color-accent-green-200);
+}
+.close-btn span{
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 24px;
+    background-color: var(--color-accent-green-700);
+    top: 18px;
+    left:6px;
+}
+.close-btn span:first-child{
+    transform: rotate(45deg);
+}
+.close-btn span:nth-child(2){
+    transform: rotate(135deg);
+}

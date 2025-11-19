@@ -1,0 +1,166 @@
+/* pink purple activity card */
+/* 行間距 */
+.activity .row:nth-of-type(-n+2){
+    display: flex;
+    margin-bottom: 50px;
+}
+
+/* activity mask */
+.activity .card-mask{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+}
+.activity .card-mask::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    transition: opacity .7s ease;
+    opacity: 0;
+}
+
+.activity .card-mask .detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    z-index: 2;
+    transition: opacity .7s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0;
+}
+.activity .card-mask .detail .h5-ch-medium{
+    border-bottom: 1px solid var(--color-white);
+    opacity: 0;
+}
+.activity .card-mask .detail p{
+    color: var(--color-white);
+    text-align: center;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    opacity: 0;
+}
+.activity .card-mask .detail .fa-heart{
+    z-index: 2;
+    color: var(--color-white);
+    position: absolute;
+    font-size: 2rem;
+    transform: translate(5px, -5px);
+    top: 24px;
+    right: 24px;
+    opacity: 0;
+}
+/* hover */
+.activity .card:hover .card-mask::before, 
+.activity .card:hover .card-mask .detail, 
+.activity .card:hover .card-mask .detail .fa-heart,
+.activity .card:hover .card-mask .detail p{
+    opacity: 1;
+}
+.activity .card-mask .detail .fa-heart:hover{
+    color: var(--color-secondary-pink-700);
+    transition: .3s;
+}
+
+.outer-frame.activity .row:nth-of-type(-n+2){
+    display: flex;
+    margin-bottom: 50px;
+}
+.activity .card{
+    border: 1px solid var(--color-neutral-500);
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    background-color: var(--color-white);
+}
+.activity .card img{
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    display: block;
+}
+.activity .card .tag{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: var(--color-white);
+    padding: 0px 10px;
+    border-radius: 20px;
+}
+.activity .card:hover .tag{
+    z-index: 2;
+}
+.activity .card a.btn-mid-bold{
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background-color: var(--color-accent-yellow-500);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    bottom: -30px;
+    right: 30px;
+}
+.activity .card:hover a.btn-mid-bold{
+    transform: translateY(-12px);
+    transition: .3s;
+}
+.activity .card a.btn-mid-bold:hover{
+    background-color: var(--color-accent-yellow-800);
+}
+.activity .card h5{
+    margin-bottom: 20px;
+}
+.activity .card .detail .title{
+    margin: -10PX 0 6px 0;
+}
+.activity .card .detail{
+    margin-bottom: 50px;
+}
+.activity .card .day{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.activity .card .day .week{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    color: var(--color-white);
+    border-radius: 50%;
+    text-align: center;
+}
+/* pink */
+.activity .card.pink .date{
+    color: var(--color-secondary-pink-700);
+}
+.activity .card.pink .day .week{
+    background-color: var(--color-secondary-pink-700);
+}
+.activity .card.pink:hover{
+    border: 1px solid var(--color-secondary-pink-700);
+    background-color: var(--color-secondary-pink-100);
+}
+/* purple */
+.activity .card.purple .date{
+    color: var(--color-secondary-purple-700);
+}
+.activity .card.purple .day .week{
+    background-color: var(--color-secondary-purple-700);
+}
+.activity .card.purple:hover{
+    border: 1px solid var(--color-secondary-purple-700);
+    background-color: var(--color-secondary-purple-100);
+}

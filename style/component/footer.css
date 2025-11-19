@@ -1,0 +1,44 @@
+footer{
+    background-color: var(--color-neutral-800);
+    padding: 60px 0;
+}
+
+footer .nav-list{
+    margin-bottom: 30px;
+    align-items: end;
+}
+.nav-list img{
+    margin-bottom: 20px;
+    width: 200px;
+}
+footer .nav-list ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+footer .nav-list a{
+    color: var(--color-white);
+    text-decoration: none;
+}
+footer .nav-list a:hover{
+    color: var(--color-accent-green-500);
+}
+footer .tour-guide-group{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 60px;
+}
+footer .info{
+    margin-top: 80px;
+}
+footer p{
+    color: var(--color-white);
+}
+footer .source{
+    padding-top: 24px;
+    border-top: 1px solid var(--color-neutral-700);
+    font-family: var(--font-main);
+    font-size: 14px;
+}
+
+/* 導覽按鈕css整理在button.css */

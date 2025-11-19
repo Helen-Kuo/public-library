@@ -1,0 +1,13 @@
+
+.newbooks-list .books-list{
+    margin-top: 100px;
+}
+.newbooks-bg1{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.newbooks-list{
+    display: flex;
+    position: relative;
+}

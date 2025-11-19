@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活動總覽 | 公共圖書館</title>
+    <link rel="stylesheet" href="style/style.css">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0" />
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="container nav">
+                <div class="logo">
+                    <img src="images/library-logo.png" alt="公共圖書館">
+                </div>
+                <div class="page-btn">
+                    <ul>
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="about.html">關於圖書館</a></li>
+                        <li><a href="activity.html">活動總覽</a></li>
+                        <li><a href="search.html">館藏查詢</a></li>
+                        <li><a href="newbooks.html">最新書籍</a></li>
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                    <div class="btn-group">
+                        <a href="#" class="little-btn yellow">導覽服務</a>
+                        <a href="#"class="little-btn green"><span class="material-symbols-outlined">login</span>我的帳戶</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="font-scale">
+            <p>字體</p>
+            <button class="p1" data-size="small">小</button>
+            <button class="p1 active" data-size="medium">中</button>
+            <button class="p1" data-size="large">大</button>
+        </div>
+    </header>
+    <main>
+        <section class="book-info">
+            <img src="images/bg/books-bg1.png" alt="books-bg1" class="bg">
+            <div class="container">
+                <div class="bread">
+                    <span class="p2"><a href="index.html">首頁</a></span>
+                    <span class="p2">></span>
+                    <span class="p2"><a href="#">館藏查詢</a></span>
+                    <span class="p2">></span>
+                    <span class="p2"><a href="#">全部書目列表</a></span>
+                    <span class="p2">></span>
+                    <span class="p2"><a href="#">詳細資料頁</a></span>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <img src="images/books/books01.png" alt="books01">
+                        <a class="little-btn collect">
+                            <i class="fa-solid fa-heart"></i>
+                            加入收藏
+                        </a>
+                    </div>
+                    <div class="col-10">
+                        <div class="content">
+                            <h1 class="h3-ch">HTML / CSS / JavaScript與前端框架完美結合 : 使用Bootstrap與PWA技術, 新手從這開始!</h1>
+                            <div class="detail">
+                                <p class="p2">作者 / 陳婉凌著</p>
+                                <p class="p2">出版項 / 新北市汐止區 :博碩文化,2025[民114]</p>
+                                <p class="p2">版本項 / 三版</p>
+                                <p class="p2">出版地 / 新北市汐止區</p>
+                                <p class="p2">規格 / 1冊 :圖, 表 ;23公分</p> 
+                                <p class="p2">ISBN / 9786264141192</p> 
+                                <p class="p2">附註 / 好評回饋版 </p>   
+                            </div>
+                            <div class="book tag">
+                                <span class="btn-sm">HTML(文件標記語言)</span>
+                                <span class="btn-sm">CSS(電腦程式語言)</span>
+                                <span class="btn-sm">Java Script(電腦程式語言)</span>
+                                <span class="btn-sm">網頁設計</span>
+                                <span class="btn-sm">全球資訊網</span>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <div class="tool">
+                                <h5 class="h5-ch">館藏位置</h5>
+                                <div class="select-btn-group">
+                                    <p class="select-btn">館藏地<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
+                                    <p class="select-btn">排序條件<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
+                                </div>
+                            </div>
+                            <table>
+                                <tr class="p2">
+                                    <th></th>
+                                    <th>館藏地/室</th>
+                                    <th>特藏/用途</th>
+                                    <th>索書號</th>
+                                    <th>狀態/到期日</th>
+                                    <th>附件</th>
+                                    <th>條碼號</th>
+                                </tr>
+                                <tr class="p2">
+                                    <td><input type="checkbox" name="selectBook" id="selectBook"></td>
+                                    <td>新豐/2樓新到館櫃</td>
+                                    <td>圖書</td>
+                                    <td>Book 312.1695 7543</td>
+                                    <td>已被外借/2025-12-12</td>
+                                    <td>CD一片</td>
+                                    <td>HF0008008</td>
+                                </tr>
+                            </table>
+                            <div class="reserve-btn">
+                                <a href="#" class="little-btn green-line">
+                                <span class="material-symbols-outlined">calendar_check</span>
+                                    我要預約
+                                </a>
+                                <p>總件數<span>1</span>件</p>
+                                <p>已預約人數(<span>0</span>)</p>
+                            </div>
+                            
+                        </div>
+                        <div class="content">
+                            <h5 class="h5-ch">書籍簡介</h5>
+                            <div class="content-block">
+                                <div class="collapsible p2">
+                                    <p>跟著範例學前端開發技術保證看得懂、學得會、做得出本書實用性極高，內容說明非常適切簡單，透過多元的範例，在學習的過程中將讓您覺得有趣且輕鬆閱讀。</p>
+                                    <p>書籍內容可分為四大部分：</p>
+                                    <p>★ 第一部分詳細介紹HTML5的標籤及所支援的屬性，並有範例程式碼可供驗證。</p>
+                                    <p>★ 第二部分解析CSS3常用的選擇器及屬性，提供範例參考，可方便掌握CSS3的功能和用法。</p>
+                                    <p>★ 第三部分重點介紹JavaScript程式設計的相關內容，可使初學者具有程式設計基礎。</p>
+                                    <p>★ 第四部分綜合運用HTML5的繪圖支援、用戶端存儲、CSS樣式、JavaScript程式設計等內容，來開發出網頁版的俄羅斯方塊小遊戲。</p>
+                                    <p>學習完本書，您可具備完整的HTML5+CSS3+JavaScript開發實力。</p>
+                                    <p>本書特色</p>
+                                    <p>★ 內容涵蓋W3C官網上已發布的HTML5標準以及即將發布的新標準。</p>
+                                    <p>★ 全面解析HTML5、CSS3、JavaScript的各種相關知識。</p>
+                                    <p>★ 各個知識點皆有對應的參考實作範例，可直接執行驗證，實用性強。</p>
+                                    <p>★ 操作步驟解說詳細，實際演練本書全部範例後，可達企業前端開發的要求。</p>
+                                </div>
+                                <button class="toggle-button" data-state="collapsed">顯示更多<span class="material-symbols-rounded">keyboard_arrow_down</span></button>
+                            </div>
+                            
+                        </div>
+                        <div class="content">
+                            <h5 class="h5-ch">鄰近書櫃的書</h5>
+                            <div class="row">
+                                <div class="col-4 books-list">
+                                    <img src="images/books/books02.png" alt="books02">
+                                    <div class="detail">
+                                        <div class="tag p2">網頁設計</div>
+                                        <div class="bookname paragraphs1">原生全端開發 : 使用Node.js建立最漂亮強大的網站</div>
+                                    </div>
+                                </div>
+                                <div class="col-4 books-list">
+                                    <img src="images/books/books03.png" alt="books03">
+                                    <div class="detail">
+                                        <div class="tag p2">網頁設計</div>
+                                        <div class="bookname paragraphs1">不會寫程式也能創立個人品牌和變現 : 快速打造你的數位...</div>
+                                    </div>
+                                </div>
+                                <div class="col-4 books-list">
+                                    <img src="images/books/books04.png" alt="books04">
+                                    <div class="detail">
+                                        <div class="tag p2">網頁設計</div>
+                                        <div class="bookname paragraphs1">遙遙領先 : 使用Java開發Web新手轉高手之路</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <a href="#" class="big-btn line btn-mid left"><span class="material-symbols-rounded">arrow_left_alt</span>上一本書目</a>
+                    <a href="search.html" class="big-btn btn-mid">返回書目列表</a>
+                    <a href="#" class="big-btn line btn-mid right">下一本書目<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                </div>
+                
+            </div>
+            <img src="images/bg/books-bg2.png" alt="books-bg2" class="bg">
+        </section>
+        
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-9">
+                    
+                    <div class="nav-list">
+                        <img src="images/library-logo-white.png" alt="公共圖書館">
+                        <ul class="btn-sm">
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="about.html">關於圖書館</a></li>
+                            <li><a href="activity.html">活動總覽</a></li>
+                            <li><a href="search.html">館藏查詢</a></li>
+                            <li><a href="newbooks.html">最新書籍</a></li>
+                            <li><a href="contact.html">聯絡我們</a></li>
+                        </ul>
+                    </div>
+                    <div class="tour-guide-group">
+                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="info">
+                        <p class="p2">公共圖書館</p>
+                        <p class="p2">通訊地址：新竹縣竹北市智惠街888號</p>
+                        <p class="p2">電話：03-666-8888</p>
+                        <p class="p2">更新日期：2025.10.22</p>
+                    </div>
+                </div>
+                <p class="source">參考資料來源: 博客來: http://xn--books-9c3ht2uuqs.com.tw/?srsltid=AfmBOoq2Y_y7kdHy_gMNaupda3pu3Lo6NsjaiSWDwKtxbmgR8aTGuEtt | Pinterest:https://www.pinterest.com/ | 新竹縣公共圖書館官網: https://hcplibrary.hchcc.gov.tw/wSite/mp?mp=1</p>
+            </div>
+        </div>
+    </footer>
+    <script src="javascript/font-size-switch.js"></script>
+    <script src="javascript/script.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+</body>
+</html>

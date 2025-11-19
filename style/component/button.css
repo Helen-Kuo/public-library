@@ -1,0 +1,340 @@
+/* btn共用屬性 */
+
+/* 字體大小按鈕 */
+header{
+    position: relative;
+}
+.font-scale{
+    position: fixed;
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    top: 30%;
+    right: 1%;
+    z-index: 2;
+}
+.font-scale .active{
+    background-color: var(--color-accent-green-700);
+    color: var(--color-white);
+}
+.font-scale button:nth-child(n+2){
+    border: 1px solid var(--color-neutral-800);
+    /* background-color: var(--color-white); */
+    border-radius: 50%;
+}
+.font-scale button:nth-child(n+2):hover{
+    background-color: var(--color-accent-green-200);
+    color: var(--color-neutral-800);
+}
+
+.page-btn{
+    display: flex;
+    gap:12px;
+}
+.page-btn .btn-sm{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--color-white);
+    margin-top: 30px;
+}
+.page-btn.green{
+    display: flex;
+    justify-content: end;
+    margin: 30px 0 100px;
+}
+
+/* green */
+.page-btn.green .btn-sm:hover, .page-btn.green .btn-sm.active:hover{
+    background-color: var(--color-accent-green-200);
+    color: var(--color-accent-green-700);
+    transition: .3s;
+}
+.page-btn.green .btn-sm.active{
+    background-color: var(--color-accent-green-700);
+    color: var(--color-white);
+}
+.page-btn.green .btn-sm{
+    border: 1px solid var(--color-accent-green-700);
+    color: var(--color-accent-green-700);
+}
+
+/* pink */
+.page-btn.pink .btn-sm:hover, .page-btn.pink .btn-sm.active:hover{
+    background-color: var(--color-secondary-pink-200);
+    color: var(--color-secondary-pink-700);
+    transition: .3s;
+}
+.page-btn.pink .btn-sm.active{
+    background-color: var(--color-secondary-pink-700);
+    color: var(--color-white);
+}
+.page-btn.pink .btn-sm{
+    border: 1px solid var(--color-secondary-pink-700);
+    color: var(--color-secondary-pink-700);
+}
+/* orange */
+.page-btn.orange .btn-sm:hover, .page-btn.orange .btn-sm.active:hover{
+    background-color: var(--color-secondary-orange-200);
+    color: var(--color-secondary-orange-700);
+    transition: .3s;
+}
+.page-btn.orange .btn-sm.active{
+    background-color: var(--color-secondary-orange-700);
+    color: var(--color-white);
+}
+.page-btn.orange .btn-sm{
+    border: 1px solid var(--color-secondary-orange-700);
+    color: var(--color-secondary-orange-700);
+}
+/* purple */
+.page-btn.purple .btn-sm:hover, .page-btn.purple .btn-sm.active:hover{
+    background-color: var(--color-secondary-purple-200);
+    color: var(--color-secondary-purple-700);
+    transition: .3s;
+}
+.page-btn.purple .btn-sm.active{
+    background-color: var(--color-secondary-purple-700);
+    color: var(--color-white);
+}
+.page-btn.purple .btn-sm{
+    border: 1px solid var(--color-secondary-purple-700);
+    color: var(--color-secondary-purple-700);
+}
+
+
+/* 小標籤按鈕 */
+.btn-group ul{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+.btn-group li{
+    list-style-type: none;
+    padding: 8px;
+}
+.btn-group li a{
+    display: block;
+    text-decoration: none;
+    color: var(--color-neutral-800);
+}
+.btn-group.line{
+    border-bottom: 1px solid var(--color-neutral-500);
+}
+
+
+/* 小標籤按鈕狀態 */
+.btn-group.green ul li:hover, .btn-group.green ul li.active{
+    border-bottom: 2px solid var(--color-accent-green-700);
+}
+.btn-group.green ul li a:hover, .btn-group.green ul li.active a{
+    color: var(--color-accent-green-700);
+    font-weight: 500;
+}
+
+.btn-group.pink ul li:hover, .btn-group.pink ul li.active{
+    border-bottom: 2px solid var(--color-secondary-pink-700);
+}
+.btn-group.pink ul li a:hover, .btn-group.pink ul li.active a{
+    color: var(--color-secondary-pink-700);
+    font-weight: 500;
+}
+.btn-group.orange ul li:hover, .btn-group.orange ul li.active{
+    border-bottom: 2px solid var(--color-secondary-orange-700);
+}
+.btn-group.orange ul li a:hover, .btn-group.orange ul li.active a{
+    color: var(--color-secondary-orange-700);
+    font-weight: 500;
+}
+.btn-group.purple ul li:hover, .btn-group.purple ul li.active{
+    border-bottom: 2px solid var(--color-secondary-purple-700);
+}
+.btn-group.purple ul li a:hover, .btn-group.purple ul li.active a{
+    color: var(--color-secondary-purple-700);
+    font-weight: 500;
+}
+
+
+/* 大按鈕 */
+.big-btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 318px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.big-btn.right:hover span{
+    transform: translateX(10px);
+    transition: .3s;
+}
+.big-btn.left:hover span{
+    transform: translateX(-10px);
+    transition: .3s;
+}
+/* 深色大按鈕 */
+.big-btn.dark{
+    color: var(--color-white);
+    background-color: var(--color-accent-green-700);
+}
+.big-btn.dark:hover{
+    background-color: var(--color-accent-green-500);
+    box-shadow: 4px 4px 10px var(--color-neutral-500);
+}
+.big-btn.dark span{
+    color: var(--color-white);
+    font-size: 2rem;
+}
+/* 線框大按鈕 */
+.big-btn.line{
+    color: var(--color-accent-green-700);
+    border: 1px solid var(--color-accent-green-700);
+}
+.big-btn.line:hover{
+    background-color: var(--color-accent-green-200);
+}
+.big-btn.line span{
+    color: var(--color-accent-green-700);
+}
+
+/* 淺色大按鈕 */
+.big-btn.light{
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}
+.big-btn.light span{
+    color: var(--color-white);
+    font-size: 2rem;
+}
+/* pink */
+.big-btn.light.pink:hover{
+    background-color: var(--color-secondary-pink-100);
+    color: var(--color-secondary-pink-700);
+}
+.big-btn.light.pink:hover span{
+    color: var(--color-secondary-pink-700);
+    transform: translateX(10px);
+    transition: .3s;
+}
+/* orange */
+.big-btn.light.orange:hover{
+    background-color: var(--color-secondary-orange-100);
+    color: var(--color-secondary-orange-700);
+}
+.big-btn.light.orange:hover span{
+    color: var(--color-secondary-orange-700);
+    transform: translateX(10px);
+    transition: .3s;
+}
+/* purple */
+.big-btn.light.purple:hover{
+    background-color: var(--color-secondary-purple-100);
+    color: var(--color-secondary-purple-700);
+}
+.big-btn.light:hover span{
+    color: var(--color-secondary-purple-700);
+    transform: translateX(10px);
+    transition: .3s;
+}
+
+/* 小按鈕 */
+.little-btn{
+    padding: 0 24px;
+    line-height: 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+}
+.little-btn span{
+    color: var(--color-white);
+    vertical-align: middle;
+    margin-right:6px 
+}
+
+.little-btn.yellow{
+    background-color: var(--color-accent-yellow-500);
+    color: var(--color-neutral-800);
+}
+.little-btn.yellow:hover{
+    background-color: var(--color-accent-yellow-700);
+    transition: .3s;
+}
+
+.little-btn.green{
+    background-color: var(--color-accent-green-700);
+    color: var(--color-white);
+}
+.little-btn.green:hover{
+    background-color: var(--color-accent-green-800);
+    color: var(--color-accent-green-200);
+    transition: .3s;
+}
+.little-btn.green:hover span{
+    color: var(--color-accent-green-200);
+    transition: .3s;
+}
+.little-btn.green-line{
+    color: var(--color-accent-green-700);
+    border: 1px solid var(--color-accent-green-700);
+}
+.little-btn.green-line span{
+    color: var(--color-accent-green-700);
+    font-size: 1.4rem;
+}
+.little-btn.green-line:hover{
+    background-color: var(--color-accent-green-200);
+    transition: .3s;
+}
+
+/* disabled */
+.little-btn.gray{
+    background-color: var(--color-neutral-200);
+    color: var(--color-neutral-500);
+    cursor: default;
+}
+
+/* 加入收藏btn */
+.collect{
+    border: 1px solid var(--color-neutral-500);
+}
+.collect:hover{
+    background-color: var(--color-secondary-pink-100);
+    color: var(--color-secondary-pink-700);
+    border: 1px solid var(--color-secondary-pink-700);
+}
+.collect:hover i{
+    color: var(--color-secondary-pink-700);
+}
+
+.bread a{
+    text-decoration: none;
+}
+.bread a:hover{
+    color: var(--color-accent-green-700);
+}
+
+th{
+    background-color: var(--color-neutral-200);
+}
+th, td{
+    padding: 20px 10px;
+    text-align: center;
+    border-bottom: 1px solid var(--color-neutral-500);
+}
+.course tr:hover{
+    background-color: var(--color-secondary-orange-100);
+}
+.course tr:hover td{
+    cursor: pointer;
+}
+table{
+    width: 100%;
+    border-radius: 20px;
+    border-spacing: 0;
+}

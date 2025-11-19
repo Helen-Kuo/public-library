@@ -1,0 +1,78 @@
+.book-info{
+    position: relative;
+    padding-top: 200px;
+}
+
+.book-info .bread{
+    margin-bottom: 50px;
+}
+.book-info .collect{
+    margin-top: 20px;
+}
+.book-info h5{
+    margin-bottom: 10px;
+}
+.book-info .detail p{
+    line-height: 250%;
+}
+.book-info .detail{
+    margin-bottom: 10px;
+}
+.book-info .content{
+    margin-bottom: 100px;
+}
+.book-info .tool{
+    display: flex;
+    justify-content: space-between;
+}
+
+.book-info .reserve-btn{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.collapsible{
+    max-height: 90px;
+    transition: max-height .3s ease-in-out;
+    overflow: hidden;
+}
+.toggle-button{
+    background: none;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.toggle-button:hover span{
+    transform: translateY(2px);
+    transition: .3s;
+}
+.book-info .books-list{
+    margin-top: 50px;
+}
+
+.book-info .btn-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+.book-info .big-btn:hover{
+    color: var(--color-accent-green-700);
+}
+.book-info img.bg:first-child{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+.book-info .bg:last-child{
+    position: absolute;
+    bottom: 100px;
+    left:0;
+    z-index: -1;
+}

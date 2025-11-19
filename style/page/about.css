@@ -1,0 +1,62 @@
+.about-indoor img{
+    border-radius: 20px;
+}
+.about-indoor .col-7{
+    position: relative;
+    margin: 100px 0;
+}
+.about-indoor .col-5{
+    margin: 100px 0;
+}
+.about-indoor .col-7 img{
+    gap: 20px;
+    position: absolute;
+}
+.about-indoor .col-5 img{
+    width: 100%;
+}
+.about-indoor .col-7 img:nth-child(2){
+    right: 30px;
+    top: 100px
+}
+.about-indoor .col-7 img:nth-child(3){
+    left: 10px;
+    top: 330px
+}
+.about-indoor .text{
+    width: 85%;
+    margin: 0 auto 60px auto;
+    
+}
+
+.about-info{
+    position: relative;
+    background: url('../images/asfalt-dark0.6.png') ,  #EDEDED;
+    padding: 100px 0;
+}
+.about-info .detail img{
+    border-radius: 20px;
+    width: 100%;
+}
+.about-info .container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+.about-info .detail{
+    align-items: center;
+}
+.about-info .col-6:last-child{
+    width: 42.5%;
+}
+.about-info .detail:last-child{
+    flex-direction: row-reverse;
+}
+.about-info .text{
+    margin: 0 auto;
+}
+.about-info .text div{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}

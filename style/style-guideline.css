@@ -1,0 +1,115 @@
+:root{
+    /* primary */
+    --color-primary-800: #299A10;
+    --color-primary-700: #4EBB36;
+    --color-primary-500: #8BEF75;
+    --color-primary-200: #C9FFBD;
+
+    /* Accent */
+    --color-accent-yellow-800: #ffbb01;
+    --color-accent-yellow-700: #F9BF01;
+    --color-accent-yellow-500: #FFEA00;
+    --color-accent-yellow-200: #FFF695;
+
+    --color-accent-green-800: #1F4D3B;
+    --color-accent-green-700: #27654C;
+    --color-accent-green-500: #42B184;
+    --color-accent-green-200: #D9FFF0;
+
+    --color-secondary-pink-700: #F34F58;
+    --color-secondary-pink-200: #FBCACD;
+    --color-secondary-pink-100: #FEEDEE;
+
+    --color-secondary-orange-700: #FD953A;
+    --color-secondary-orange-200: #FEDFC4;
+    --color-secondary-orange-100: #FFF4EB;
+
+    --color-secondary-purple-700: #782BAF;
+    --color-secondary-purple-200: #D6BFE7;
+    --color-secondary-purple-100: #F1E9F7;
+
+    --color-neutral-800: #4A4A4A;
+    --color-neutral-700: #757575;
+    --color-neutral-500: #9F9F9F;
+    --color-neutral-200: #E5E7EB;
+    --color-neutral-100: #EDEDED;
+    --color-black: #000000; 
+    --color-white: #FFFFFF;
+
+    --font-main:"inter","serif", "arial";
+    --font-eg: "livvic", "arial";
+    --line-height-base: 150%;
+    --letter-spacing-ch: 2px;
+    --letter-spacing-btn: 0.12em;
+    --letter-soacing-num: 0;
+}
+
+
+[class*="-eg"]{
+    font-family: var(--font-eg);
+    line-height: var(--line-height-base);
+    letter-spacing: 0%;
+}
+[class*="-ch"]{
+    font-family: var(--font-main);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-ch);
+}
+[class*="btn-"]{
+    font-family: var(--font-main);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-btn);
+}
+
+/* Desktop */
+/* Englis Heading */
+.h1-eg{font-weight:400; font-size: 5rem;}
+.h2-eg{font-weight:400; font-size: 2.5rem;}
+.h3-eg{font-weight:400; font-size: 1.25rem;}
+.h1-eg-medium{font-weight:500; font-size: 5rem;}
+.h2-eg-medium{font-weight:500; font-size: 2.5rem;}
+.h3-eg-medium{font-weight:500; font-size: 1.25rem;}
+
+/* Chinese Heading */
+.h1-ch{font-weight:400; font-size: 2.5rem;}
+.h2-ch{font-weight:400; font-size: 2.25rem;}
+.h3-ch{font-weight:400; font-size: 2rem;}
+.h4-ch{font-weight:400; font-size: 1.75rem;}
+.h5-ch{font-weight:400; font-size: 1.5rem;}
+
+.h1-ch-medium{font-weight:500; font-size: 2.5rem;}
+.h2-ch-medium{font-weight:500; font-size: 2.25rem;}
+.h3-ch-medium{font-weight:500; font-size: 2rem;}
+.h4-ch-medium{font-weight:500; font-size: 1.75rem;}
+.h5-ch-medium{font-weight:500;font-size: 1.5rem;}
+
+/* Button Text */
+.btn-lg{font-weight:400; font-size: 1.5rem;}
+.btn-mid{font-weight:400; font-size: 1.25rem;}
+.btn-sm{font-weight:400; font-size: 1rem;}
+.btn-lg-blod{font-weight:700; font-size: 1.5rem;}
+.btn-mid-bold{font-weight:700; font-size: 1.25rem;}
+.btn-sm-bold{font-weight:700; font-size: 1rem;}
+
+/* paragraphs */
+.p1{font-family: var(--font-main); font-weight:400; font-size: 1.25rem;line-height: 150%;}
+.p2{font-family: var(--font-main);font-weight:400; font-size: 1rem;line-height: 180%;}
+
+[class*="strong-number-"]{
+    font-family: var(--font-eg);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-soacing-num);
+}
+/* Strong Number */
+.strong-number-lg-blod{font-weight:700; font-size: 2.5rem;}
+.strong-number-sm-blod{font-weight:700; font-size: 1.5rem;}
+
+html{
+    font-size: 100%;
+}
+html.size-small{
+    font-size: 87.5%;
+}
+html.size-large{
+    font-size: 112.5%;
+}
