@@ -478,7 +478,7 @@
 .hot-activity{
     position: relative;
     padding: 85px 0 0 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .hot-activity .row{
     display: flex;
@@ -510,18 +510,24 @@
     margin-bottom: -20px;
 }
 
-.hot-activity .cards-wrapper{
+/* .hot-activity .cards-wrapper{
     display: flex;
     gap: 20px;
-}
+} */
 .hot-activity .card img{
     border-radius: 30px;
     width: 100%;
     display: block;
     flex-shrink: 0;
 }
+.hot-activity .card img:hover{
+    scale: 1.1;
+    transition: .3s;
+}
 .hot-activity .card{
     position: relative;
+    overflow: hidden;
+    border-radius: 30px;
 }
 
 .hot-activity .card .detail{
@@ -546,6 +552,11 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+}
+.hot-activity .card:hover .detail a{
+    background-color: var(--color-accent-yellow-800);
+    transition: .3s;
+    transform: translateY(-10px);
 }
 .hot-activity .card .day{
     display: flex;
@@ -594,21 +605,40 @@
     display: flex;
     margin: 8px 8px 0 0;
 }
-/* 單獨設定間距與位置 */
-.hot-activity .page-btn{
-    margin-top: 0;
-    margin-bottom: 95px;
-    justify-content: start;
+
+/* activity的滑動動畫按鈕 */
+.hot-activity-swiper .swiper-pagination-bullet{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-accent-green-700);
+    color: var(--color-accent-green-700);
+    opacity: 1;
+
+}
+.hot-activity-swiper .swiper-pagination-bullet-active{
+    background-color: var(--color-accent-green-700);
+    color: var(--color-white);
+}
+.activity-pagination{
+    margin: 30px 0 100px 0;
 }
 
+
+/* best-moments */
 .best-moments{
     position: relative;
     height: 100vh;
     overflow: hidden;
 }
 .best-moments .main-image img{
-    /* width: 100%; */
-    height: 100%;
+    width: 100%;
+    /* height: 100%; */
     position: absolute; 
     top: 0;
     left: 0;
@@ -629,6 +659,7 @@
     justify-content: end;
     z-index: 2;
     font-size: 0;
+    width: 100%;;
 }
 .best-moments .swiper-wrapper img{
     border: 1px solid var(--color-white);
@@ -647,13 +678,31 @@
 
 /* ============================================ */
 /* login signup */
-
+.imgHidden{
+    opacity: 0;
+    visibility: hidden;
+}
 #modal-overlay{
     background-color: rgba(0, 0, 0, .5);
-    height: 100%;
+    height: 100vh;
     width: 100%;
     position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
     /* display: none; */
+}
+#modal-content{
+    position: relative;
+    background-color: var(--color-white);
+    padding: 51px 0;
+    border-radius: 20px;
+    width: 1000px;
+    height: 484px;
+    display: flex;
 }
 form{
     width: 80%;
@@ -663,6 +712,7 @@ form{
     flex-direction: column;
     align-items: center;
     text-align: left;
+    height: 100%;
 }
 .form-panel form{
     display: flex;
@@ -677,27 +727,11 @@ form{
     color: var(--color-accent-green-700);
     width: 80%;
 }
-#form-slider{
-    display: flex;
+.form-panel a{
+    text-decoration: none;
 }
-#modal-content{
-    position: absolute;
-    background-color: var(--color-white);
-    padding: 60px 0;
-    border-radius: 20px;
-    width: 75%;
-    margin-top: 10%;
-    align-items: center;
-    justify-content: center;
-}
-#modal-content h2{
-    margin-bottom: 30px;
-    width: 80%;
-}
-#modal-content input{
-    border:none;
-    
-    padding: 10px 50px 10px 10px;
+.form-panel a:hover{
+    color:var(--color-accent-green-700);
 }
 form label{
     border-bottom: 1px solid var(--color-neutral-500);
@@ -705,41 +739,63 @@ form label{
 label:has(input:focus){
     border-bottom: 1px solid var(--color-black);
 }
+.form-panel .forget{
+    font-size: 0.75rem;
+}
+
+#modal-content h2{
+    margin-bottom: 24px;
+    width: 80%;
+}
+#modal-content input{
+    border:none;
+    padding: 10px 50px 10px 10px;
+}
+
 input:focus{
     outline: none;
 }
-.form-panel a{
-    text-decoration: none;
-}
-.form-panel a:hover{
-    color:var(--color-accent-green-700);
-}
+
 #switch-signup a:hover span{
-    color:var(--color-accent-green-700);
-    transform: translateX(6px);
-    transition: .3s;
-}
-#switch-login a:hover span{
     color:var(--color-accent-green-700);
     transform: translateX(-6px);
     transition: .3s;
 }
-#switch-signup{
+#switch-login a:hover span{
+    color:var(--color-accent-green-700);
+    transform: translateX(6px);
+    transition: .3s;
+}
+#switch-signup, #switch-login{
     display: flex;
     flex-direction: row;
-    justify-content: end;
-    gap: 10px;
-}
-#switch-login{
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: start;
+    justify-content: flex-start;
+    align-items: end;
     gap: 10px;
 }
 #switch-signup *,#switch-login *{
     display: flex;
     align-items: center;
 }
+#signup-panel img, #login-panel img{
+    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
+}
+#login-panel img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20px 0 0 20px;
+    transition: .3s;
+}
+#signup-panel img{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0 20px 20px 0;
+    transition: .3s;
+}
+
+/* 叉叉 */
 .close-btn{
     width:40px;
     height: 40px;
@@ -749,6 +805,9 @@ input:focus{
     background-color: var(--color-white);
     position: absolute;
     top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
 .close-btn:hover{
     background-color: var(--color-accent-green-200);

@@ -10,29 +10,10 @@
 <body>
     <div id="modal-overlay">
         <div class="container">
-            
             <div id="modal-content"  class="row">
                 <div class="close-btn">
                     <span></span>
                     <span></span>
-                </div>
-                <div class="col-6">
-                    <div class="form-panel" id="login-panel">
-                        <span class="h2-eg-medium">Login</span>
-                        <h2 class="h5-ch">登入帳號</h2>
-                        <form action="">
-                            <label for="" class="p2">帳號
-                            <input type="text" placeholder="請輸入身分證字號或信箱"></label>
-                            <label for="" class="p2">密碼
-                            <input type="password" placeholder="請輸入密碼"></label>
-                            <a href="#" class="p2 forget">忘記密碼?</a>
-                            <button type="submit" class="little-btn green-line btn-sm">登入</button>
-                            <div id="switch-signup">
-                                <p class="p2">您還沒有帳號嗎?</p>
-                                <a href="#" class="p2">註冊新帳號<span class="material-symbols-outlined">arrow_right_alt</span></a>
-                            </div>
-                        </form>
-                    </div>
                 </div>
                 <div class="col-6">
                     <div class="form-panel" id="signup-panel">
@@ -48,16 +29,40 @@
                             <button type="submit" class="little-btn green-line btn-sm">註冊帳號</button>
                             <div id="switch-login">
                                 <p class="p2">已經有帳號了嗎?</p>
-                                <a href="#" class="p2"><span class="material-symbols-outlined">arrow_left_alt</span>我要登入</a>
+                                <a href="#" class="p2">我要登入<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                                
                             </div>
                         </form>
+                        <img src="images/pop-up-window/signup.png" alt="signup image">
                     </div>
                 </div>
-                
-                
+                <div class="col-6">
+                    <div class="form-panel" id="login-panel">
+                        <span class="h2-eg-medium">Login</span>
+                        <h2 class="h5-ch">登入帳號</h2>
+                        <form action="">
+                            <label for="" class="p2">帳號
+                            <input type="text" placeholder="請輸入身分證字號或信箱"></label>
+                            <label for="" class="p2">密碼
+                            <input type="password" placeholder="請輸入密碼"></label>
+                            <a href="#" class="p2 forget">忘記密碼?</a>
+                            <button type="submit" class="little-btn green-line btn-sm">登入</button>
+                            <div id="switch-signup">
+                                <a href="#" class="p2"><span class="material-symbols-outlined">arrow_left_alt</span>註冊新帳號</a>
+                                <p class="p2">您還沒有帳號嗎?</p>
+                            </div>
+                        </form>
+                        <img src="images/pop-up-window/login.png" alt="login image" class="imgHidden">
+                    </div>
+                </div>
             </div>
         </div>
-        
     </div>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <script src="javascript/font-size-switch.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>

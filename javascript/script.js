@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroSwiper = new Swiper('#hero-swiper', {
         loop: true,
         autoplay: {
-            delay: 4000,
+            delay: 3000,
             disableOnInteraction: false, // 使用者手動操作後不停止自動播放
         },
         pagination: {
@@ -31,7 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // swiper2.Hot Activity Swiper
-    
+    const activitySwiper = new Swiper('.hot-activity-swiper', {
+        loop: false,
+        slidePerView: 1.2,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true, // 使用者手動操作後不停止自動播放
+        },
+        pagination: {
+            el: '.activity-pagination',
+            clickable: true,
+            renderBullet: function (index, className){
+                const pageNum = index + 1;
+                return `<span class="${className} btn-sm">${pageNum}</span>`
+            }
+        },
+        effect: 'slide', 
+        speed: 800,
+        watchOverflow: true, 
+    });
 
 
     // ==== 滾動動畫 ==== //
@@ -111,6 +130,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 
             }
         });
-    })
-});
+    });
 
+    // ==== 首頁搜尋欄按鈕切換 ==== //
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+        })
+    });
+
+    // ==== modal圖片顯示 ==== //
+    const signupImg = document.querySelector('#signup-panel img');
+    const loginImg = document.querySelector('#login-panel img');
+    const switchLogin = document.querySelector('#switch-login a');
+    const switchSignUp = document.querySelector('#switch-signup a');
+    switchLogin.addEventListener('click', (e) =>{
+        e.preventDefault();
+        signupImg.classList.add('imgHidden');
+        loginImg.classList.remove('imgHidden');
+    });
+    switchSignUp.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginImg.classList.add('imgHidden');
+        signupImg.classList.remove('imgHidden');
+    });
+
+    // ==== 點小圖換大圖 ==== //
+    // const bestMonentsImg = document.querySelectorAll('.best-moments.swiper-slide img');
+    // const mainImg = document.querySelector('#main-img');
+    // function showLargeImg(){
+    //     document.querySelector('#main-img').src = `images/best-moments/best-moments0${this.dataset.index}.png`;
+    // }
+    // for(let i = 0; i < bestMonentsImg.length; i++){
+    //     bestMonentsImg[i].onclick = showLargeImg;
+    // }
+});

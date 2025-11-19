@@ -43,7 +43,7 @@
         </nav>
 
         <section class="hero">
-            <div class="search-bar">
+            <div class="search-bar reveal-item">
                 <div class="tab-btns">
                     <a href="#" class="tab-btn active">館藏查詢</a>
                     <a href="#" class="tab-btn">資源整合查詢</a>
@@ -83,6 +83,57 @@
             <button class="p1 active" data-size="medium">中</button>
             <button class="p1" data-size="large">大</button>
         </div>
+        <!-- 會員註冊登入視窗 -->
+        <!-- <div id="modal-overlay">
+            <div class="container">
+                <div id="modal-content"  class="row">
+                    <div class="close-btn">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-panel" id="signup-panel">
+                            <span class="h2-eg-medium">Sing up</span>
+                            <h2 class="h5-ch">註冊帳號</h2>
+                            <form action="">
+                                <label for="" class="p2">帳號
+                                <input type="text" placeholder="請輸入身分證字號或信箱"></label>
+                                <label for="" class="p2">密碼
+                                <input type="password" placeholder="請輸入密碼"></label>
+                                <label for="" class="p2">確認密碼
+                                <input type="password" placeholder="請再次輸入密碼"></label>
+                                <button type="submit" class="little-btn green-line btn-sm">註冊帳號</button>
+                                <div id="switch-login">
+                                    <p class="p2">已經有帳號了嗎?</p>
+                                    <a href="#" class="p2">我要登入<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                                    
+                                </div>
+                            </form>
+                            <img src="images/pop-up-window/signup.png" alt="signup image">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-panel" id="login-panel">
+                            <span class="h2-eg-medium">Login</span>
+                            <h2 class="h5-ch">登入帳號</h2>
+                            <form action="">
+                                <label for="" class="p2">帳號
+                                <input type="text" placeholder="請輸入身分證字號或信箱"></label>
+                                <label for="" class="p2">密碼
+                                <input type="password" placeholder="請輸入密碼"></label>
+                                <a href="#" class="p2 forget">忘記密碼?</a>
+                                <button type="submit" class="little-btn green-line btn-sm">登入</button>
+                                <div id="switch-signup">
+                                    <a href="#" class="p2"><span class="material-symbols-outlined">arrow_left_alt</span>註冊新帳號</a>
+                                    <p class="p2">您還沒有帳號嗎?</p>
+                                </div>
+                            </form>
+                            <img src="images/pop-up-window/login.png" alt="login image" class="imgHidden">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </header>
     <main>
         <!-- 導覽服務 -->
@@ -299,76 +350,77 @@
                         <h2 class="h2-ch">熱門活動</h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-11">
-                        <div class="card">
-                            <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
-                            <div class="detail">
-                                <div class="day">
-                                    <span class="week strong-number-sm-blod">六</span>
-                                    <span class="date strong-number-lg-blod">12.07</span>
-                                    <span class="time p1">10:00-12:00</span>
-                                </div>
-                                <div class="activity-name">
-                                    <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
-                                    <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
-                                    <div class="sign-up">
-                                        <p class="p2">報名時間</p>
-                                        <p class="btn-sm">2025.
-                                        <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
+                
+                <div class="swiper hot-activity-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
+                                <div class="detail">
+                                    <div class="day">
+                                        <span class="week strong-number-sm-blod">六</span>
+                                        <span class="date strong-number-lg-blod">12.07</span>
+                                        <span class="time p1">10:00-12:00</span>
                                     </div>
+                                    <div class="activity-name">
+                                        <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
+                                        <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
+                                        <div class="sign-up">
+                                            <p class="p2">報名時間</p>
+                                            <p class="btn-sm">2025.
+                                            <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
                                 </div>
-                                <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
+                                <div class="detail">
+                                    <div class="day">
+                                        <span class="week strong-number-sm-blod">六</span>
+                                        <span class="date strong-number-lg-blod">12.07</span>
+                                        <span class="time p1">10:00-12:00</span>
+                                    </div>
+                                    <div class="activity-name">
+                                        <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
+                                        <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
+                                        <div class="sign-up">
+                                            <p class="p2">報名時間</p>
+                                            <p class="btn-sm">2025.
+                                            <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card">
+                                <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
+                                <div class="detail">
+                                    <div class="day">
+                                        <span class="week strong-number-sm-blod">六</span>
+                                        <span class="date strong-number-lg-blod">12.07</span>
+                                        <span class="time p1">10:00-12:00</span>
+                                    </div>
+                                    <div class="activity-name">
+                                        <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
+                                        <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
+                                        <div class="sign-up">
+                                            <p class="p2">報名時間</p>
+                                            <p class="btn-sm">2025.
+                                            <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-11">
-                        <div class="card">
-                            <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
-                            <div class="detail">
-                                <div class="day">
-                                    <span class="week strong-number-sm-blod">六</span>
-                                    <span class="date strong-number-lg-blod">12.07</span>
-                                    <span class="time p1">10:00-12:00</span>
-                                </div>
-                                <div class="activity-name">
-                                    <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
-                                    <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
-                                    <div class="sign-up">
-                                        <p class="p2">報名時間</p>
-                                        <p class="btn-sm">2025.
-                                        <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-11">
-                        <div class="card">
-                            <img src="./images/activity01.png" alt="小小建築師樂高設計工坊">
-                            <div class="detail">
-                                <div class="day">
-                                    <span class="week strong-number-sm-blod">六</span>
-                                    <span class="date strong-number-lg-blod">12.07</span>
-                                    <span class="time p1">10:00-12:00</span>
-                                </div>
-                                <div class="activity-name">
-                                    <h2 class="h2-ch-medium">小小建築師樂高設計工坊</h2>
-                                    <p class="h5-ch">利用樂高積木，讓孩子們發揮想像力，設計一座夢想中的城市空間</p>
-                                    <div class="sign-up">
-                                        <p class="p2">報名時間</p>
-                                        <p class="btn-sm">2025.
-                                        <span class="btn-lg-blod">11.05 </span>09:00 ~ 2025.<span class="btn-lg-blod">11.25 </span>23:59</p>
-                                    </div>
-                                </div>
-                                <a href="#" class="btn-lg-blod" style="line-height: 120%;">線上<br>報名</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 page-btn green">
+                    <div class="activity-pagination">
                         <span class="btn-sm active">1</span>
                         <span class="btn-sm">2</span>
                         <span class="btn-sm">3</span>
@@ -379,7 +431,7 @@
         </section>
         <section class="best-moments">
             <div class="main-image">
-                <img src="images/best-moments/best-moments01.png" alt="Best Moments Main Image">
+                <img src="images/best-moments/best-moments01.png" alt="Best Moments Main Image" id="main-img">
             </div>
             <div class="container">
                 <div class="row">
@@ -409,6 +461,7 @@
                     <img src="images/best-moments/best-moments-s-05.png" alt="best-moments-05">
                     <img src="images/best-moments/best-moments-s-06.png" alt="best-moments-06">
                     <img src="images/best-moments/best-moments-s-07.png" alt="best-moments-07">
+                    <img src="images/best-moments/best-moments-s-08.png" alt="best-moments-08">
                 </div>
             </div>
             <img src="images/bg/index-bg6.png" alt="index-bg6" class="bg">       
