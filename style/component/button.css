@@ -302,6 +302,7 @@ header{
 /* 加入收藏btn */
 .collect{
     border: 1px solid var(--color-neutral-500);
+    cursor: pointer;
 }
 .collect:hover{
     background-color: var(--color-secondary-pink-100);
