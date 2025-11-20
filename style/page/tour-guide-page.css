@@ -1,8 +1,3 @@
-/* 切換頁面的開關 */
-.hidden{
-    display: none;
-}
-
 /* tour-guide label按鈕 */
 .label .col-12{
     display: flex;

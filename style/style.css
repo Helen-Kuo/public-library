@@ -22,15 +22,14 @@
     box-sizing: border-box;
     color: var(--color-neutral-800);
 }
-
-
-/* hero */
-.hero{
-    overflow: hidden;
+/* 切換頁面的開關 */
+.hidden{
+    display: none;
 }
+
+/* ==== hero swiper ==== */
 .hero .swiper{
     position: relative;
-    z-index: -1;
 }
 .hero .swiper-slide img{
     width:100%;
@@ -41,36 +40,29 @@
 .hero .swiper-pagination-bullet-active{
     background-color: var(--color-accent-green-700);
 }
-.swiper-pagination{
-    position: absolute;
-    bottom: 200px;
-}
 
+/* ===== 搜尋列 ===== */
 .search-bar{
     position: absolute;
     bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
 
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
     max-width: 910px;
-    min-width: 90%;
     z-index: 2;
+    margin: 0 auto;
 }
 .search-bar:has(input:focus) .search-box,
 .search-title:has(input:focus) .search-box{
     border: 2px solid var(--color-accent-green-700);
 }
-.tab-btns{
-    display: flex;
-    gap: 10px;
-}
 .search-box{
     height: 80px;
-    width: 910px;
+    max-width: 910px;
+    width: 100%;
     border-radius: 40px;
     border: 1px solid var(--color-neutral-500);
     overflow: hidden;
@@ -79,25 +71,25 @@
 }
 .search-box input{
     flex-grow: 1;
-    height: 100%;
     border: none;
-    outline: none;
     font-size: 1rem;
     padding-left: 40px;
 }
+.search-box button:hover{
+    background: var(--color-neutral-100);
+    transition: .3s;
+}
 .tab-btn{
     display: inline-flex;
-    justify-content: center;
-    align-items: center;
     padding: 8px 40px;
     background-color: var(--color-white);
     border-radius: 20px;
+    border: 1px solid var(--color-neutral-500);
+    cursor: pointer;
 
     position: relative;
     margin-bottom: 8px;
-    border: 1px solid transparent;
     text-decoration: none;
-    color: var(--color-neutral-800);
     letter-spacing: 2px;
 }
 .tab-btn::after{
@@ -106,13 +98,10 @@
     height: 4px;
     background-color: var(--color-accent-green-700);
     position: absolute;
-
-    display: block;
     left: 50%;
     transform: translateX(-50%);
     bottom: -9px;
     border-radius: 4px 4px 0 0;
-
     transition: opacity .3s ease, transform .3s ease;
     opacity: 0;
 }
@@ -126,8 +115,10 @@
     opacity: 1;
 }
 .tab-btn.active{
+    border: 1px solid var(--color-accent-green-700);
     background-color: var(--color-accent-green-700);
     color: var(--color-white);
+    transition: .3s;
 }
 .tab-btn.active:hover{
     background-color: var(--color-accent-green-800);
@@ -138,28 +129,20 @@
     background-color: var(--color-white);
     border: none;
     cursor: pointer;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     width: 80px;
-    padding-right: 0;
-    flex-shrink: 0;
-
     position: relative;
-    z-index: 2;
 }
 .search-icon-btn .material-symbols-outlined{
     font-size: 1.8rem;
     color: var(--color-neutral-800);
-    position: relative;
 }
 
 
-/* tour guide */
+/* ==== 首頁分眾按鈕 ==== */
 .tour-guide{
-    width: 100%;
     display: flex;
     padding: 120px 0;
     flex-direction: column;
@@ -181,20 +164,13 @@
 }
 .tour-guide .card{
     text-align: center;
-    padding: 50px 0 50px;
-
     border: 1px solid var(--color-neutral-500);
     background-color: var(--color-white);
     border-radius: 20px;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-
-    position: relative;
     transition: all .3s ease-in-out;
-    
     min-height: 370px;
 }
 .tour-guide .card .arrow{
@@ -202,7 +178,6 @@
     right: 20px;
     top: 20px;
     font-size: 30px;
-    color: var(--color-neutral-800);
 }
 .tour-guide .card:hover .arrow{
     font-size: 35px;
@@ -210,7 +185,6 @@
     top: 10px;
     transition: .3s;
 }
-
 .tour-guide .card-content{
     display: flex;
     flex-direction: column;
@@ -224,11 +198,6 @@
     color: var(--color-accent-green-700);
     margin: 8px 0 12px 0;
 }
-.tour-guide .card .btn-sm{
-    background-color: var(--color-white);
-}
-
-
 .tour-guide .card .h3-eg{
     opacity: 0;
     height: 0;
@@ -254,45 +223,6 @@
     height: 0;
     margin: 0;
 }
-
-
-/* 分眾一hover效果設定 */
-.tour-guide .card.pink:hover{
-    background-color: var(--color-secondary-pink-100);
-    border: 1px solid var(--color-secondary-pink-700);
-}
-.tour-guide .card.pink:hover span, .tour-guide .card.pink:hover h4{
-    color: var(--color-secondary-pink-700);
-}
-.tour-guide .card.pink:hover .h3-eg{
-    color: var(--color-secondary-pink-700);
-}
-
-/* 分眾二hover效果設定 */
-.tour-guide .card.orange:hover{
-    background-color: var(--color-secondary-orange-100);
-    border: 1px solid var(--color-secondary-orange-700);
-}
-.tour-guide .card.orange:hover span, .tour-guide .card.orange:hover h4{
-    color: var(--color-secondary-orange-700);
-}
-.tour-guide .card.orange:hover .h3-eg{
-    color: var(--color-secondary-orange-700);
-}
-
-/* 分眾三hover效果設定 */
-.tour-guide .card.purple:hover{
-    background-color: var(--color-secondary-purple-100);
-    border: 1px solid var(--color-secondary-purple-700);
-}
-.tour-guide .card.purple:hover span, .tour-guide .card.purple:hover h4{
-    color: var(--color-secondary-purple-700);
-}
-.tour-guide .card.purple:hover .h3-eg{
-    color: var(--color-secondary-purple-700);
-}
-
-
 .tour-guide .title{
     padding-right: 60px;
     display: flex;
@@ -312,27 +242,52 @@
     padding: 5px 24px;
 }
 
-/* news */
+/* 分眾pink hover效果 */
+.tour-guide .card.pink:hover{
+    background-color: var(--color-secondary-pink-100);
+    border: 1px solid var(--color-secondary-pink-700);
+}
+.tour-guide .card.pink:hover span, 
+.tour-guide .card.pink:hover h4{
+    color: var(--color-secondary-pink-700);
+}
+.tour-guide .card.pink:hover .h3-eg{
+    color: var(--color-secondary-pink-700);
+}
+
+/* 分眾orange hover效果 */
+.tour-guide .card.orange:hover{
+    background-color: var(--color-secondary-orange-100);
+    border: 1px solid var(--color-secondary-orange-700);
+}
+.tour-guide .card.orange:hover span, 
+.tour-guide .card.orange:hover h4{
+    color: var(--color-secondary-orange-700);
+}
+.tour-guide .card.orange:hover .h3-eg{
+    color: var(--color-secondary-orange-700);
+}
+
+/* 分眾purple hover效果 */
+.tour-guide .card.purple:hover{
+    background-color: var(--color-secondary-purple-100);
+    border: 1px solid var(--color-secondary-purple-700);
+}
+.tour-guide .card.purple:hover span, 
+.tour-guide .card.purple:hover h4{
+    color: var(--color-secondary-purple-700);
+}
+.tour-guide .card.purple:hover .h3-eg{
+    color: var(--color-secondary-purple-700);
+}
+
+
+/* ==== news ==== */
 .news{
     position: relative;
-
-}
-.news .title{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-}
-.news .title span{
-    margin-bottom: -20px;
 }
 .news .title .h1-eg-medium{
     color: var(--color-accent-green-700);
-}
-.news .container{
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    padding: 100px 0 0 0;
 }
 .news img:nth-of-type(1){
     position: absolute;
@@ -347,14 +302,11 @@
     right: 0;
     z-index: -1;
 }
-
 .news-group{
-    display: flex;
     justify-content: end;
 }
 .news-item{
     display: flex;
-    flex-grow: 1;
     padding: 20px 0;
     border-top: 1px solid var(--color-neutral-500);
 }
@@ -362,26 +314,11 @@
     border-bottom: 1px solid var(--color-neutral-500);
 }
 .news-list{
-    display: flex;
     flex-direction: column;
 }
-.news-item .date p{
-    font-size: 1rem;
-    font-family: var(--font-main);
-    font-weight: 400;
-    line-height: 150%;
-    letter-spacing: 0;
-    color: var(--color-accent-green-700);
-}
 .news-item .date p:nth-child(2){
-    font-size: 1.5rem;
-    font-family: var(--font-eg);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0;
     color: var(--color-accent-green-700);
     display: inline-flex;
-    justify-content: center;
     align-items: center;
 }
 .news-item .date p:nth-child(2) span{
@@ -401,9 +338,8 @@
 }
 .news-title{
     display: flex;
-    justify-content: center;
     align-items: center;
-    max-width: 70%;
+    max-width: 80%;
 }
 .news-title p{
     margin: 0 36px;
@@ -416,7 +352,6 @@
     color: var(--color-accent-green-700);
     cursor: pointer;
 }
-
 /* news裡的page-btn定位 */
 .news .page-btn{
     margin-top: 30px;
@@ -424,21 +359,16 @@
 }
 
 
-/* newbooks */
+/* ==== newbooks ==== */
 .newbooks{
     position: relative;
     background: url('../images/asfalt-dark0.6.png') ,  #EDEDED;
-    /* z-index: -2; */
-}
-.newbooks .container{
-    padding: 125px 10px;
-    z-index: 1;
+    padding: 125px 0;
 }
 .newbooks > img{
     position: absolute;
     right: 0;
     top: 0;
-    /* z-index: -1; */
 }
 .newbooks .title{
     display: flex;
@@ -446,19 +376,19 @@
     margin-bottom: 80px;
 }
 .newbooks .title span{
-    color: var(--color-accent-green-700);margin-bottom: -20px;
+    color: var(--color-accent-green-700);
+    margin-bottom: -20px;
 }
 .newbooks .books-list:nth-child(even){
     margin-top: 134px;
 }
 .newbooks .col-12{
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
     margin-top: 60px;
 }
 
-
-/* 書籍展示共用設定 */
+/* 書籍共用設定 */
 .books-list .tag{
     color: var(--color-accent-green-700);
 }
@@ -474,22 +404,22 @@
     margin: auto;
 }
 
-/* hot-activity */
+/* ==== hot-activity ==== */
 .hot-activity{
     position: relative;
     padding: 85px 0 0 0;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
-.hot-activity .row{
+/* .hot-activity .row{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-}
-
+} */
+/* 
 .hot-activity .row .col-11{
     width: 65vw;
     flex-shrink: 0;
-}
+} */
 .hot-activity img.bg{
     position: absolute;
     width: 100%;
@@ -505,31 +435,25 @@
     display: flex;
     flex-direction: column;
 }
-.hot-activity .container .title span{
+.hot-activity .title span{
     color: var(--color-accent-green-700);
     margin-bottom: -20px;
 }
 
-/* .hot-activity .cards-wrapper{
-    display: flex;
-    gap: 20px;
-} */
 .hot-activity .card img{
     border-radius: 30px;
     width: 100%;
     display: block;
-    flex-shrink: 0;
 }
 .hot-activity .card img:hover{
     scale: 1.1;
-    transition: .3s;
+    transition: .5s;
 }
 .hot-activity .card{
     position: relative;
     overflow: hidden;
     border-radius: 30px;
 }
-
 .hot-activity .card .detail{
     position: absolute;
     background-color: rgba(0, 0, 0, .5);
@@ -547,7 +471,7 @@
     background-color: var(--color-accent-yellow-500);
     width: 120px;
     height: 120px;
-    border-radius: 60px;
+    border-radius: 50%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -603,7 +527,7 @@
 }
 .hot-activity .card .sign-up p:first-child{
     display: flex;
-    margin: 8px 8px 0 0;
+    margin: 6px 8px 0 0;
 }
 
 /* activity的滑動動畫按鈕 */
@@ -619,7 +543,6 @@
     border: 1px solid var(--color-accent-green-700);
     color: var(--color-accent-green-700);
     opacity: 1;
-
 }
 .hot-activity-swiper .swiper-pagination-bullet-active{
     background-color: var(--color-accent-green-700);
@@ -630,28 +553,24 @@
 }
 
 
-/* best-moments */
+/* ==== best-moments ==== */
 .best-moments{
     position: relative;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
+    padding: 100px 0 120px 0;
 }
 .best-moments .main-image img{
-    width: 100%;
-    /* height: 100%; */
+    width: 70%;
     position: absolute; 
     top: 0;
     left: 0;
     z-index: -1;
 }
-.best-moments .text-overlay{
-    padding: 0;
-    margin: 100px 0 120px 0;
-}
-.best-moments .text-overlay h2{
+.text-overlay h2{
     margin-bottom: 50px;
 }
-.best-moments .text-overlay p{
+.text-overlay p{
     margin-bottom: 24px;
 }
 .best-moments .swiper-wrapper{
@@ -667,6 +586,8 @@
 .best-moments .swiper{
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
 }
 .best-moments .bg{
     position: absolute;
@@ -676,14 +597,17 @@
     z-index: -1;
 }
 
-/* ============================================ */
-/* login signup */
-.imgHidden{
+
+/* ==== login signup ==== */
+.imgHidden, .modalHidden{
     opacity: 0;
     visibility: hidden;
+    pointer-events: none;
+    transition: opacity .3s;
 }
-#modal-overlay{
-    background-color: rgba(0, 0, 0, .5);
+
+.modal-overlay{
+    background-color: rgba(0, 0, 0, .7);
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -692,18 +616,38 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 5;
-    /* display: none; */
+    z-index: 20;
 }
-#modal-content{
+.modal-content{
     position: relative;
     background-color: var(--color-white);
     padding: 51px 0;
-    border-radius: 20px;
+    border-radius: 30px;
     width: 1000px;
     height: 484px;
-    display: flex;
 }
+.tour-guide .modal-content{
+    width: 1240px;
+    height: 650px;
+    padding: 50px 128px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: url(/images/pop-up-window/tour-guide.png) no-repeat center/ cover;
+    position: relative;
+}
+.tour-guide .modal-content p{
+    margin-bottom: 30px;
+}
+.tour-guide .modal-content img{
+    width: 180px;
+    z-index: 5;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
 form{
     width: 80%;
 }
@@ -712,7 +656,6 @@ form{
     flex-direction: column;
     align-items: center;
     text-align: left;
-    height: 100%;
 }
 .form-panel form{
     display: flex;
@@ -743,19 +686,17 @@ label:has(input:focus){
     font-size: 0.75rem;
 }
 
-#modal-content h2{
+.account .modal-content h2{
     margin-bottom: 24px;
     width: 80%;
 }
-#modal-content input{
+.modal-content input{
     border:none;
     padding: 10px 50px 10px 10px;
 }
-
 input:focus{
     outline: none;
 }
-
 #switch-signup a:hover span{
     color:var(--color-accent-green-700);
     transform: translateX(-6px);
@@ -799,25 +740,27 @@ input:focus{
 .close-btn{
     width:40px;
     height: 40px;
-    border: 2px solid var(--color-accent-green-700);
+    border: 1px solid var(--color-white);
     border-radius: 50%;
-    position: relative;
-    background-color: var(--color-white);
     position: absolute;
     top: -60px;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    transition: .3s;
 }
 .close-btn:hover{
     background-color: var(--color-accent-green-200);
+}
+.close-btn:hover span{
+    background-color: var(--color-accent-green-700);
 }
 .close-btn span{
     position: absolute;
     display: block;
     height: 2px;
     width: 24px;
-    background-color: var(--color-accent-green-700);
+    background-color: var(--color-white);
     top: 18px;
     left:6px;
 }

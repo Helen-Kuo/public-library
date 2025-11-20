@@ -9,14 +9,13 @@
     margin: 100px 0;
 }
 .about-indoor .col-7 img{
-    gap: 20px;
     position: absolute;
 }
 .about-indoor .col-5 img{
     width: 100%;
 }
 .about-indoor .col-7 img:nth-child(2){
-    right: 30px;
+    right: 10px;
     top: 100px
 }
 .about-indoor .col-7 img:nth-child(3){
@@ -26,12 +25,10 @@
 .about-indoor .text{
     width: 85%;
     margin: 0 auto 60px auto;
-    
 }
-
 .about-info{
     position: relative;
-    background: url('../images/asfalt-dark0.6.png') ,  #EDEDED;
+    background: url('/images/asfalt-dark0.6.png') repeat ,  #EDEDED;
     padding: 100px 0;
 }
 .about-info .detail img{
@@ -54,9 +51,4 @@
 }
 .about-info .text{
     margin: 0 auto;
-}
-.about-info .text div{
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
 }

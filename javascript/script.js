@@ -11,7 +11,6 @@ window.onscroll = () => {
 }
 
 
-// ===== swiper ====
 document.addEventListener('DOMContentLoaded', function() {
     
     // swiper1.Hero Section Swiper
@@ -33,12 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // swiper2.Hot Activity Swiper
     const activitySwiper = new Swiper('.hot-activity-swiper', {
         loop: false,
-        slidePerView: 1.2,
+        slidesPerView: 1,
         spaceBetween: 20,
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: true, // 使用者手動操作後不停止自動播放
-        },
+        
         pagination: {
             el: '.activity-pagination',
             clickable: true,
@@ -56,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==== 滾動動畫 ==== //
     const sr = ScrollReveal({
     distance: '60px',
-    duration: 1000,
+    duration: 800,
     easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)', // 動畫曲線
     interval: 1000,
     reset: false
@@ -64,8 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sr.reveal('.reveal-item', { 
         origin: 'bottom', 
-        delay: 200,
-        interval: 300
+        interval: 100
     });
     // 針對 .reveal-special 元素應用不同的動畫
     sr.reveal('.reveal-left', {
@@ -158,13 +153,40 @@ document.addEventListener('DOMContentLoaded', function() {
         signupImg.classList.remove('imgHidden');
     });
 
-    // ==== 點小圖換大圖 ==== //
-    // const bestMonentsImg = document.querySelectorAll('.best-moments.swiper-slide img');
-    // const mainImg = document.querySelector('#main-img');
-    // function showLargeImg(){
-    //     document.querySelector('#main-img').src = `images/best-moments/best-moments0${this.dataset.index}.png`;
-    // }
-    // for(let i = 0; i < bestMonentsImg.length; i++){
-    //     bestMonentsImg[i].onclick = showLargeImg;
-    // }
+    // ==== 跳窗功能 ==== //
+    const bodyElement = document.body;
+    const loginModal = document.querySelector('#account');
+    const accountBtn = document.querySelector('#account-btn');
+    const closeBtns = document.querySelectorAll('.close-btn');
+    const tourGuideModal = document.querySelector('#tour-guide');
+    const tourGuideBtn = document.querySelector('#tour-guide-btn');
+
+
+    if(accountBtn){
+        accountBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.classList.remove('modalHidden');
+            bodyElement.style.overflow = 'hidden';
+        });
+    }
+    if(tourGuideBtn){
+        tourGuideBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            tourGuideModal.classList.remove('modalHidden');
+            bodyElement.style.overflow = 'hidden';
+        })
+    }
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if(btn.closest('#tour-guide')){
+                tourGuideModal.classList.add('modalHidden');
+                bodyElement.style.overflow = 'auto';
+            }else if(btn.closest('#account')){
+                loginModal.classList.add('modalHidden');
+                bodyElement.style.overflow = 'auto';
+            }
+            
+        })
+    })
 });

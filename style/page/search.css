@@ -2,7 +2,6 @@
     position: relative;
     margin-bottom: 60px;
 }
-
 .search-title h1{
     text-align: center;
     padding: 200px 0 50px 0;
@@ -28,7 +27,6 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-
     border-radius: 30px;
     padding: 0 16px;
 }
