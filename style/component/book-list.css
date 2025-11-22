@@ -1,0 +1,65 @@
+/* 書籍共用設定 */
+.books-list .green-tag .p2:first-child{
+    color: var(--color-accent-green-700);
+}
+.books-list .green-tag{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+.books-list p.bookname{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.books-list p.bookname:hover{
+    color: var(--color-accent-green-700);
+}
+.books-list{
+    text-align: center;
+}
+.books-list a{
+    text-decoration: none;
+}
+.books-list .detail{
+    max-width: 80%;
+    text-align: left;
+    margin: auto;
+}
+.collect{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    background: none;
+    transition: padding-right .3 ease;
+
+}
+.collect span{
+    font-size: 1rem;
+    opacity: 0;
+    max-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: translateX .3s ease .3s, max-width .5s ease, opacity 0s;
+    transform: translateX(100%);
+}
+.collect:hover span{
+    color: var(--color-secondary-pink-700);
+    max-width: 80px;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.collect:hover i{
+    color: var(--color-secondary-pink-700);
+}
+.collect i{
+    color: var(--color-neutral-500);
+}

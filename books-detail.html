@@ -168,26 +168,26 @@
             <img src="images/bg/books-bg1.png" alt="books-bg1" class="bg">
             <div class="container">
                 <div class="bread">
-                    <span class="p2"><a href="index.html">首頁</a></span>
+                    <span class="green p2"><a href="index.html">首頁</a></span>
                     <span class="p2">></span>
-                    <span class="p2"><a href="#">館藏查詢</a></span>
+                    <span class="green p2"><a href="search.html">館藏查詢</a></span>
                     <span class="p2">></span>
-                    <span class="p2"><a href="#">全部書目列表</a></span>
+                    <span class="green p2"><a href="search.html">全部書目列表</a></span>
                     <span class="p2">></span>
-                    <span class="p2"><a href="#">詳細資料頁</a></span>
+                    <span class="green p2">詳細資料頁</span>
                 </div>
                 <div class="row">
                     <div class="col-2">
                         <img src="images/books/books01.png" alt="books01">
-                        <a class="little-btn collect">
+                        <button class="collect">
                             <i class="fa-solid fa-heart"></i>
-                            加入收藏
-                        </a>
+                            <span class="p2">加入收藏</span>
+                        </button>
                     </div>
                     <div class="col-10">
                         <div class="content">
                             <h1 class="h3-ch">HTML / CSS / JavaScript與前端框架完美結合 : 使用Bootstrap與PWA技術, 新手從這開始!</h1>
-                            <div class="detail">
+                            <div class="basic-detail">
                                 <p class="p2">作者 / 陳婉凌著</p>
                                 <p class="p2">出版項 / 新北市汐止區 :博碩文化,2025[民114]</p>
                                 <p class="p2">版本項 / 三版</p>
@@ -208,9 +208,25 @@
                             <div class="tool">
                                 <h5 class="h5-ch">館藏位置</h5>
                                 <div class="select-btn-group">
-                                    <p class="select-btn">館藏地<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
-                                    <p class="select-btn">排序條件<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
+                                    <div class="select-wrapper">
+                                        <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                                        <select name="" id="" class="select-btn p2">
+                                            <option value="">館藏地</option>
+                                            <option value="">新豐</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-wrapper">
+                                        <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                                        <select name="" id="" class="select-btn p2">
+                                            <option value="">排序條件</option>
+                                            <option value="">條碼號-升冪</option>
+                                            <option value="">條碼號-降冪</option>
+                                            <option value="">館藏地/室-升冪</option>
+                                            <option value="">館藏地/室-降冪</option>
+                                        </select>
+                                    </div>
                                 </div>
+                                
                             </div>
                             <table>
                                 <tr class="p2">
@@ -269,22 +285,40 @@
                                 <div class="col-4 books-list">
                                     <img src="images/books/books02.png" alt="books02">
                                     <div class="detail">
-                                        <div class="tag p2">網頁設計</div>
-                                        <div class="bookname paragraphs1">原生全端開發 : 使用Node.js建立最漂亮強大的網站</div>
+                                        <div class="green-tag">
+                                            <p class="p2">生活指導</p>
+                                            <button class="collect">
+                                                <i class="fa-solid fa-heart"></i>
+                                                <span>加入收藏</span>
+                                            </button>
+                                        </div>
+                                        <a href=""><p class="bookname p1" title="原生全端開發 : 使用Node.js建立最漂亮強大的網站">原生全端開發 : 使用Node.js建立最漂亮強大的網站</p></a>
                                     </div>
                                 </div>
                                 <div class="col-4 books-list">
                                     <img src="images/books/books03.png" alt="books03">
                                     <div class="detail">
-                                        <div class="tag p2">網頁設計</div>
-                                        <div class="bookname paragraphs1">不會寫程式也能創立個人品牌和變現 : 快速打造你的數位...</div>
+                                        <div class="green-tag">
+                                            <p class="p2">生活指導</p>
+                                            <button class="collect">
+                                                <i class="fa-solid fa-heart"></i>
+                                                <span>加入收藏</span>
+                                            </button>
+                                        </div>
+                                        <a href=""><p class="bookname p1" title="不會寫程式也能創立個人品牌和變現：快速打造你的數位助理，建立結帳系統，多管道同步推廣品牌">不會寫程式也能創立個人品牌和變現：快速打造你的數位助理，建立結帳系統，多管道同步推廣品牌</p></a>
                                     </div>
                                 </div>
                                 <div class="col-4 books-list">
                                     <img src="images/books/books04.png" alt="books04">
                                     <div class="detail">
-                                        <div class="tag p2">網頁設計</div>
-                                        <div class="bookname paragraphs1">遙遙領先 : 使用Java開發Web新手轉高手之路</div>
+                                        <div class="green-tag">
+                                            <p class="p2">生活指導</p>
+                                            <button class="collect">
+                                                <i class="fa-solid fa-heart"></i>
+                                                <span>加入收藏</span>
+                                            </button>
+                                        </div>
+                                        <a href=""><p class="bookname p1" title="遙遙領先 : 使用Java開發Web新手轉高手之路">遙遙領先 : 使用Java開發Web新手轉高手之路</p></a>
                                     </div>
                                 </div>
                             </div>
@@ -338,6 +372,7 @@
     </footer>
     <script src="javascript/font-size-switch.js"></script>
     <script src="javascript/script.js"></script>
+    <script src="javascript/show-more.js"></script>
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- scroll reveal -->

@@ -117,11 +117,15 @@ header{
 .btn-group li{
     list-style-type: none;
     padding: 8px;
+    cursor: pointer;
 }
-.btn-group li a{
+.btn-group li button{
     display: block;
     text-decoration: none;
     color: var(--color-neutral-800);
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 .btn-group.line{
     border-bottom: 1px solid var(--color-neutral-500);
@@ -132,7 +136,7 @@ header{
 .btn-group.green ul li:hover, .btn-group.green ul li.active{
     border-bottom: 2px solid var(--color-accent-green-700);
 }
-.btn-group.green ul li a:hover, .btn-group.green ul li.active a{
+.btn-group.green ul li button:hover, .btn-group.green ul li.active button{
     color: var(--color-accent-green-700);
     font-weight: 500;
 }
@@ -140,21 +144,21 @@ header{
 .btn-group.pink ul li:hover, .btn-group.pink ul li.active{
     border-bottom: 2px solid var(--color-secondary-pink-700);
 }
-.btn-group.pink ul li a:hover, .btn-group.pink ul li.active a{
+.btn-group.pink ul li button:hover, .btn-group.pink ul li.active button{
     color: var(--color-secondary-pink-700);
     font-weight: 500;
 }
 .btn-group.orange ul li:hover, .btn-group.orange ul li.active{
     border-bottom: 2px solid var(--color-secondary-orange-700);
 }
-.btn-group.orange ul li a:hover, .btn-group.orange ul li.active a{
+.btn-group.orange ul li button:hover, .btn-group.orange ul li.active button{
     color: var(--color-secondary-orange-700);
     font-weight: 500;
 }
 .btn-group.purple ul li:hover, .btn-group.purple ul li.active{
     border-bottom: 2px solid var(--color-secondary-purple-700);
 }
-.btn-group.purple ul li a:hover, .btn-group.purple ul li.active a{
+.btn-group.purple ul li button:hover, .btn-group.purple ul li.active button{
     color: var(--color-secondary-purple-700);
     font-weight: 500;
 }
@@ -299,27 +303,6 @@ header{
     cursor: default;
 }
 
-/* 加入收藏btn */
-.collect{
-    border: 1px solid var(--color-neutral-500);
-    cursor: pointer;
-}
-.collect:hover{
-    background-color: var(--color-secondary-pink-100);
-    color: var(--color-secondary-pink-700);
-    border: 1px solid var(--color-secondary-pink-700);
-}
-.collect:hover i{
-    color: var(--color-secondary-pink-700);
-}
-
-.bread a{
-    text-decoration: none;
-}
-.bread a:hover{
-    color: var(--color-accent-green-700);
-}
-
 th{
     background-color: var(--color-neutral-200);
 }
@@ -338,4 +321,33 @@ table{
     width: 100%;
     border-radius: 20px;
     border-spacing: 0;
+}
+
+/* select-btn */
+.select-btn-group{
+    gap: 10px;
+}
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 36px 0 12px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid var(--color-neutral-500);
+}
+
+.select-btn option{
+    text-align: center;
+}
+.select-wrapper{
+    position: relative;
+    display: inline-block;
+}
+.select-wrapper span{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }

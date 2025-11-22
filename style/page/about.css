@@ -52,3 +52,6 @@
 .about-info .text{
     margin: 0 auto;
 }
+.about-info .text h4{
+    margin-bottom: 20px;
+}

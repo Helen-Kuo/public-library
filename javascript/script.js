@@ -62,7 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         origin: 'bottom', 
         interval: 100
     });
-    // 針對 .reveal-special 元素應用不同的動畫
     sr.reveal('.reveal-left', {
         origin: 'left',
         distance: '100px',
@@ -159,7 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const accountBtn = document.querySelector('#account-btn');
     const closeBtns = document.querySelectorAll('.close-btn');
     const tourGuideModal = document.querySelector('#tour-guide');
-    const tourGuideBtn = document.querySelector('#tour-guide-btn');
+    const tourGuideBtn = document.querySelectorAll('.tour-guide-btn');
 
 
     if(accountBtn){
@@ -170,11 +169,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     if(tourGuideBtn){
-        tourGuideBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            tourGuideModal.classList.remove('modalHidden');
-            bodyElement.style.overflow = 'hidden';
+        tourGuideBtn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                tourGuideModal.classList.remove('modalHidden');
+                bodyElement.style.overflow = 'hidden';
+            })
         })
+        
     }
     closeBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -186,7 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 loginModal.classList.add('modalHidden');
                 bodyElement.style.overflow = 'auto';
             }
-            
-        })
-    })
+        });
+    });
 });

@@ -34,7 +34,7 @@
                         <li><a href="contact.html">聯絡我們</a></li>
                     </ul>
                     <div class="btn-group">
-                        <a href="#" class="little-btn yellow" id="tour-guide-btn">導覽服務</a>
+                        <a href="#" class="little-btn yellow tour-guide-btn">導覽服務</a>
                         <a href="#"class="little-btn green" id="account-btn"><span class="material-symbols-outlined">login</span>我的帳戶</a>
                     </div>
                 </div>
@@ -173,42 +173,94 @@
                     </button>
                 </div>
                 <div class="select-btn-group reveal-item">
-                    <p class="select-btn">全文<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
-                    <p class="select-btn">全部類型<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
-                    <p class="select-btn">進階查詢<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
-                    <p class="select-btn">分館查詢<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
+                    <div class="select-wrapper">
+                        <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                        <select name="" id="" class="select-btn p2">
+                            <option value="">全文</option>
+                            <option value="">題名</option>
+                            <option value="">作者</option>
+                            <option value="">主題/標籤</option>
+                            <option value="">ISBN</option>
+                            <option value="">ISSN</option>
+                            <option value="">條碼號</option>
+                            <option value="">索書號</option>
+                            <option value="">出版者</option>
+                            <option value="">分類號</option>
+                            <option value="">叢書名</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                        <select name="" id="" class="select-btn p2">
+                            <option value="">全部類型</option>
+                            <option value="">圖書</option>
+                            <option value="">期刊</option>
+                            <option value="">多媒體</option>
+                        </select>
+                    </div>
+                    <div class="select-wrapper">
+                        <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                        <select name="" id="" class="select-btn p2">
+                            <option value="">分館查詢</option>
+                            <option value="">不分館別</option>
+                            <option value="">五峰</option>
+                            <option value="">北埔</option>
+                            <option value="">寶山</option>
+                            <option value="">尖石</option>
+                            <option value="">峨眉</option>
+                            <option value="">文化局</option>
+                            <option value="">文化局行動書庫</option>
+                            <option value="">新埔</option>
+                            <option value="">新豐</option>
+                            <option value="">橫山</option>
+                            <option value="">湖口</option>
+                            <option value="">竹北福德分館</option>
+                            <option value="">竹東</option>
+                            <option value="">竹東行動書庫</option>
+                            <option value="">縣史館</option>
+                            <option value="">芎林</option>
+                            <option value="">關西</option>
+                        </select>
+                    </div>
+                    
                 </div>
                 <p class="hot reveal-item">熱門關鍵字: 解憂雜貨店、被討厭的勇氣、原子習慣、哈利波特、鬥羅大陸、鬼滅之刃、你的名字...</p>
             </div>
             <img src="images/bg/activity-bg1.png" alt="activity-bg1">
         </section>
-        <div class="font-scale">
-            <p>字體</p>
-            <button class="p1" data-size="small">小</button>
-            <button class="p1 active" data-size="medium">中</button>
-            <button class="p1" data-size="large">大</button>
-        </div>
     </header>
     <main>
         <section class="search-books">
             <div class="container">
                 <div class="row tool">
                     <div class="bread reveal-left">
-                        <span><a href="index.html">首頁</a></span>
-                        <span>></span>
-                        <span><a href="#">館藏查詢</a></span>
-                        <span>></span>
-                        <span><a href="#">全部書目列表</a></span>
+                        <span class="green p2"><a href="index.html">首頁</a></span>
+                        <span class="p2">></span>
+                        <span class="green p2"><a href="search.html">館藏查詢</a></span>
+                        <span class="p2">></span>
+                        <span class="green p2">全部書目列表</span>
                     </div>
-                    <p class="select-btn reveal-right">排序方式<span class="material-symbols-rounded">keyboard_arrow_down</span></p>
+                    <div class="select-wrapper reveal-right">
+                        <span class="material-symbols-rounded">keyboard_arrow_down</span>
+                        <select name="" id="" class="select-btn p2">
+                            <option value="">排序方式</option>
+                            <option value="">題名-升冪</option>
+                            <option value="">題名-降冪</option>
+                            <option value="">出版年-升冪</option>
+                            <option value="">出版年-降冪</option>
+                            <option value="">作者-升冪</option>
+                            <option value="">作者-降冪</option>
+                            <option value="">索書號-升冪</option>
+                            <option value="">索書號-降冪</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="row book-list reveal-item">
                     <div class="col-2">
                         <img src="images/books/books01.png" alt="books01">
                     </div>
                     <div class="col-10">
-                        <a href="books-detail.html">
-                            <h5 class="h5-ch">HTML / CSS / JavaScript與前端框架完美結合 : 使用Bootstrap與PWA技術, 新手從這開始!</h5>
+                            <h5 class="h5-ch"><a href="books-detail.html">HTML / CSS / JavaScript與前端框架完美結合 : 使用Bootstrap與PWA技術, 新手從這開始!</a></h5>
                             <div class="detail">
                                 <p class="p2">作者 / 陳婉凌著</p>
                                 <p class="p2">出版者 / 博碩文化</p>
@@ -222,17 +274,17 @@
                                 <span class="btn-sm">網頁設計</span>
                                 <span class="btn-sm">全球資訊網</span>
                             </div>
-                        </a>
+                        
                         <div class="btn-group">
                             <a href="#" class="little-btn gray">無可利用館藏</a>
                             <a href="#" class="little-btn green-line">
                                 <span class="material-symbols-outlined">calendar_check</span>
                                 我要預約
                             </a>
-                            <a class="little-btn collect">
+                            <button class="collect">
                                 <i class="fa-solid fa-heart"></i>
-                                加入收藏
-                            </a>
+                                <span class="p2">加入收藏</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -241,7 +293,8 @@
                         <img src="images/books/books02.png" alt="books02">
                     </div>
                     <div class="col-10">
-                        <h5 class="h5-ch">原生全端開發 : 使用Node.js建立最漂亮強大的網站</h5>
+                        <h5 class="h5-ch"><a href="">原生全端開發 : 使用Node.js建立最漂亮強大的網站</a></h5>
+                        
                         <div class="detail">
                             <p class="p2">作者 / 潘成均作</p>
                             <p class="p2">出版者 / 深智數位</p>
@@ -259,10 +312,10 @@
                                 <span class="material-symbols-outlined">calendar_check</span>
                                 我要預約
                             </a>
-                            <a class="little-btn collect">
+                            <button class="collect">
                                 <i class="fa-solid fa-heart"></i>
-                                加入收藏
-                            </a>
+                                <span class="p2">加入收藏</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -271,7 +324,7 @@
                         <img src="images/books/books03.png" alt="books03">
                     </div>
                     <div class="col-10">
-                        <h5 class="h5-ch">不會寫程式也能創立個人品牌和變現 : 快速打造你的數位助理, 建立結帳系統, 多管道同步推廣品牌</h5>
+                        <h5 class="h5-ch"><a href="">不會寫程式也能創立個人品牌和變現 : 快速打造你的數位助理, 建立結帳系統, 多管道同步推廣品牌</a></h5>
                         <div class="detail">
                             <p class="p2">作者 / 鄭緯筌(Vista Cheng)著</p>
                             <p class="p2">出版者 / 真文化出版遠足文化發行</p>
@@ -291,10 +344,10 @@
                                 <span class="material-symbols-outlined">calendar_check</span>
                                 我要預約
                             </a>
-                            <a class="little-btn collect">
+                            <button class="collect">
                                 <i class="fa-solid fa-heart"></i>
-                                加入收藏
-                            </a>
+                                <span class="p2">加入收藏</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -303,7 +356,7 @@
                         <img src="images/books/books04.png" alt="books04">
                     </div>
                     <div class="col-10">
-                        <h5 class="h5-ch">遙遙領先 : 使用Java開發Web新手轉高手之路</h5>
+                        <h5 class="h5-ch"><a href="">遙遙領先 : 使用Java開發Web新手轉高手之路</a></h5>
                         <div class="detail">
                             <p class="p2">作者 / 王樹生著</p>
                             <p class="p2">出版者 / 深智數位</p>
@@ -321,10 +374,10 @@
                                 <span class="material-symbols-outlined">calendar_check</span>
                                 我要預約
                             </a>
-                            <a class="little-btn collect">
+                            <button class="collect">
                                 <i class="fa-solid fa-heart"></i>
-                                加入收藏
-                            </a>
+                                <span class="p2">加入收藏</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -333,7 +386,7 @@
                         <img src="images/books/books05.png" alt="books05">
                     </div>
                     <div class="col-10">
-                        <h5 class="h5-ch">全端網站開發筆記 : 活用MERN技術, 打造制霸全球的動態網站, 開創六位數被動收入!</h5>
+                        <h5 class="h5-ch"><a href="">全端網站開發筆記 : 活用MERN技術, 打造制霸全球的動態網站, 開創六位數被動收入!</a></h5>
                         <div class="detail">
                             <p class="p2">作者 / 柯昱丞(Ko)著</p>
                             <p class="p2">出版者 / 博碩文化</p>
@@ -350,10 +403,10 @@
                                 <span class="material-symbols-outlined">calendar_check</span>
                                 我要預約
                             </a>
-                            <a class="little-btn collect">
+                            <button class="collect">
                                 <i class="fa-solid fa-heart"></i>
-                                加入收藏
-                            </a>
+                                <span class="p2">加入收藏</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -376,18 +429,18 @@
                     <div class="nav-list">
                         <img src="images/library-logo-white.png" alt="公共圖書館">
                         <ul class="btn-sm">
-                            <li><a href="#">首頁</a></li>
-                            <li><a href="#">關於圖書館</a></li>
-                            <li><a href="#">活動總覽</a></li>
-                            <li><a href="#">館藏查詢</a></li>
-                            <li><a href="#">最新書籍</a></li>
-                            <li><a href="#">聯絡我們</a></li>
+                            <li><a href="index.html">首頁</a></li>
+                            <li><a href="about.html">關於圖書館</a></li>
+                            <li><a href="activity.html">活動總覽</a></li>
+                            <li><a href="search.html">館藏查詢</a></li>
+                            <li><a href="newbooks.html">最新書籍</a></li>
+                            <li><a href="contact.html">聯絡我們</a></li>
                         </ul>
                     </div>
                     <div class="tour-guide-group">
-                        <a href="" class="big-btn light pink btn-mid">兒童與青少年專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
-                        <a href="" class="big-btn light orange btn-mid">研究與進修專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
-                        <a href="" class="big-btn light purple btn-mid">樂齡學習專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
                     </div>
                 </div>
                 <div class="col-3">

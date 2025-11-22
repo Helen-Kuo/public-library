@@ -6,16 +6,14 @@
 .book-info .bread{
     margin-bottom: 50px;
 }
-.book-info .collect{
-    margin-top: 20px;
-}
+
 .book-info h5{
     margin-bottom: 10px;
 }
-.book-info .detail p{
+.book-info .basic-detail p{
     line-height: 250%;
 }
-.book-info .detail{
+.book-info .basic-detail{
     margin-bottom: 10px;
 }
 .book-info .content{
@@ -45,10 +43,12 @@
     align-items: center;
     cursor: pointer;
 }
-.toggle-button:hover span{
-    transform: translateY(2px);
+.toggle-button:hover span, .toggle-button:hover{
+    color: var(--color-accent-green-700);
+    transform: translateY(1px);
     transition: .3s;
 }
+
 .book-info .books-list{
     margin-top: 50px;
 }

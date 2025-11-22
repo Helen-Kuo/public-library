@@ -35,7 +35,7 @@ header .title-area.green  .col-8 > span{
 }
 .title-area{
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
 }
 .title-area img{
     position: absolute;
@@ -52,4 +52,51 @@ header .title-area.green  .col-8 > span{
 }
 .title-area .text-overlay{
     margin-top: 30px;
+}
+
+/* bread */
+.bread a{
+    text-decoration: none;
+}
+
+.bread span:last-child{
+    color: var(--color-accent-green-700);
+}
+.bread span.pink{
+    color: var(--color-secondary-pink-700);
+}
+.bread span.orange{
+    color: var(--color-secondary-orange-700);
+}
+.bread span.purple{
+    color: var(--color-secondary-purple-700);
+}
+.bread .green a:hover{
+    color: var(--color-accent-green-700);
+}
+.bread a.pink:hover{
+    color: var(--color-secondary-pink-700);
+}
+.bread a.orange:hover{
+    color: var(--color-secondary-orange-700);
+}
+.bread a.purple:hover{
+    color: var(--color-secondary-purple-700);
+}
+.bread button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.bread button.green:hover{
+    color: var(--color-accent-green-700);
+}
+.bread button.pink:hover{
+    color: var(--color-secondary-pink-700);
+}
+.bread button.orange:hover{
+    color: var(--color-secondary-orange-700);
+}
+.bread button.purple:hover{
+    color: var(--color-secondary-purple-700);
 }

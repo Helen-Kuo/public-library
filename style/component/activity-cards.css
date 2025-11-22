@@ -50,7 +50,11 @@
     letter-spacing: 1px;
     opacity: 0;
 }
-.activity .card-mask .detail .fa-heart{
+.activity .card-mask .detail button{
+    background: none;
+    border: none;
+}
+.activity .card-mask .detail i{
     z-index: 2;
     color: var(--color-white);
     position: absolute;
@@ -67,8 +71,9 @@
 .activity .card:hover .card-mask .detail p{
     opacity: 1;
 }
-.activity .card-mask .detail .fa-heart:hover{
+.activity .card-mask .detail button:hover i{
     color: var(--color-secondary-pink-700);
+    cursor: pointer;
     transition: .3s;
 }
 
@@ -82,6 +87,9 @@
     padding: 10px;
     position: relative;
     background-color: var(--color-white);
+}
+.activity a{
+    text-decoration: none;
 }
 .activity .card img{
     width: 100%;

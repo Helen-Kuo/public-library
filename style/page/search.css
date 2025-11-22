@@ -1,6 +1,8 @@
 .search-title{
     position: relative;
     margin-bottom: 60px;
+    margin: 20px auto;
+    display: flex;
 }
 .search-title h1{
     text-align: center;
@@ -17,19 +19,13 @@
     text-align: center;
 }
 .search-title .select-btn-group{
-    display: flex;
-    gap: 10px;
-    justify-content: center;
     margin: 20px auto;
-}
-.select-btn{
-    border: 1px solid var(--color-neutral-500);
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    padding: 0 16px;
 }
+
 .search-books .tool{
     justify-content: space-between;
     border-bottom: 1px solid var(--color-neutral-500);
@@ -42,12 +38,15 @@
 .search-books .book-list a{
     text-decoration: none;
 }
+.search-books h5:hover a{
+    color: var(--color-accent-green-700);
+}
 .book-list .detail{
     display: flex;
     gap: 30px;
     margin-bottom: 16px;
 }
-.book-list .detail .cpl-10{
+.book-list .detail .col-10{
     display: flex;
 }
 .book-list .btn-group{
