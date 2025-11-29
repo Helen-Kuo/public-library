@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>關於圖書館 | 公共圖書館</title>
     <link rel="stylesheet" href="style/style.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +26,7 @@
                 <div class="logo">
                     <a href="index.html"><img src="images/library-logo.png" alt="公共圖書館"></a>
                 </div>
-                <div class="page-btn">
+                <div class="nav-btn">
                     <ul>
                         <li><a href="index.html">首頁</a></li>
                         <li><a href="#" class="active">關於圖書館</a></li>
@@ -34,14 +36,20 @@
                         <li><a href="contact.html">聯絡我們</a></li>
                     </ul>
                     <div class="btn-group">
-                        <a href="#" class="little-btn yellow" id="tour-guide-btn">導覽服務</a>
+                        <a href="#" class="little-btn yellow tour-guide-btn">導覽服務</a>
                         <a href="#"class="little-btn green" id="account-btn"><span class="material-symbols-outlined">login</span>我的帳戶</a>
+                    </div>
+                    <div class="hb">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
                 </div>
             </div>
-        </nav><!-- 字體縮放按鈕 -->
+        </nav>
+        <!-- 字體縮放按鈕 -->
         <div class="font-scale">
-            <p>字體</p>
+            <div><span class="material-symbols-outlined">text_fields</span><p class="p2">字體</p></div>
             <button class="p1" data-size="small">小</button>
             <button class="p1 active" data-size="medium">中</button>
             <button class="p1" data-size="large">大</button>
@@ -156,16 +164,17 @@
                                 </div>
                             </div>
                         </a>
+                        
                     </div>
                     <img src="./images/library-logo.png" alt="公共圖書館">
                     <img src="./images/pop-up-window/tour-guide.png" alt="tour-guide">
                 </div>
             </div>
         </section>
-        <section class="title-area green">
+        <section class="title-area green about-page">
             <div class="container">
                 <div class="row">
-                    <div class="col-8 reveal-item">
+                    <div class="col-sm-12 col-8 reveal-item">
                         <span class="h1-eg-medium">About Library</span>
                         <h1 class="h1-ch">關於圖書館</h1>
                         <div class="bread">
@@ -176,11 +185,13 @@
                     </div>
                 </div>
             </div>
-            <img src="images/bg/about-bg1.png" alt="about-bg1">
+            <img src="images/bg/about-bg1.png" alt="about-bg1" class="about-bg">
+            <img src="images/bg/about-bg1-w440.png" alt="about-bg2" class="about-bg2">
         </section>
     </header>
     <main>
         <section class="about-indoor">
+            <img src="images/bg/about-bg2.png" alt="about-bg1" class="about-bg">
             <div class="container">
         
                 <div class="btn-group line green reveal-right">
@@ -192,17 +203,36 @@
                 </div>
                     
                 <div class="row">
-                    <div class="col-7">
+                    <div class="col-md-5 col-7 indoor-img">
                         <img src="images/about/about02.png" alt="公共圖書館室內" class="reveal-item">
                         <img src="images/about/about03.png" alt="公共圖書館室內" class="reveal-item">
                         <img src="images/about/about04.png" alt="公共圖書館室內" class="reveal-item">
                     </div>
-                    <div class="col-5">
+                    <div class="col-sm-12 col-md-7 col-5">
                         <div class="text reveal-fadein">
                             <h4 class="h4-ch-medium">主要閱覽區</h4>
                             <p class="p2">圖書館主要閱覽區館舍為一地上三層、地下一層之獨立建築，總樓地板面積約為 4,372 平方公尺，館內局部區域採天光設計，可解決內部深處的採光，並形成空氣對流，有利書籍典藏及讀者閱覽。</p>
                         </div>
-                        <img src="images/about/about01.png" alt="公共圖書館室內" class="reveal-right">
+                        <img src="images/about/about01.png" alt="公共圖書館室內" class="reveal-right indoor-img">
+                        <!-- rwd圖片輪播 -->
+                        <div class="swiper" id="indoor-img-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/about/about01-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about02-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about03-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about04-w440.png" alt="公共圖書館室內">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -210,10 +240,10 @@
         <section class="about-info">
             <div class="container">
                 <div class="row detail">
-                    <div class="col-6 reveal-item">
+                    <div class="col-sm-12 col-6 reveal-item">
                         <img src="images/about/about05.png" alt="圖書館外觀">
                     </div>
-                    <div class="col-6 text reveal-fadein">
+                    <div class="col-sm-12 col-6 text reveal-fadein">
                         <h4 class="h4-ch-medium">圖書館簡介</h4>
                         <div class="line"></div>
                         <div>
@@ -230,10 +260,10 @@
                     </div>
                 </div>
                 <div class="row detail">
-                    <div class="col-6 reveal-item">
+                    <div class="col-sm-12 col-6 reveal-item">
                         <img src="images/about/about06.png" alt="圖書館情境">
                     </div>
-                    <div class="col-6 text reveal-fadein">
+                    <div class="col-sm-12 col-6 text reveal-fadein">
                         <h4 class="h4-ch-medium">開館時間</h4>
                         <div class="line"></div>
                         <div>
@@ -256,8 +286,7 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-9">
-                    
+                <div class="col-lg-12 col-9">
                     <div class="nav-list">
                         <img src="images/library-logo-white.png" alt="公共圖書館">
                         <ul class="btn-sm">
@@ -270,12 +299,30 @@
                         </ul>
                     </div>
                     <div class="tour-guide-group">
-                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
-                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
-                        <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span
+                                class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span
+                                class="material-symbols-outlined">arrow_right_alt</span></a>
+                        <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span
+                                class="material-symbols-outlined">arrow_right_alt</span></a>
+                    </div>
+                    <!-- rwd手機板 -->
+                    <div class="tour-guide-group-w440">
+                        <a href="student.html" class="big-btn light pink btn-mid">
+                            <span class="material-symbols-outlined">menu_book</span>
+                            兒童與青少年<br>專區
+                        </a>
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">
+                            <span class="material-symbols-outlined">flag</span>
+                            研究與進修<br>專區
+                        </a>
+                        <a href="senior.html" class="big-btn light purple btn-mid">
+                            <span class="material-symbols-outlined">person_play</span>
+                            樂齡學習<br>專區
+                        </a>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col-lg-12 col-3">
                     <div class="info">
                         <p class="p2">公共圖書館</p>
                         <p class="p2">通訊地址：新竹縣竹北市智惠街888號</p>
@@ -283,7 +330,13 @@
                         <p class="p2">更新日期：2025.10.22</p>
                     </div>
                 </div>
-                <p class="source">參考資料來源: 博客來: http://xn--books-9c3ht2uuqs.com.tw/?srsltid=AfmBOoq2Y_y7kdHy_gMNaupda3pu3Lo6NsjaiSWDwKtxbmgR8aTGuEtt | Pinterest:https://www.pinterest.com/ | 新竹縣公共圖書館官網: https://hcplibrary.hchcc.gov.tw/wSite/mp?mp=1</p>
+                <div class="col-12 source">
+                    <p>參考資料來源: 博客來:
+                        http://xn--books-9c3ht2uuqs.com.tw/?srsltid=AfmBOoq2Y_y7kdHy_gMNaupda3pu3Lo6NsjaiSWDwKtxbmgR8aTGuEtt
+                        | Pinterest:https://www.pinterest.com/ | 新竹縣公共圖書館官網: https://hcplibrary.hchcc.gov.tw/wSite/mp?mp=1
+                    </p>
+                </div>
+                
             </div>
         </div>
     </footer>

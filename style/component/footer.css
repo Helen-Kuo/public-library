@@ -26,7 +26,7 @@ footer .nav-list a:hover{
 footer .tour-guide-group{
     display: flex;
     gap: 12px;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 footer .info{
     margin-top: 80px;
@@ -40,5 +40,90 @@ footer .source{
     font-family: var(--font-main);
     font-size: 14px;
 }
+footer .tour-guide-group-w440{
+    display: none;
+}
 
 /* 導覽按鈕css整理在button.css */
+
+@media screen and (max-width: 1024px){
+    footer .info{
+        margin-top: 0;
+        margin-bottom: 30px;
+        display: flex;
+        gap: 30px;
+    }
+    footer .tour-guide-group{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 440px){
+    footer .nav-list ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0;
+    }
+    footer .nav-list ul li{
+        width: 47%;
+        
+    }
+    footer .nav-list ul li a{
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid var(--color-neutral-500);
+    }
+    footer .info{
+        margin-bottom: 24px;
+        flex-direction: column;
+        gap: 3px;
+    }
+    footer .source p{
+        overflow-wrap: break-word;
+        white-space: normal;
+        
+    }
+    footer .tour-guide-group{
+        display: none;
+    }
+    footer .tour-guide-group-w440{
+        display: flex;
+        gap: 10px;
+        height: 126px;
+        margin-bottom: 24px;
+    }
+    footer .tour-guide-group-w440 .big-btn{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 20px;
+    }
+    footer .tour-guide-group-w440 .big-btn span{
+        font-size: 3rem;
+    }
+    footer .tour-guide-group-w440 .big-btn.pink{
+        color: var(--color-secondary-pink-700);
+        background-color: var(--color-secondary-pink-100);
+        border: 1px solid var(--color-secondary-pink-700);
+    }
+    footer .tour-guide-group-w440 .big-btn.pink span{
+        color: var(--color-secondary-pink-700);
+    }
+    footer .tour-guide-group-w440 .big-btn.orange{
+        color: var(--color-secondary-orange-700);
+        background-color: var(--color-secondary-orange-100);
+        border: 1px solid var(--color-secondary-orange-700);
+    }
+    footer .tour-guide-group-w440 .big-btn.orange span{
+        color: var(--color-secondary-orange-700);
+    }
+    footer .tour-guide-group-w440 .big-btn.purple{
+        color: var(--color-secondary-purple-700);
+        background-color: var(--color-secondary-purple-100);
+        border: 1px solid var(--color-secondary-purple-700);
+    }
+    footer .tour-guide-group-w440 .big-btn.purple span{
+        color: var(--color-secondary-purple-700);
+    }
+}

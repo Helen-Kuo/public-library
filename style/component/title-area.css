@@ -21,13 +21,12 @@ header .title-area.green  .col-8 > span{
     width: 70px;
     margin: 24px 0;
 }
-
-
 .title-area .col-8 > span{
-    margin-top: 220px;
+    margin-top: 180px;
+    margin-bottom: 30px
 }
 .title-area .col-4 > .text-overlay{
-    margin-top: 250px;
+    margin-top: 180px;
 }
 .title-area .col-8{
     display: flex;
@@ -35,13 +34,21 @@ header .title-area.green  .col-8 > span{
 }
 .title-area{
     position: relative;
-    margin-bottom: 40px;
+    overflow: hidden;
 }
+.title-area.about-page{
+    height: 450px;
+}
+@media screen and (max-width: 440px){
+    .title-area.activity-page .text-overlay{
+        margin-top: 30px;
+    }
+}
+
 .title-area img{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     z-index: -1;
 }
 .title-area h1{
@@ -52,6 +59,9 @@ header .title-area.green  .col-8 > span{
 }
 .title-area .text-overlay{
     margin-top: 30px;
+}
+.title-area span.h1-eg-medium{
+    line-height: 1;
 }
 
 /* bread */
@@ -99,4 +109,13 @@ header .title-area.green  .col-8 > span{
 }
 .bread button.purple:hover{
     color: var(--color-secondary-purple-700);
+}
+
+@media screen and (max-width: 440px){
+    .title-area .col-8 > span{
+        margin-top: 140px;
+    }
+    .about-indoor .indoor-img{
+        display: none;
+    }
 }

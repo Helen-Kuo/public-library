@@ -63,3 +63,8 @@
 .collect i{
     color: var(--color-neutral-500);
 }
+@media screen and (max-width: 1024px){
+    .books-list .detail{
+        max-width: 70%;
+    }
+}

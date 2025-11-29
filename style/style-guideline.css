@@ -63,37 +63,112 @@
 
 /* Desktop */
 /* Englis Heading */
-.h1-eg{font-weight:400; font-size: 5rem;}
-.h2-eg{font-weight:400; font-size: 2.5rem;}
-.h3-eg{font-weight:400; font-size: 1.25rem;}
-.h1-eg-medium{font-weight:500; font-size: 5rem;}
-.h2-eg-medium{font-weight:500; font-size: 2.5rem;}
-.h3-eg-medium{font-weight:500; font-size: 1.25rem;}
+.h1-eg{
+    font-weight:400; 
+    font-size: clamp(4rem, 1rem + 5vw, 5rem);
+}
+.h2-eg{
+    font-weight:400; 
+    font-size: clamp(2rem, 1rem + 2.5vw, 2.5rem);
+}
+.h3-eg{
+    font-weight:400; 
+    font-size: clamp(1rem, .5rem + 2.5vw, 1.25rem);
+}
+.h1-eg-medium{
+    font-weight:500; 
+    font-size: clamp(4rem, 1rem + 5vw, 5rem);
+}
+.h2-eg-medium{
+    font-weight:500; 
+    font-size: clamp(1.5rem, 1rem + 5vw, 2.5rem);
+}
+.h3-eg-medium{
+    font-weight:500; 
+    font-size: clamp(1rem, .5rem + 2.5vw, 1.25rem);
+}
 
 /* Chinese Heading */
-.h1-ch{font-weight:400; font-size: 2.5rem;}
-.h2-ch{font-weight:400; font-size: 2.25rem;}
-.h3-ch{font-weight:400; font-size: 2rem;}
-.h4-ch{font-weight:400; font-size: 1.75rem;}
-.h5-ch{font-weight:400; font-size: 1.5rem;}
+.h1-ch{
+    font-weight:400; 
+    font-size: clamp(2.25rem, 1rem + 2.5vw, 2.5rem);
+}
+.h2-ch{
+    font-weight:400; 
+    font-size: clamp(2rem, 1rem + 2.25vw, 2.25rem);
+}
+.h3-ch{
+    font-weight:400; 
+    font-size: clamp(1.75rem, 1rem + 2vw, 2rem);
+}
+.h4-ch{
+    font-weight:400; 
+    font-size: clamp(1.5rem, .75rem + 1vw, 1.75rem);
+}
+.h5-ch{
+    font-weight:400; 
+    font-size: clamp(1.25rem, .5rem + 1vw, 1.5rem);
+}
 
-.h1-ch-medium{font-weight:500; font-size: 2.5rem;}
-.h2-ch-medium{font-weight:500; font-size: 2.25rem;}
-.h3-ch-medium{font-weight:500; font-size: 2rem;}
-.h4-ch-medium{font-weight:500; font-size: 1.75rem;}
-.h5-ch-medium{font-weight:500;font-size: 1.5rem;}
+.h1-ch-medium{
+    font-weight:500; 
+    font-size: clamp(2.25rem, 1rem + 2.5vw, 2.5rem);
+}
+.h2-ch-medium{
+    font-weight:500; 
+    font-size: clamp(2rem, 1rem + 2.25vw, 2.25rem);
+}
+.h3-ch-medium{
+    font-weight:500; 
+    font-size: clamp(1.75rem, 1rem + 2vw, 2rem);
+}
+.h4-ch-medium{
+    font-weight:500; 
+    font-size: clamp(1.5rem, 1rem + 1.75vw, 1.75rem);
+}
+.h5-ch-medium{
+    font-weight:500;
+    font-size: clamp(1.25rem, 1rem + 1.5vw, 1.5rem);
+}
 
 /* Button Text */
-.btn-lg{font-weight:400; font-size: 1.5rem;}
-.btn-mid{font-weight:400; font-size: 1.25rem;}
-.btn-sm{font-weight:400; font-size: 1rem;}
-.btn-lg-blod{font-weight:700; font-size: 1.5rem;}
-.btn-mid-bold{font-weight:700; font-size: 1.25rem;}
-.btn-sm-bold{font-weight:700; font-size: 1rem;}
+.btn-lg{
+    font-weight:400; 
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+}
+.btn-mid{
+    font-weight:400; 
+    font-size: clamp(1rem, .75rem + .75vw, 1.25rem);
+}
+.btn-sm{
+    font-weight:400; 
+    font-size: clamp(.95rem, .5rem + .5vw, 1rem);
+}
+.btn-lg-blod{
+    font-weight:700; 
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+}
+.btn-mid-bold{
+    font-weight:700; 
+    font-size: clamp(1rem, .75rem + .75vw, 1.25rem);
+}
+.btn-sm-bold{
+    font-weight:700; 
+    font-size: clamp(.87rem, .5rem + .5vw, 1rem);
+}
 
 /* paragraphs */
-.p1{font-family: var(--font-main); font-weight:400; font-size: 1.25rem;line-height: 150%;}
-.p2{font-family: var(--font-main);font-weight:400; font-size: 1rem;line-height: 180%;}
+.p1{
+    font-family: var(--font-main); 
+    font-weight:400; 
+    font-size: clamp(1rem, .75rem + .75vw, 1.25rem);
+    line-height: 150%;
+}
+.p2{
+    font-family: var(--font-main);
+    font-weight:400; 
+    font-size: clamp(.87rem, .5rem + .5vw, 1rem);
+    line-height: 180%;}
 
 [class*="strong-number-"]{
     font-family: var(--font-eg);
@@ -101,8 +176,14 @@
     letter-spacing: var(--letter-soacing-num);
 }
 /* Strong Number */
-.strong-number-lg-blod{font-weight:700; font-size: 2.5rem;}
-.strong-number-sm-blod{font-weight:700; font-size: 1.5rem;}
+.strong-number-lg-blod{
+    font-weight:700; 
+    font-size: clamp(2.25rem, 1rem + 2.5vw, 2.5rem);
+}
+.strong-number-sm-blod{
+    font-weight:700; 
+    font-size: clamp(1.25rem, 1rem + 1.5vw, 1.5rem);
+}
 
 html{
     font-size: 100%;

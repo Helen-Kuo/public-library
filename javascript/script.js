@@ -48,6 +48,22 @@ document.addEventListener('DOMContentLoaded', function() {
         watchOverflow: true, 
     });
 
+    //rwd indoor-img swiper
+    const indoorImgSwiper = new Swiper('#indoor-img-swiper', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        effect: 'slide', 
+        speed: 1500,
+        watchOverflow: true, 
+    });
+
 
     // ==== 滾動動畫 ==== //
     const sr = ScrollReveal({

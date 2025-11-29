@@ -148,6 +148,7 @@
     padding: 120px 0;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
 }
 .tour-guide a{
     text-decoration: none;
@@ -158,7 +159,8 @@
 }
 .tour-guide img{
     position: absolute;
-    width: 100%;
+    object-fit: cover;
+    margin: auto;
     bottom: 0;
     left: 0;
     z-index: -1;
@@ -168,11 +170,12 @@
     border: 1px solid var(--color-neutral-500);
     background-color: var(--color-white);
     border-radius: 20px;
-
+    position: relative;
     display: flex;
     align-items: center;
     transition: all .3s ease-in-out;
-    min-height: 370px;
+    padding:40px 0;
+    min-height: 330px;
 }
 .tour-guide .card .arrow{
     position: absolute;
@@ -191,6 +194,11 @@
     flex-direction: column;
     align-items: center;
 }
+.tour-guide .card-content .detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .tour-guide .card-content span:nth-child(1){
     font-size: 6rem;
     color: var(--color-accent-green-700);
@@ -204,6 +212,9 @@
     height: 0;
     margin: 0;
     transform: translateY(10px);
+}
+.tour-guide .card .btn-sm-group{
+    width: 80%;
 }
 .tour-guide .card:hover .h3-eg{
     opacity: 1;
@@ -223,7 +234,6 @@
     margin: 0;
 }
 .tour-guide .title{
-    padding-right: 60px;
     display: flex;
     flex-direction: column;
     justify-content:center;
@@ -232,13 +242,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px 12px;
+    gap: 8px;
     width: 90%;
 }
-.tour-guide .btn-sm-group > .btn-sm{
+.tour-guide .btn-sm-group .btn-sm{
     border: 1px solid var(--color-accent-green-700);
     border-radius: 25px;
-    padding: 5px 24px;
+    padding: 5px 16px;
 }
 
 /* 分眾pink hover效果 */
@@ -284,6 +294,7 @@
 /* ==== news ==== */
 .news{
     position: relative;
+    overflow: hidden;
 }
 .news .title{
     display: flex;
@@ -295,9 +306,9 @@
 }
 .news img:nth-of-type(1){
     position: absolute;
-    width: 100%;
     top: 0;
     left: 0;
+    right: 0;
     z-index: -1;
 }
 .news img:nth-of-type(2){
@@ -403,13 +414,12 @@
 }
 .hot-activity img.bg{
     position: absolute;
-    width: 100%;
     top: 0;
     left: 0;
     z-index:-1;
 }
 .hot-activity .container .title{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 .hot-activity .title{
     display: flex;
@@ -444,10 +454,22 @@
     display: flex;
     padding: 24px;
 }
-.hot-activity .card .detail a{
+.hot-activity .card .detail .content{
+    position: relative;
+    flex-grow: 1;
+    margin-left: 20px;
+}
+.hot-activity .card .detail .content p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.hot-activity .card .detail .content a{
     position: absolute;
     right: 65px;
-    bottom: 130px;
+    top: -80px;
     background-color: var(--color-accent-yellow-500);
     width: 120px;
     height: 120px;
@@ -478,7 +500,7 @@
 }
 .hot-activity .card .day{
     text-align: center;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     text-shadow: 4px 4px 10px var(--color-neutral-800);
 }
 .hot-activity .card .day .date{
@@ -541,12 +563,19 @@
 /* ==== best-moments ==== */
 .best-moments{
     position: relative;
-    height: 90vh;
     overflow: hidden;
-    padding: 100px 0 120px 0;
+    padding: 100px 0 250px 0;
 }
-.best-moments .main-image img{
-    width: 70%;
+.best-moments .main-image img:first-child{
+    height: 100%;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.best-moments .main-image img:nth-child(2){
+    display: none;
+    height: 100%;
     position: absolute; 
     top: 0;
     left: 0;
@@ -556,7 +585,7 @@
     margin-bottom: 50px;
 }
 .text-overlay p{
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 }
 .best-moments .swiper-wrapper{
     display: flex;
@@ -578,7 +607,6 @@
     position: absolute;
     bottom: -50px;
     left: 0;
-    width: 100%;
     z-index: -1;
 }
 
@@ -759,4 +787,252 @@ input:focus{
 }
 .close-btn span:nth-child(2){
     transform: rotate(135deg);
+}
+@media screen and (max-width: 1200px){
+    .search-box{
+        max-width: 95%;
+    }
+    .hero .swiper-slide img{
+        height: 100vh;
+        object-fit: cover;
+    }
+    .tour-guide .row{
+        display: flex;
+    }
+    .tour-guide .title{
+        margin-bottom: 50px;
+        align-items: center;
+    }
+    .tour-guide .title h3{
+        text-align: center;
+    }
+    .tour-guide .btn-sm-group .btn-sm{
+        padding: 5px 14px;
+    }
+    .tour-guide .detail .btn-sm-group{
+        width: 85%;
+    }
+    .book-list a img{
+        width: 220px;
+    }
+    .tour-guide img,
+    .news img:nth-of-type(1),
+    .best-moments .main-image img:first-child,
+    .hot-activity img.bg,
+    .best-moments .bg{
+        left: -360px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .tour-guide img,
+    .news img:nth-of-type(1),
+    .best-moments .main-image img:first-child,
+    .hot-activity img.bg,
+    .best-moments .bg{
+        left: -448px;
+    }
+    .newbooks .col-12{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 810px){
+    .nav-bar .btn-group{
+        display: none;
+    }
+    .search-box{
+        max-width: 95%;
+    }
+    .tour-guide .detail .btn-sm-group{
+        width: 100%;
+    }
+    .tour-guide .card{
+        min-height: 290px;
+        padding: 20px 0;
+    }
+
+    /* 分眾pink效果 */
+    .tour-guide .card.pink .btn-sm-group .btn-sm{
+        border: 1px solid var(--color-secondary-pink-700);
+        background-color: var(--color-white);
+    }
+    .tour-guide .card.pink{
+        background-color: var(--color-secondary-pink-100);
+        border: 1px solid var(--color-secondary-pink-700);
+    }
+    .tour-guide .card.pink span, 
+    .tour-guide .card.pink h4,
+    .tour-guide .card.pink .h3-eg{
+        color: var(--color-secondary-pink-700);
+    }
+    /* 分眾orange效果 */
+    .tour-guide .card.orange .btn-sm-group .btn-sm{
+        border: 1px solid var(--color-secondary-orange-700);
+        background-color: var(--color-white);
+    }
+    .tour-guide .card.orange{
+        background-color: var(--color-secondary-orange-100);
+        border: 1px solid var(--color-secondary-orange-700);
+    }
+    .tour-guide .card.orange span, 
+    .tour-guide .card.orange h4,
+    .tour-guide .card.orange .h3-eg{
+        color: var(--color-secondary-orange-700);
+    }
+    /* 分眾purple效果 */
+    .tour-guide .card.purple .btn-sm-group .btn-sm{
+        border: 1px solid var(--color-secondary-purple-700);
+        background-color: var(--color-white);
+    }
+    .tour-guide .card.purple{
+        background-color: var(--color-secondary-purple-100);
+        border: 1px solid var(--color-secondary-purple-700);
+    }
+    .tour-guide .card.purple span, 
+    .tour-guide .card.purple h4,
+    .tour-guide .card.purple .h3-eg{
+        color: var(--color-secondary-purple-700);
+    }
+    .tour-guide .bg,
+    .news .bg{
+        display: none;
+    }
+    .hot-activity .card .detail{
+        position: static;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 0px;
+    }
+    .hot-activity .card .detail .content{
+        margin-left: 0;
+    }
+    .hot-activity .card img{
+        border-radius: 30px;
+    }
+    .hot-activity .card{
+        border-radius: 0px;
+    }
+    .hot-activity .card .day{
+        position: absolute;
+        border-radius: 30px;
+        top: 260px;
+        left: 16px;
+        background-color: rgba(0, 0, 0, .5);
+    }
+    
+    .hot-activity .card .activity-name *{
+        text-shadow: none;
+        color: var(--color-neutral-800);
+    }
+    .tour-guide img,
+    .news img:nth-of-type(1),
+    .hot-activity img.bg,
+    .best-moments .bg{
+        left: -448px;
+    }
+    .best-moments .main-image img:first-child{
+        display: none;
+    }
+    .best-moments .main-image img:nth-child(2){
+        display: block;
+        left: -250px;
+    }
+}
+@media screen and (max-width: 440px){
+    .font-scale{
+        display: none;
+    }
+    .tab-btn{
+        padding: 4px 24px;
+    }
+    .tour-guide{
+        padding: 80px 0;
+    }
+    .tour-guide .card{
+        min-height: 200px;
+        margin-bottom: 20px;
+        padding: 20px 30px;
+    }
+    .tour-guide .card-content{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+    }
+    .tour-guide .card-content .detail{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tour-guide .card .arrow{
+        right: 10px;
+        top: 10px;
+    }
+    
+    .newbooks{
+        padding: 80px 0;
+    }
+    .news .title,
+    .newbooks .title{
+        margin-bottom: 30px;
+    }
+    .news-item .date p:nth-child(2) span{
+        margin: 0 10px 0 6px;
+    }
+    .news-item .date{
+        border-right: none;
+    }
+    .news-title p{
+        margin: 0 10px;
+    }
+    .newbooks .books-list img{
+        width: 100%;
+    }
+    .newbooks .books-list:nth-child(even){
+        margin-top: 100px;
+    }
+    .best-moments .main-image img:nth-child(2){
+        display: block;
+        left: -400px;
+    }
+    .newbooks .big-btn,
+    .best-moments .big-btn{
+        width: 100%;
+    }
+    .tour-guide img,
+    .news img:nth-of-type(1){
+        left: -740px;
+    }
+    .hot-activity .card{
+        width: 100%;
+    }
+    .hot-activity .card img{
+        border-radius: 20px;
+        height: 300px;
+        object-fit: cover;
+    }
+    .hot-activity .sign-up{
+        flex-direction: column;
+    }
+    .hot-activity .detail .day{
+        width: 120px;
+        height: 120px;
+    }
+    .hot-activity .detail .date{
+        line-height: 1;
+    }
+    .hot-activity .card .detail .content a{
+        right: 20px;
+        top: -88px;
+        width: 80px;
+        height: 80px;
+    }
+    .hot-activity .card:hover .detail a{
+        background-color: var(--color-accent-yellow-700);
+        transform: translateY(0px);
+    }
+    .hot-activity .card .day{
+        position: absolute;
+        border-radius: 20px;
+        top: 172px;
+        left: 8px;
+    }
 }
