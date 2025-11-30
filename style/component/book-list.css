@@ -20,6 +20,7 @@
 }
 .books-list{
     text-align: center;
+    margin-top: 60px;
 }
 .books-list a{
     text-decoration: none;
@@ -66,5 +67,18 @@
 @media screen and (max-width: 1024px){
     .books-list .detail{
         max-width: 70%;
+    }
+}
+@media screen and (max-width: 810px){
+    .books-list .detail{
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 440px){
+    .books-list .detail{
+        max-width: 100%;
+    }
+    .books-list{
+        margin-top: 30px;
     }
 }

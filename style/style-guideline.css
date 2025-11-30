@@ -85,7 +85,7 @@
 }
 .h3-eg-medium{
     font-weight:500; 
-    font-size: clamp(1rem, .5rem + 2.5vw, 1.25rem);
+    font-size: clamp(1rem, .5rem + 1vw, 1.25rem);
 }
 
 /* Chinese Heading */
@@ -99,15 +99,15 @@
 }
 .h3-ch{
     font-weight:400; 
-    font-size: clamp(1.75rem, 1rem + 2vw, 2rem);
+    font-size: clamp(1.5rem, 1rem + 1vw, 2rem);
 }
 .h4-ch{
     font-weight:400; 
-    font-size: clamp(1.5rem, .75rem + 1vw, 1.75rem);
+    font-size: clamp(1.25rem, .75rem + .75vw, 1.75rem);
 }
 .h5-ch{
     font-weight:400; 
-    font-size: clamp(1.25rem, .5rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, .5rem + .5vw, 1.5rem);
 }
 
 .h1-ch-medium{
@@ -134,7 +134,7 @@
 /* Button Text */
 .btn-lg{
     font-weight:400; 
-    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+    font-size: clamp(1.25rem, .75rem + 1vw, 1.5rem);
 }
 .btn-mid{
     font-weight:400; 
@@ -146,7 +146,7 @@
 }
 .btn-lg-blod{
     font-weight:700; 
-    font-size: clamp(1.25rem, 1rem + 1vw, 1.5rem);
+    font-size: clamp(1.25rem, .75rem + 1vw, 1.5rem);
 }
 .btn-mid-bold{
     font-weight:700; 
@@ -154,7 +154,7 @@
 }
 .btn-sm-bold{
     font-weight:700; 
-    font-size: clamp(.87rem, .5rem + .5vw, 1rem);
+    font-size:1rem;
 }
 
 /* paragraphs */
@@ -167,7 +167,7 @@
 .p2{
     font-family: var(--font-main);
     font-weight:400; 
-    font-size: clamp(.87rem, .5rem + .5vw, 1rem);
+    font-size: 1rem;
     line-height: 180%;}
 
 [class*="strong-number-"]{

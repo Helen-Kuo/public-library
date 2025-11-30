@@ -68,6 +68,10 @@
 .about-info .text{
     margin: 0 auto;
 }
+.about-info .text .p1{
+    font-weight: 500;
+    margin-top: 10px;
+}
 .about-info .text h4{
     margin-bottom: 20px;
 }
@@ -81,9 +85,6 @@
         top: 150px;
         width: 40%;
     }
-    
-}
-@media screen and (max-width: 1024px){
     
 }
 @media screen and (max-width: 810px){

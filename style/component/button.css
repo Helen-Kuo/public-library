@@ -67,7 +67,6 @@ header{
     align-items: center;
     cursor: pointer;
     background-color: var(--color-white);
-    /* margin-top: 30px; */
 }
 .page-btn.green{
     display: flex;
@@ -135,6 +134,12 @@ header{
 
 
 /* 小標籤按鈕 */
+.btn-group{
+    overflow-x: scroll;
+}
+.btn-group::-webkit-scrollbar{
+    display: none;
+}
 .btn-group ul{
     display: flex;
     gap: 10px;
@@ -144,6 +149,7 @@ header{
     list-style-type: none;
     padding: 8px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 .btn-group li button{
     display: block;
@@ -156,7 +162,11 @@ header{
 .btn-group.line{
     border-bottom: 1px solid var(--color-neutral-500);
 }
-
+@media screen and (max-width: 440px){
+    .btn-group ul{
+        justify-content: start;
+    }
+}
 
 /* 小標籤按鈕狀態 */
 .btn-group.green ul li:hover, 
@@ -232,6 +242,7 @@ header{
 .big-btn.line{
     color: var(--color-accent-green-700);
     border: 1px solid var(--color-accent-green-700);
+    background-color: var(--color-white);
 }
 .big-btn.line:hover{
     background-color: var(--color-accent-green-200);
@@ -340,13 +351,15 @@ table{
     border-radius: 20px;
     border-spacing: 0;
 }
-th{
-    background-color: var(--color-neutral-200);
-}
+
 th, td{
-    padding: 20px 10px;
+    padding: 20px 0;
     text-align: center;
     border-bottom: 1px solid var(--color-neutral-500);
+}
+th{
+    background-color: var(--color-neutral-200);
+    padding: 10px 0;
 }
 .course tr:hover{
     background-color: var(--color-secondary-orange-100);

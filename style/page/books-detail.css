@@ -1,6 +1,7 @@
 .book-info{
     position: relative;
-    padding-top: 200px;
+    padding-top: 140px;
+    overflow: hidden;
 }
 
 .book-info .bread{
@@ -52,7 +53,6 @@
 .book-info .books-list{
     margin-top: 50px;
 }
-
 .book-info .btn-group{
     display: flex;
     justify-content: space-between;
@@ -63,16 +63,64 @@
 .book-info .big-btn:hover{
     color: var(--color-accent-green-700);
 }
-.book-info img.bg:first-child{
+.book-info img.books-detail-bg:first-child{
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
     z-index: -1;
 }
-.book-info .bg:last-child{
+.book-info .books-detail-bg:last-child{
     position: absolute;
     bottom: 100px;
     left:0;
     z-index: -1;
+}
+
+@media screen and (max-width: 1200px){
+    .book-info img.books-detail-bg:first-child{
+        left: -360px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .book-info img.books-detail-bg:first-child{
+        left: -448px;
+    }
+}
+@media screen and (max-width: 810px){
+    .book-info img.books-detail-bg:first-child{
+        left: -555px;
+    }
+    .book-info .books-list:last-child{
+        display: none;
+    }
+    .book-info .books-detail-bg:last-child{
+        width: 40%;
+        bottom: 0px;
+    }
+    .book-info .col-2{
+        display: flex;
+        margin-bottom: 30px;
+    }
+    .book-info .books01{
+        margin: 0 auto;
+    }
+    .book-info .collect{
+        align-items: flex-end;
+    }
+}
+@media screen and (max-width: 440px){
+    .book-info img.books-detail-bg:first-child{
+        display: none;
+    }
+    .book-info .books-list:nth-child(2){
+        display: none;
+    }
+    .book-info .books-list:first-child{
+        width: 70%;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+    .book-info .content{
+        margin-bottom: 60px;
+    }
 }

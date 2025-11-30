@@ -1,8 +1,8 @@
 /* tour-guide label按鈕 */
-.label .col-12{
+.label .row{
     display: flex;
+    padding: 0 10px;
     gap: 20px;
-    padding: 0;
 }
 
 .label-btn{
@@ -21,7 +21,7 @@
     transition: width .3s;
 }
 .label-btn span{
-    font-size: 40px;
+    font-size: 2.5rem;
 }
 .label-btn.active{
     width: 315px;
@@ -42,7 +42,6 @@
     position: absolute;
     bottom: -62px;
     left: 145.5px;
-    /* transition: .3s; */
 }
 
 /* label pink */
@@ -128,13 +127,14 @@
 
 /* 大區塊 */
 .content-wrapper{
-    padding: 60px 0 100px 0;
+    padding: 0 0 100px 0;
     position: relative;
+    overflow: hidden;
 }
 .content-wrapper .outer-frame{
     padding: 60px;
     background-color: var(--color-white);
-    max-width: 1440px;
+    max-width: 1380px;
     margin: 0 auto;
     border-radius: 40px;
 }
@@ -160,7 +160,6 @@
 /* 控制卡片行間距 */
 .outer-frame.good-books .row:nth-of-type(-n+2){
     display: flex;
-    margin-bottom: 80px;
 }
 .outer-frame.student-activity .row:nth-of-type(-n+2){
     display: flex;
@@ -172,6 +171,25 @@
 .outer-frame .page-btn{
     display: flex;
     justify-content: end;
+    margin: 30px 0 10px;
+}
+.label{
+    position: relative;
+    padding-bottom: 60px;
+    overflow: hidden;
+}
+.tour-guide-pink-bg,
+.tour-guide-orange-bg,
+.tour-guide-purple-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.title-area.pink,
+.title-area.orange,
+.title-area.purple{
+    padding-bottom: 41.2px;
 }
 
 /* pink purple reading card */
@@ -532,4 +550,93 @@
 }
 .medical ul li:last-child{
     border-bottom: none;
+}
+@media screen and (max-width: 1440px){
+    .pink .tour-guide-pink-bg,
+    .tour-guide-pink-bg{
+        left: -240px;
+    }
+    .outer-frame{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .outer-frame{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 810px){
+    .pink .tour-guide-pink-bg,
+    .tour-guide-pink-bg,
+    .orange .tour-guide-orange-bg,
+    .tour-guide-orange-bg,
+    .purple .tour-guide-purple-bg,
+    .tour-guide-purple-bg{
+        display: none;
+    }
+    .title-area .text-overlay .p2{
+        margin-bottom: 0;
+    }
+    .label{
+        padding-bottom: 30px;
+    }
+    .label .row{
+        display: flex;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    .label-btn.active{
+        width: 230px;
+    }
+    .label-btn.active::after{
+        bottom: -32px;
+        left: 103px;
+    }
+    .content-wrapper .outer-frame{
+        padding: 30px 20px
+    }
+}
+@media screen and (max-width: 440px){
+    .good-books img{
+        width: 90%;
+    }
+    .label .row{
+        align-items: space-between;
+    }
+    .label-btn,
+    .label-btn.active{
+        width: 48%;
+        height: 100px;
+        
+    }
+    .label-btn.active::after{
+        display: none;
+    }
+    .label-btn span{
+        font-size: 2rem;
+    }
+    .label-btn.pink.active,
+    .label-btn.orange.active,
+    .label-btn.purple.active{
+        font-size: 1.3rem;
+    }
+    .label-btn.pink.active span,
+    .label-btn.orange.active span,
+    .label-btn.purple.active span{
+        font-size: 3rem;
+    }
+    .content-wrapper .outer-frame.pink,
+    .content-wrapper .outer-frame.orange,
+    .content-wrapper .outer-frame.purple{
+        border: 0;
+        padding: 0 20px;
+    }
+    .title-area.pink,
+    .title-area.orange,
+    .title-area.purple{
+        padding-bottom: 0;
+    }
+    .content-wrapper{
+        padding-bottom: 60px;
+    }
 }
