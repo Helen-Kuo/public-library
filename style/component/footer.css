@@ -31,6 +31,9 @@ footer .tour-guide-group{
 footer .info{
     margin-top: 80px;
 }
+footer .info p{
+    font-size: .8rem;
+}
 footer p{
     color: var(--color-white);
 }
@@ -132,5 +135,8 @@ footer .source p{
     }
     footer .tour-guide-group-w440 .big-btn.purple span{
         color: var(--color-secondary-purple-700);
+    }
+    .big-btn.light:hover span{
+        transform: translateX(0px);
     }
 }

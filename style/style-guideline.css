@@ -41,7 +41,7 @@
     --line-height-base: 150%;
     --letter-spacing-ch: 2px;
     --letter-spacing-btn: 0.12em;
-    --letter-soacing-num: 0;
+    --letter-spacing-num: 0.15em;
 }
 
 
@@ -178,7 +178,7 @@
 /* Strong Number */
 .strong-number-lg-blod{
     font-weight:700; 
-    font-size: clamp(1.5rem, 1rem + 2.5vw, 2rem);
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 2.25rem);
 }
 .strong-number-sm-blod{
     font-weight:700; 

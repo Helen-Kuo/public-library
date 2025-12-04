@@ -106,6 +106,9 @@ header .title-area.green  .col-8 > span{
 .bread button.purple:hover{
     color: var(--color-secondary-purple-700);
 }
+@media screen and (max-width: 1024px){
+    
+}
 @media screen and (max-width: 810px){
     .title-area .col-4 > .text-overlay{
         margin: 30px 0;

@@ -161,10 +161,7 @@
 .outer-frame.good-books .row:nth-of-type(-n+2){
     display: flex;
 }
-/* .outer-frame.student-activity .row:nth-of-type(-n+2){
-    display: flex;
-    margin-bottom: 50px;
-} */
+
 .outer-frame .row:nth-of-type(4){
     justify-content: end;
 }
@@ -186,18 +183,7 @@
     left: 0;
     z-index: -1;
 }
-/* .title-area.pink,
-.title-area.orange,
-.title-area.purple{
-    padding-bottom: 41.2px;
-} */
 
-/* pink purple reading card */
-/* 行間距 */
-/* .outer-frame.reading .row:nth-of-type(-n+2){
-    display: flex;
-    margin-bottom: 50px;
-} */
 .reading a{
     text-decoration: none;
 }
@@ -539,9 +525,6 @@
 .medical .card:hover span{
     background-color: var(--color-white);
 }
-/* .medical .card .tag span{
-    margin-top: 24px;
-} */
 .medical ul{
     margin-top: 20px;
     border: 1px solid var(--color-neutral-500);
@@ -550,7 +533,7 @@
     list-style: none;
 }
 .medical ul li{
-    padding: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid var(--color-neutral-500);
 }
 .medical ul li a{
@@ -565,6 +548,9 @@
 .tour-guide-pink-bg-w810,
 .tour-guide-orange-bg-w810,
 .tour-guide-purple-bg-w810,
+.tour-guide-pink-bg-w555,
+.tour-guide-orange-bg-w555,
+.tour-guide-purple-bg-w555,
 .tour-guide-pink-bg-w440,
 .tour-guide-orange-bg-w440,
 .tour-guide-purple-bg-w440{
@@ -608,7 +594,8 @@
     .orange .tour-guide-orange-bg,
     .tour-guide-orange-bg,
     .purple .tour-guide-purple-bg,
-    .tour-guide-purple-bg{
+    .tour-guide-purple-bg,
+    .label-btn.active::after{
         display: none;
     }
     .title-area .text-overlay .p2{
@@ -646,6 +633,22 @@
         display: block;
         position: absolute;
         top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+@media screen and (max-width: 555px){
+    .tour-guide-pink-bg-w810,
+    .tour-guide-orange-bg-w810,
+    .tour-guide-purple-bg-w810{
+        display: none;
+    }
+    .tour-guide-pink-bg-w555,
+    .tour-guide-orange-bg-w555,
+    .tour-guide-purple-bg-w555{
+        display: block;
+        position: absolute;
+        top: 0;
         right: 0;
         z-index: -1;
     }
@@ -655,7 +658,7 @@
         width: 90%;
     }
     .label{
-        padding: 0 0 30px 0;
+        padding: 40px 0 30px 0;
     }
     .label .row{
         justify-content: space-between;
@@ -722,9 +725,13 @@
     }
     .tour-guide-pink-bg-w810,
     .tour-guide-orange-bg-w810,
-    .tour-guide-purple-bg-w810{
+    .tour-guide-purple-bg-w810,
+    .tour-guide-pink-bg-w555,
+    .tour-guide-orange-bg-w555,
+    .tour-guide-purple-bg-w555{
         display: none;
     }
+    
     .tour-guide-pink-bg-w440,
     .tour-guide-orange-bg-w440,
     .tour-guide-purple-bg-w440{

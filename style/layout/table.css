@@ -1,8 +1,10 @@
 table{
     width: 100%;
-    min-width: 1200px;
     border-radius: 20px;
     border-spacing: 0;
+}
+.course table{
+    min-width: 1200px;
 }
 
 th, td{
