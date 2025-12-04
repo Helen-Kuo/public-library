@@ -178,7 +178,7 @@
 /* Strong Number */
 .strong-number-lg-blod{
     font-weight:700; 
-    font-size: clamp(2.25rem, 1rem + 2.5vw, 2.5rem);
+    font-size: clamp(1.5rem, 1rem + 2.5vw, 2rem);
 }
 .strong-number-sm-blod{
     font-weight:700; 

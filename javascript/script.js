@@ -2,7 +2,6 @@
 // ===== nav高度縮放 ====
 window.onscroll = () => {
     const navBar = document.querySelector(".nav-bar");
-
     if(document.documentElement.scrollTop > 180){
         navBar.classList.add("scrolled");
     }else{
@@ -10,9 +9,21 @@ window.onscroll = () => {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', function() {
     
+    //====hb選單開關====//
+    const navBar = document.querySelector('.nav-bar');
+    const hbBtn = document.querySelector('.hb');
+    const overlay = document.querySelector('.mobile-menu-overlay')
+
+    hbBtn.addEventListener('click', () => {
+        navBar.classList.toggle('menu-open');
+    });
+    overlay.addEventListener('click', () => {
+        navBar.classList.remove('menu-open');
+    });
+
+
     // swiper1.Hero Section Swiper
     const heroSwiper = new Swiper('#hero-swiper', {
         loop: true,
@@ -47,6 +58,20 @@ document.addEventListener('DOMContentLoaded', function() {
         speed: 800,
         watchOverflow: true, 
     });
+
+    //swiper3.best-moments-swiper
+    // const bestMomentsSwiper = new Swiper('.best-moments-swiper', {
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 0,
+    //     loop: true,
+    //     loopedSlides: 8,
+    //     allowTouchMove: false,
+    //     autoplay: {
+    //         delay: 0,
+    //         disableOnInteraction: false,
+    //     },
+    //     speed: 3000,
+    // });
 
     //rwd indoor-img swiper
     const indoorImgSwiper = new Swiper('#indoor-img-swiper', {
@@ -136,8 +161,6 @@ document.addEventListener('DOMContentLoaded', function() {
             //顯示當前按鈕索引相對應內容區域
             if(contentSections[index]){
                 contentSections[index].classList.remove('hidden');
-                sr.sync();
-                
             }
         });
     });
@@ -171,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==== 跳窗功能 ==== //
     const bodyElement = document.body;
     const loginModal = document.querySelector('#account');
-    const accountBtn = document.querySelector('#account-btn');
+    const accountBtn = document.querySelector('.account-btn');
     const closeBtns = document.querySelectorAll('.close-btn');
     const tourGuideModal = document.querySelector('#tour-guide');
     const tourGuideBtn = document.querySelectorAll('.tour-guide-btn');
@@ -180,6 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(accountBtn){
         accountBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            console.log("click");
             loginModal.classList.remove('modalHidden');
             bodyElement.style.overflow = 'hidden';
         });
@@ -190,8 +214,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 tourGuideModal.classList.remove('modalHidden');
                 bodyElement.style.overflow = 'hidden';
-            })
-        })
+            });
+        });
         
     }
     closeBtns.forEach(btn => {
@@ -205,5 +229,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 bodyElement.style.overflow = 'auto';
             }
         });
+    });
+
+    //==== font-scale 開闔 ====//
+    const toggleButton = document.querySelector('.font-scale div');
+    const fontScaleContainer = document.querySelector('.font-scale');
+    const fontScaleButtons = document.querySelector('.font-scale-buttons');
+    
+    toggleButton.addEventListener('click', () => {
+        fontScaleContainer.classList.toggle('open');
+    });
+    fontScaleButtons.addEventListener('mouseleave', () => {
+        fontScaleContainer.classList.remove('open');
     });
 });

@@ -1,0 +1,22 @@
+table{
+    width: 100%;
+    min-width: 1200px;
+    border-radius: 20px;
+    border-spacing: 0;
+}
+
+th, td{
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-neutral-500);
+}
+th{
+    background-color: var(--color-neutral-200);
+    padding: 10px 0;
+}
+.course tr:hover{
+    background-color: var(--color-secondary-orange-100);
+}
+.course tr:hover td{
+    cursor: pointer;
+}

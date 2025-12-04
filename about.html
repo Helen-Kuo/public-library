@@ -27,17 +27,63 @@
                     <a href="index.html"><img src="images/library-logo.png" alt="公共圖書館"></a>
                 </div>
                 <div class="nav-btn">
-                    <ul>
-                        <li><a href="index.html">首頁</a></li>
-                        <li><a href="#" class="active">關於圖書館</a></li>
-                        <li><a href="activity.html">活動總覽</a></li>
-                        <li><a href="search.html">館藏查詢</a></li>
-                        <li><a href="newbooks.html">最新書籍</a></li>
-                        <li><a href="contact.html">聯絡我們</a></li>
-                    </ul>
-                    <div class="btn-group">
-                        <a href="#" class="little-btn yellow tour-guide-btn">導覽服務</a>
-                        <a href="#"class="little-btn green" id="account-btn"><span class="material-symbols-outlined">login</span>我的帳戶</a>
+                    <div class="mobile-menu-overlay"></div>
+                    <div class="mobile-menu-content">
+                        <img src="./images/library-logo-white.png" alt="公共圖書館">
+                        <ul>
+                            <li><a href="index.html" class="p2">首頁</a></li>
+                            <li><a href="#" class="active p2">關於圖書館</a></li>
+                            <li><a href="activity.html" class="p2">活動總覽</a></li>
+                            <li><a href="search.html" class="p2">館藏查詢</a></li>
+                            <li><a href="newbooks.html" class="p2">最新書籍</a></li>
+                            <li><a href="contact.html" class="p2">聯絡我們</a></li>
+                            <li>
+                                <a href="" class="tour-guide-btn p2">導覽服務</a>
+                                <a href="student.html" class="h5-ch">
+                                    <div class="text">
+                                        <span class="material-symbols-outlined">menu_book</span>兒童與青少年專區
+                                    </div>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
+                                <a href="advanced-course.html" class="h5-ch">
+                                    <div class="text">
+                                        <span class="material-symbols-outlined">flag</span>研究與進修專區
+                                    </div>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
+                                <a href="senior.html" class="h5-ch">
+                                    <div class="text">
+                                        <span class="material-symbols-outlined">person_play</span>樂齡學習專區
+                                    </div>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="#" class="little-btn yellow tour-guide-btn p2">導覽服務</a>
+                            <a href="#" class="little-btn green account-btn">
+                                <span class="material-symbols-outlined">login</span>
+                                <span class="p2">我的帳戶</span>
+                            </a>
+                        </div>
+                        <div class="tool">
+                            <!-- nav字體縮放按鈕 -->
+                            <div class="font-scale">
+                                <div>
+                                    <span class="material-symbols-outlined">text_fields</span>
+                                    <p class="p2">字體</p>
+                                </div>
+                                <div class="font-scale-buttons">
+                                    <button class="p1" data-size="small">小</button>
+                                    <button class="p1 active" data-size="medium">中</button>
+                                    <button class="p1" data-size="large">大</button>
+                                </div>
+                            </div>
+                            <a href="#" class="little-btn green-line account-btn">
+                                <span class="material-symbols-outlined">login</span>
+                                <p class="p2">我的帳戶</p>
+                            </a>
+                        </div>
                     </div>
                     <div class="hb">
                         <span></span>
@@ -47,13 +93,6 @@
                 </div>
             </div>
         </nav>
-        <!-- 字體縮放按鈕 -->
-        <div class="font-scale">
-            <div><span class="material-symbols-outlined">text_fields</span><p class="p2">字體</p></div>
-            <button class="p1" data-size="small">小</button>
-            <button class="p1 active" data-size="medium">中</button>
-            <button class="p1" data-size="large">大</button>
-        </div>
         <!-- 會員註冊登入視窗 -->
         <section id="account" class="account modal-overlay modalHidden">
             <div class="container">
@@ -202,7 +241,7 @@
                     </ul>
                 </div>
                     
-                <div class="row">
+                <div class="row content-tab-item active" data-tab="main-reading-area">
                     <div class="col-md-5 col-7 indoor-img">
                         <img src="images/about/about02.png" alt="公共圖書館室內" class="reveal-item">
                         <img src="images/about/about03.png" alt="公共圖書館室內" class="reveal-item">
@@ -232,7 +271,70 @@
                             </div>
                             <div class="swiper-pagination"></div>
                         </div>
-                        
+                    </div>
+                </div>
+                <div class="row content-tab-item hidden" data-tab="space-planning">
+                    <div class="col-md-5 col-7 indoor-img">
+                        <img src="images/about/about08.png" alt="公共圖書館室內" class="reveal-item">
+                        <img src="images/about/about09.png" alt="公共圖書館室內" class="reveal-item">
+                        <img src="images/about/about10.png" alt="公共圖書館室內" class="reveal-item">
+                    </div>
+                    <div class="col-sm-12 col-md-7 col-5">
+                        <div class="text reveal-fadein">
+                            <h4 class="h4-ch-medium">空間規劃</h4>
+                            <p class="p2">空間規劃上設置有書庫、期刊區、兒童室、視聽區、參考區、資訊檢索區、辦公室等，現有館藏約三十萬冊，並以「藝術」 、「兒童」、「青少年」相關資料為典藏特色。故事城堡，為客家圓樓造型，現為提供假日說故事或辦理其它活動時使用。</p>
+                        </div>
+                        <img src="images/about/about07.png" alt="公共圖書館室內" class="reveal-right indoor-img">
+                        <!-- rwd圖片輪播 -->
+                        <div class="swiper" id="indoor-img-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/about/about07-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about08-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about09-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about10-w440.png" alt="公共圖書館室內">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content-tab-item hidden" data-tab="floor-intro">
+                    <div class="col-md-5 col-7 indoor-img">
+                        <img src="images/about/about12.png" alt="公共圖書館室內" class="reveal-item">
+                        <img src="images/about/about13.png" alt="公共圖書館室內" class="reveal-item">
+                        <img src="images/about/about14.png" alt="公共圖書館室內" class="reveal-item">
+                    </div>
+                    <div class="col-sm-12 col-md-7 col-5">
+                        <div class="text reveal-fadein">
+                            <h4 class="h4-ch-medium">樓層簡介</h4>
+                            <p class="p2">圖書館提供多元閱讀與學習空間，採開架式典藏各式書籍供閱覽及外借；兒童室以原木設計打造親子共讀與塗鴉區；期刊室蒐羅各類報章雜誌；K 書室座位舒適是自修的理想場域；參考區提供百科與工具書供研究使用；視聽室定期播放紀錄片與藝文影片；展覽區則為社區創作者展示成果的平台。</p>
+                        </div>
+                        <img src="images/about/about11.png" alt="公共圖書館室內" class="reveal-right indoor-img">
+                        <!-- rwd圖片輪播 -->
+                        <div class="swiper" id="indoor-img-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/about/about11-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about12-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about13-w440.png" alt="公共圖書館室內">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/about/about14-w440.png" alt="公共圖書館室內">
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
                     </div>
                 </div>
             </div>

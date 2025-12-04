@@ -8,13 +8,6 @@
     align-items: center;
     vertical-align: middle;
 }
-.books-list p.bookname{
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 .books-list p.bookname:hover{
     color: var(--color-accent-green-700);
 }
@@ -80,5 +73,8 @@
     }
     .books-list{
         margin-top: 30px;
+    }
+    .collect:hover span{
+        display: none;
     }
 }

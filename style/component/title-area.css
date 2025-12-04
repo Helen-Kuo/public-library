@@ -110,6 +110,10 @@ header .title-area.green  .col-8 > span{
     .title-area .col-4 > .text-overlay{
         margin: 30px 0;
     }
+    .title-area .col-8 > span{
+        margin-top: 120px;
+        margin-bottom: 30px
+    }
 }
 @media screen and (max-width: 440px){
     .title-area .col-8 > span{
@@ -118,7 +122,7 @@ header .title-area.green  .col-8 > span{
     .about-indoor .indoor-img{
         display: none;
     }
-    .title-area.contact-page{
+    /* .title-area.contact-page{
         height: 380px;
-    }
+    } */
 }

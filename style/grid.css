@@ -28,6 +28,11 @@
 .col-11 { width: 91.666666%; }
 .col-12 { width: 100%; }
 
+@media screen and (max-width: 1440px){
+    .container{
+        max-width: 95%;
+    }
+}
 @media screen and (max-width: 1200px){
     .container{
         max-width: 95%;

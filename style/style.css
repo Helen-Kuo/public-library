@@ -17,6 +17,9 @@
 @import url("./component/footer.css");
 @import url("./component/book-list.css");
 
+@import url("./layout/words.css");
+@import url("./layout/table.css");
+
 *{
     padding: 0;
     margin: 0;
@@ -468,13 +471,6 @@
     flex-grow: 1;
     margin-left: 20px;
 }
-.hot-activity .card .detail .content p{
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
 .hot-activity .card .detail .content a{
     position: absolute;
     right: 35px;
@@ -604,7 +600,8 @@
     justify-content: end;
     z-index: 2;
     font-size: 0;
-    width: 100%;;
+    width: 100%;
+    transition-timing-function: linear;
 }
 .best-moments .swiper-wrapper img{
     border: 1px solid var(--color-white);
@@ -620,6 +617,19 @@
     bottom: -50px;
     left: 0;
     z-index: -1;
+}
+.best-moments-swiper{
+    width: 100%;
+    overflow: hidden;
+}
+.best-moments-swiper .swiper-slide{
+    width: auto;
+    height: 140px;
+
+}
+.best-moments-swiper .swiper-slide img{
+    height: 100%;
+    width: auto;
 }
 
 
@@ -848,9 +858,6 @@ input:focus{
     }
 }
 @media screen and (max-width: 810px){
-    .nav-bar .btn-group{
-        display: none;
-    }
     .search-box{
         max-width: 95%;
     }
@@ -971,9 +978,6 @@ input:focus{
     }
 }
 @media screen and (max-width: 440px){
-    .font-scale{
-        display: none;
-    }
     .tab-btn{
         padding: 4px 24px;
     }
@@ -981,8 +985,8 @@ input:focus{
         padding: 80px 0;
     }
     .tour-guide .card{
-        min-height: 200px;
-        margin-bottom: 20px;
+        min-height: 160px;
+        margin-bottom: 10px;
         padding: 20px 30px;
     }
     .tour-guide .card-content{
@@ -999,7 +1003,9 @@ input:focus{
         right: 10px;
         top: 10px;
     }
-    
+    .tour-guide .card h4{
+        margin-top: 0;
+    }
     .newbooks{
         padding: 80px 0;
     }
@@ -1082,6 +1088,6 @@ input:focus{
         padding-top: 0;
     }
     .hot-activity .card .detail .content p{
-    -webkit-line-clamp: 2;
-}
+        -webkit-line-clamp: 2;
+    }
 }

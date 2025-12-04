@@ -1,59 +1,5 @@
 /* btn共用屬性 */
 
-/* 字體大小按鈕 */
-header{
-    position: relative;
-}
-.font-scale{
-    position: fixed;
-    display: inline-flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    gap: 8px;
-    top: 30%;
-    right: 1%;
-    z-index: 2;
-}
-.font-scale div{
-    height: 50px;
-    width: 50px;
-    background-color: var(--color-white);
-    border-radius: 50%;
-    border: 1px solid var(--color-accent-green-700);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0px;
-}
-.font-scale div p{
-    margin: 0;
-    line-height: 1;
-    font-size: .75rem;
-}
-.font-scale button{
-    height: 40px;
-    width: 40px;
-    background: none;
-    cursor: pointer;
-    background-color: var(--color-white);
-}
-.font-scale .material-symbols-outlined{
-    color: var(--color-accent-green-700);
-}
-.font-scale .active{
-    background-color: var(--color-accent-green-700);
-    color: var(--color-white);
-}
-.font-scale button:nth-child(n+2){
-    border: 1px solid var(--color-neutral-800);
-    border-radius: 50%;
-}
-.font-scale button:nth-child(n+2):hover{
-    background-color: var(--color-accent-green-200);
-    color: var(--color-neutral-800);
-}
-
 .page-btn{
     display: flex;
     gap:12px;
@@ -294,7 +240,7 @@ header{
 /* 小按鈕 */
 .little-btn{
     padding: 0 24px;
-    line-height: 40px;
+    line-height: 45px;
     text-decoration: none;
     border-radius: 30px;
     display: inline-block;
@@ -330,6 +276,7 @@ header{
 .little-btn.green-line{
     color: var(--color-accent-green-700);
     border: 1px solid var(--color-accent-green-700);
+    background-color: var(--color-white);
 }
 .little-btn.green-line span{
     color: var(--color-accent-green-700);
@@ -346,28 +293,6 @@ header{
     color: var(--color-neutral-500);
     cursor: default;
 }
-table{
-    width: 100%;
-    border-radius: 20px;
-    border-spacing: 0;
-}
-
-th, td{
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid var(--color-neutral-500);
-}
-th{
-    background-color: var(--color-neutral-200);
-    padding: 10px 0;
-}
-.course tr:hover{
-    background-color: var(--color-secondary-orange-100);
-}
-.course tr:hover td{
-    cursor: pointer;
-}
-
 
 /* select-btn */
 .select-btn-group{

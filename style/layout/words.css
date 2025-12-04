@@ -1,0 +1,17 @@
+.books-list p.bookname,
+.kid-learning .card .detail p:last-child{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.hot-activity .card .detail .content p,
+.activity .card .detail .title,
+.medical .card .detail h5{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

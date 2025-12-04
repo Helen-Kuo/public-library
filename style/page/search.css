@@ -37,7 +37,7 @@
 .search-books .book-list a{
     text-decoration: none;
 }
-.search-books h5:hover a{
+.search-books h4:hover a{
     color: var(--color-accent-green-700);
 }
 .book-list .detail{

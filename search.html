@@ -25,17 +25,65 @@
                     <a href="index.html"><img src="images/library-logo.png" alt="公共圖書館"></a>
                 </div>
                 <div class="nav-btn">
-                    <ul>
-                        <li><a href="index.html">首頁</a></li>
-                        <li><a href="about.html">關於圖書館</a></li>
-                        <li><a href="activity.html">活動總覽</a></li>
-                        <li><a href="#" class="active">館藏查詢</a></li>
-                        <li><a href="newbooks.html">最新書籍</a></li>
-                        <li><a href="contact.html">聯絡我們</a></li>
-                    </ul>
-                    <div class="btn-group">
-                        <a href="#" class="little-btn yellow tour-guide-btn">導覽服務</a>
-                        <a href="#"class="little-btn green" id="account-btn"><span class="material-symbols-outlined">login</span>我的帳戶</a>
+                    <div class="mobile-menu-overlay"></div>
+                    <div class="mobile-menu-content">
+                        <img src="./images/library-logo-white.png" alt="公共圖書館">
+                        <ul>
+                            <li><a href="index.html" class="p2">首頁</a></li>
+                            <li><a href="about.html" class="p2">關於圖書館</a></li>
+                            <li><a href="activity.html" class="p2">活動總覽</a></li>
+                            <li><a href="#" class="active p2">館藏查詢</a></li>
+                            <li><a href="newbooks.html" class="p2">最新書籍</a></li>
+                            <li><a href="contact.html" class="p2">聯絡我們</a></li>
+                            <li>
+                                <a href="" class="tour-guide-btn p2">導覽服務</a>
+                                <a href="student.html" class="h5-ch">
+                                    <div class="text">
+                                        <span class="material-symbols-outlined">menu_book</span>兒童與青少年專區
+                                    </div>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
+                                <a href="advanced-course.html" class="h5-ch">
+                                    <div class="text">
+                                        <span class="material-symbols-outlined">flag</span>研究與進修專區
+                                    </div>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
+                                <a href="senior.html" class="h5-ch">
+                                    <div class="text">
+                                        <span class="material-symbols-outlined">person_play</span>樂齡學習專區
+                                    </div>
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="#" class="little-btn yellow tour-guide-btn p2">導覽服務</a>
+                            <a href="#" class="little-btn green account-btn">
+                                <span class="material-symbols-outlined">login</span>
+                                <span class="p2">我的帳戶</span>
+                            </a>
+                        </div>
+                        
+                        <div class="tool">
+                            <!-- nav字體縮放按鈕 -->
+                            <div class="font-scale">
+                                <div>
+                                    <span class="material-symbols-outlined">text_fields</span>
+                                    <p class="p2">字體</p>
+                                </div>
+                                <div class="font-scale-buttons">
+                                    <button class="p1" data-size="small">小</button>
+                                    <button class="p1 active" data-size="medium">中</button>
+                                    <button class="p1" data-size="large">大</button>
+                                </div>
+                            </div>
+                            <a href="#" class="little-btn green-line account-btn">
+                                <span class="material-symbols-outlined">login</span>
+                                <p class="p2">我的帳戶</p>
+                            </a>
+                        </div>
+                        
                     </div>
                     <div class="hb">
                         <span></span>
@@ -45,13 +93,6 @@
                 </div>
             </div>
         </nav>
-        <!-- 字體縮放按鈕 -->
-        <div class="font-scale">
-            <div><span class="material-symbols-outlined">text_fields</span><p class="p2">字體</p></div>
-            <button class="p1" data-size="small">小</button>
-            <button class="p1 active" data-size="medium">中</button>
-            <button class="p1" data-size="large">大</button>
-        </div>
         <!-- 會員註冊登入視窗 -->
         <section id="account" class="account modal-overlay modalHidden">
             <div class="container">
