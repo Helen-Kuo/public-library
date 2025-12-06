@@ -1,6 +1,9 @@
 .books-list p.bookname,
 .kid-learning .card .content .detail p:last-child,
-.activity .card .text-area p:last-child{
+.activity .card .text-area p:last-child,
+.reading .card-mask .detail p,
+.kid-learning .card .detail p:last-child,
+.reading.pink .card .title{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -10,10 +13,19 @@
 .hot-activity .card .detail .content p,
 .activity .card .detail .title,
 .medical .card .detail h5,
-.paper .card .title h5{
+.paper .card .title h5,
+.medical .card .detail p:nth-child(3),
+.reading.purple .card .title,
+.financial .card-mask h5{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 810px){
+    .medical .card .detail p:nth-child(3){
+        -webkit-line-clamp: 2;
+    }
 }

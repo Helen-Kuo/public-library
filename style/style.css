@@ -16,6 +16,10 @@
 @import url("./component/activity-cards.css");
 @import url("./component/footer.css");
 @import url("./component/book-list.css");
+@import url("./component/reading-cards.css");
+@import url("./component/medical-cards.css");
+@import url("./component/kid-learning-cards.css");
+@import url("./component/modal.css");
 
 @import url("./layout/words.css");
 @import url("./layout/table.css");
@@ -33,18 +37,27 @@
 
 /* ==== hero swiper ==== */
 .hero .swiper{
-    position: relative;
     height: 100vh;
-    
+}
+.hero .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: end;
 }
 .hero .swiper-slide img{
+    display: block;
+    overflow: hidden;
     object-fit: cover;
+    
 }
 .hero .swiper-pagination-bullet{
     background-color: var(--color-neutral-100);
 }
 .hero .swiper-pagination-bullet-active{
     background-color: var(--color-accent-green-700);
+}
+.hero-swiper-w440{
+    display: none;
 }
 
 /* ===== 搜尋列 ===== */
@@ -99,7 +112,7 @@
     text-decoration: none;
     letter-spacing: 2px;
 }
-.tab-btn::after{
+/* .tab-btn::after{
     content: "";
     width: 60%;
     height: 4px;
@@ -111,7 +124,7 @@
     border-radius: 4px 4px 0 0;
     transition: opacity .3s ease, transform .3s ease;
     opacity: 0;
-}
+} */
 .tab-btn:hover{
     border: 1px solid var(--color-accent-green-700);
     background-color: var(--color-accent-green-200);
@@ -157,7 +170,7 @@
     left: 0;
     z-index: -1;
 }
-.tour-guide{
+.tour-guide.main{
     display: flex;
     padding: 120px 0;
     flex-direction: column;
@@ -193,7 +206,7 @@
     display: flex;
     align-items: center;
     padding:40px 0;
-    min-height: 330px;
+    min-height: 320px;
 }
 .tour-guide .card-content{
     display: flex;
@@ -471,6 +484,8 @@
     position: relative;
     flex-grow: 1;
     margin-left: 20px;
+    align-items: center;
+    display: flex;
 }
 .hot-activity .card .detail .content a{
     position: absolute;
@@ -518,6 +533,7 @@
     border: 1px solid var(--color-white);
     height: 40px;
     width: 40px;
+    line-height: 40px;
     border-radius: 20px;
     margin-left: auto;
 }
@@ -529,12 +545,12 @@
     text-shadow: 4px 4px 10px var(--color-neutral-800);
 }
 .hot-activity .card .activity-name{
-    padding: 10px 0;
+    margin: 0;
 }
 .hot-activity .card .sign-up{
     display: flex;
     flex-wrap: wrap;
-    margin-top: 8px;
+    margin-top: 10px;
 }
 .hot-activity .card .sign-up p:first-child{
     display: flex;
@@ -622,192 +638,9 @@
     height: 100%;
 }
 
-
-/* ==== login signup ==== */
-.imgHidden, .modalHidden{
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity .3s;
-}
-
-.modal-overlay{
-    background-color: rgba(0, 0, 0, .7);
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top:0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 20;
-}
-.modal-content{
-    position: relative;
-    padding: 51px 0;
-    border-radius: 30px;
-    width: 1000px;
-    height: 484px;
-}
-#account .modal-content{
-    background-color: var(--color-white);
-}
-.tour-guide .modal-content{
-    width: 1024px;
-    height: 600px;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-.tour-guide .modal-content p{
-    margin-bottom: 30px;
-}
-.tour-guide .modal-content img:nth-last-child(2){
-    width: 180px;
-    z-index: 5;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-}
-.tour-guide .modal-content img:last-child{
-    border-radius: 30px;
-}
-
-form{
-    width: 80%;
-}
-.form-panel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-}
-.form-panel form{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.form-panel button{
-    align-self: flex-end;
-    background: none;
-}
-.form-panel .h2-eg-medium{
-    color: var(--color-accent-green-700);
-    width: 80%;
-}
-.form-panel a{
-    text-decoration: none;
-}
-.form-panel a:hover{
-    color:var(--color-accent-green-700);
-}
-form label{
-    border-bottom: 1px solid var(--color-neutral-500);
-}
-label:has(input:focus){
-    border-bottom: 1px solid var(--color-black);
-}
-.form-panel .forget{
-    font-size: 0.75rem;
-}
-
-.account .modal-content h2{
-    margin-bottom: 24px;
-    width: 80%;
-}
-.modal-content input{
-    border:none;
-    padding: 10px 50px 10px 10px;
-}
-input:focus{
-    outline: none;
-}
-#switch-signup a:hover span{
-    color:var(--color-accent-green-700);
-    transform: translateX(-6px);
-    transition: .3s;
-}
-#switch-login a:hover span{
-    color:var(--color-accent-green-700);
-    transform: translateX(6px);
-    transition: .3s;
-}
-#switch-signup, #switch-login{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: end;
-    gap: 10px;
-}
-#switch-signup *,#switch-login *{
-    display: flex;
-    align-items: center;
-}
-#signup-panel img, #login-panel img{
-    transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
-}
-#login-panel img{
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 30px 0 0 30px;
-    transition: .3s;
-}
-#signup-panel img{
-    position: absolute;
-    right: 0;
-    top: 0;
-    border-radius: 0 30px 30px 0;
-    transition: .3s;
-}
-
-/* 叉叉 */
-.close-btn{
-    width:40px;
-    height: 40px;
-    border: 1px solid var(--color-accent-green-700);
-    background-color: var(--color-white);
-    border-radius: 50%;
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    cursor: pointer;
-    transition: .3s;
-    z-index: 1;
-}
-.close-btn:hover{
-    background-color: var(--color-accent-green-200);
-}
-.close-btn:hover span{
-    background-color: var(--color-accent-green-700);
-}
-.close-btn span{
-    position: absolute;
-    display: block;
-    height: 2px;
-    width: 24px;
-    background-color: var(--color-accent-green-700);
-    top: 19px;
-    left:7px;
-}
-.close-btn span:first-child{
-    transform: rotate(45deg);
-}
-.close-btn span:nth-child(2){
-    transform: rotate(135deg);
-}
 @media screen and (max-width: 1200px){
     .search-box{
         max-width: 95%;
-    }
-    .hero .swiper-slide img{
-        height: 100vh;
-        object-fit: cover;
     }
     .tour-guide .row{
         display: flex;
@@ -834,9 +667,6 @@ input:focus{
     .hot-activity img.bg,
     .best-moments .bg{
         left: -360px;
-    }
-    .modal-overlay{
-        display: none;
     }
 }
 @media screen and (max-width: 1024px){

@@ -62,12 +62,12 @@
 .book-list:last-child{
     margin-bottom: 30px;
 }
-.tag{
+.book.tag{
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
 }
-.tag span{
+.book.tag span{
     background-color: var(--color-neutral-200);
     padding: 0 16px;
 }

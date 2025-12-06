@@ -37,9 +37,9 @@
     display: flex;
 }
 .nav-btn ul{
-    display: inline-flex;
+    display: flex;
     margin-right: 0px;
-    height: 40px;
+    height: 45px;
     align-items: center;
 }
 .nav-bar ul a{
@@ -60,11 +60,9 @@
     list-style-type: none;
     margin-right: 12px;
 }
-.nav-btn .btn-group{
+.nav-btn .tool-btn{
     display: flex;
     gap: 10px;
-}
-.nav-btn .btn-group{
     margin-right: 10px;
 }
 
@@ -89,7 +87,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* margin-right: 10px; */
     cursor: pointer;
     z-index: 3;
 }
@@ -109,7 +106,7 @@
     justify-content: center;
     gap: 4px;
     top: 50px;
-    left: 2.5px;
+    right: 2.5px;
 
     max-height: 0;
     overflow: hidden;
@@ -147,60 +144,92 @@
     border: 1px solid var(--color-neutral-800);
     border-radius: 50%;
 }
+
 .mobile-menu-content img,
 .mobile-menu-content ul li:last-child,
 .mobile-menu-content .little-btn.green-line{
     display: none;
 }
 .nav-bar .nav-btn .hb{
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        border: 1px solid var(--color-neutral-800);
-        position: relative;
-        z-index: 10;
-        opacity: 0;
-        height: 0;
-        width: 0;
-        transition: .3s ease;
-    }
-    .nav-bar .nav-btn .hb span{
-        display: block;
-        height: 2px;
-        width: 60%;
-        position: absolute;
-        background-color: var(--color-neutral-800);
-        margin: auto;
-        left: 0;
-        right: 0;
-        transition: transform 1s ease, top 1.3s ease, opacity 1s ease;
-    }
-    .nav-bar .nav-btn .hb span:first-child{
-        top: 12px;
-        transform: rotate(0deg);
-    }
-    .nav-bar.menu-open .nav-btn .hb span:first-child{
-        top: 21.5px;
-        transform: rotate(45deg);
-    }
-    .nav-bar .nav-btn .hb span:nth-child(2){
-        top: 21.5px;
-        transform: rotate(0deg);
-    }
-    .nav-bar.menu-open .nav-btn .hb span:nth-child(2){
-        opacity: 0;
-    }
-    .nav-bar .nav-btn .hb span:nth-child(3){
-        top: 31px;
-        transform: rotate(0deg);
-    }
-    .nav-bar.menu-open .nav-btn .hb span:nth-child(3){
-        top: 21.5px;
-        transform: rotate(135deg);
-    }
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid var(--color-neutral-800);
+    position: relative;
+    z-index: 10;
+    opacity: 0;
+    height: 0;
+    width: 0;
+    transition: .3s ease;
+}
+.nav-bar .nav-btn .hb span{
+    display: block;
+    height: 2px;
+    width: 60%;
+    position: absolute;
+    background-color: var(--color-neutral-800);
+    margin: auto;
+    left: 0;
+    right: 0;
+    transition: transform 1s ease, top 1.3s ease, opacity 1s ease;
+}
+.nav-bar .nav-btn .hb span:first-child{
+    top: 12px;
+    transform: rotate(0deg);
+}
+.nav-bar.menu-open .nav-btn .hb span:first-child{
+    top: 21.5px;
+    transform: rotate(45deg);
+}
+.nav-bar .nav-btn .hb span:nth-child(2){
+    top: 21.5px;
+    transform: rotate(0deg);
+}
+.nav-bar.menu-open .nav-btn .hb span:nth-child(2){
+    opacity: 0;
+}
+.nav-bar .nav-btn .hb span:nth-child(3){
+    top: 31px;
+    transform: rotate(0deg);
+}
+.nav-bar.menu-open .nav-btn .hb span:nth-child(3){
+    top: 21.5px;
+    transform: rotate(135deg);
+}
 @media screen and (max-width: 1200px){
-    .nav-bar .btn-group{
+    .nav-bar .tool-btn .tour-guide-btn{
         display: none;
+    }
+    .nav-bar .tool-btn{
+        margin: 10px 0 0 0;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .font-scale div:first-child,
+    .font-scale div:first-child:hover{
+        background-color: var(--color-neutral-800);
+        border: 1px solid var(--color-neutral-500);
+    }
+    .font-scale div:first-child span,
+    .font-scale div:first-child p{
+        color: var(--color-neutral-200);
+    }
+    .font-scale-buttons{
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+        top: 2.5px;
+        left: 50px;
+        right: auto;
+        max-width: 0;
+        transition: max-width .3s ease-out, opacity .3s ease-out;
+    }
+    .font-scale.open .font-scale-buttons{
+        max-width: 200px;
+        opacity: 1;
+    }
+    .nav-btn ul{
+        display: block;
     }
     .nav-bar ul a:hover{
         border-bottom: none;
@@ -230,7 +259,6 @@
     .nav-bar.scrolled.menu-open .nav-btn .hb span:nth-child(3){
         top: 16.5px;
     }
-
     .mobile-menu-content img{
         display: block;
         margin-bottom: 30px;
@@ -304,8 +332,7 @@
     .mobile-menu-content ul li a,
     .mobile-menu-content ul li p{
         display: block;
-        padding: 12px 0;
-        
+        padding: 10px 0;
     }
     .mobile-menu-content ul li:last-child{
         display: block;
@@ -342,7 +369,6 @@
     .mobile-menu-content ul li:last-child a:nth-child(4) span{
         color: var(--color-neutral-200);
     }
-    
     .mobile-menu-content ul li .arrow,
     .mobile-menu-content ul li .arrow,
     .mobile-menu-content ul li .arrow{
@@ -360,7 +386,6 @@
         color: var(--color-secondary-pink-700);
         transition: 1s ease;
     }
-    
     .mobile-menu-content ul li:last-child a:nth-child(3):hover{
         background-color: var(--color-secondary-orange-100);
         color: var(--color-secondary-orange-700);
@@ -389,46 +414,5 @@
         color: var(--color-secondary-purple-700);
         transition: .3s ease;
     }
-
-    .font-scale{
-        
-        align-items: flex-start;
-    }
-    .font-scale-buttons{
-        position: absolute;
-        display: flex;
-        flex-direction: row;
-        gap: 4px;
-        top: 2.5px;
-        left: 50px;
-        max-width: 0;
-        transition: max-width .3s ease-out, opacity .3s ease-out;
-    }
-    .font-scale.open .font-scale-buttons{
-        max-width: 200px;
-        opacity: 1;
-    }
-    .mobile-menu-content .little-btn.green-line{
-        display: flex;
-        padding: 10px;
-        width: 130px;
-        height: 45px;
-        justify-content: center;
-    }
-    .mobile-menu-content .little-btn.green-line p{
-        color:var(--color-accent-green-700);
-    }
-    
-    .mobile-menu-content .tool{
-        display: flex;
-        margin-top: 10px;
-        justify-content: space-between;
-    }
-    .mobile-menu-content .tool .account-btn{
-        display: inline-flex;
-        align-items: center;
-    }
-}
-@media screen and (max-width: 810px){
     
 }

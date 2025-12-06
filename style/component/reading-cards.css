@@ -1,0 +1,174 @@
+.reading a{
+    text-decoration: none;
+}
+.reading .card{
+    border: 1px solid var(--color-neutral-500);
+    padding: 10px;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 20px;
+}
+.reading .card img{
+    border-radius: 14px 14px 0 0;
+    width: 100%;
+    display: block;
+}
+.reading .card .title{
+    text-align: center;
+    margin: 12px 0;
+}
+.reading .card .title.pink:hover{
+    color: var(--color-secondary-pink-700);
+}
+.reading .card .title.purple:hover{
+    color: var(--color-secondary-purple-700);
+}
+
+/* mask */
+.reading .card-mask{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+}
+.reading .card-mask::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    transition: opacity .7s ease;
+    opacity: 0;
+}
+.reading .card-mask .detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 35px;
+    z-index: 2;
+    transition: opacity .7s ease;
+    font-size: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+}
+.reading .card-mask .detail p{
+    color: var(--color-white);
+}
+.reading .card-mask .detail .tag{
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+.reading .card-mask .tag span{
+    background-color: var(--color-white);
+    display: inline-block;
+    padding: 0 14px;
+    border-radius: 20px;
+    font-size: 16px;
+}
+.reading .card-mask .arrow{
+    z-index: 2;
+    color: var(--color-white);
+    position: absolute;
+    font-size: 1.5rem;
+    transform: translate(5px, -5px);
+    top: 16px;
+    right: 16px;
+    opacity: 0;
+}
+/* hover */
+.reading .card:hover .card-mask::before, 
+.reading .card:hover .card-mask .detail, 
+.reading .card:hover .card-mask .detail .arrow{
+    opacity: 1;
+}
+/* card hover pink */
+.reading.pink .card:hover{
+    border: 1px solid var(--color-secondary-pink-700);
+    background-color: var(--color-secondary-pink-100);
+    transition: .3s;
+}
+/* card hover purple */
+.reading.purple .card:hover{
+    border: 1px solid var(--color-secondary-purple-700);
+    background-color: var(--color-secondary-purple-100);
+    transition: .3s;
+}
+
+@media screen and (max-width: 440px){
+    .reading .card-mask::before{
+        display: none;
+    }
+    .reading .card-mask .detail p{
+        color: var(--color-neutral-800);
+        padding: 6px 10px 0 10px;
+        
+    }
+    .reading .card-mask .tag span{
+        background-color: var(--color-neutral-200);
+    }
+    .reading .card-mask .detail{
+        justify-content: flex-end;
+        padding: 0;
+        opacity: 1;
+    }
+    .reading .card-mask .detail .tag{
+        margin: 0;
+    }
+    .reading.purple .card-mask .detail .p2,
+    .reading.purple .card-mask .detail .tag{
+        background-color: var(--color-secondary-purple-100);
+    }
+    .reading.pink .card-mask .detail .p2,
+    .reading.pink .card-mask .detail .tag{
+        background-color: var(--color-secondary-pink-100);
+    }
+    .reading.purple .card-mask .detail p{
+        border-top: 1px solid var(--color-secondary-purple-700);
+    }
+    .reading.pink .card-mask .detail p{
+        border-top: 1px solid var(--color-secondary-pink-700);
+    }
+    .reading .card-mask .detail .tag{
+        padding: 6px 10px 16px 10px;
+        border-radius: 0 0 20px 20px;
+    }
+    .reading.purple .card-mask .detail .tag span{
+        background-color: var(--color-secondary-purple-200);
+        color: var(--color-secondary-purple-700);
+        font-size: .75rem;
+    }
+    .reading.pink .card-mask .detail .tag span{
+        background-color: var(--color-secondary-pink-200);
+        color: var(--color-secondary-pink-700);
+        font-size: .75rem;
+    }
+    .reading .card-mask{
+        position: static;
+    }
+    .reading .card .h5-ch-medium{
+        margin-bottom: 110px;
+    }
+    .reading.pink .card:hover,
+    .reading.purple .card:hover{
+        background-color: var(--color-white);
+    }
+    .reading.pink .card{
+        border: 1px solid var(--color-secondary-pink-700);
+    }
+    .reading.purple .card{
+        border: 1px solid var(--color-secondary-purple-700);
+    }
+    .reading .card .title{
+        margin: 12px 0 110px 0;
+    }
+}

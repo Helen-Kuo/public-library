@@ -7,6 +7,7 @@
     justify-content: space-between;
     align-items: center;
     vertical-align: middle;
+    flex-wrap: wrap;
 }
 .books-list p.bookname:hover{
     color: var(--color-accent-green-700);
@@ -19,9 +20,12 @@
     text-decoration: none;
 }
 .books-list .detail{
-    max-width: 80%;
+    max-width: 90%;
     text-align: left;
     margin: auto;
+}
+.books-list img{
+    width: 70%;
 }
 .collect{
     display: inline-flex;

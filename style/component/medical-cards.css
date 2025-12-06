@@ -1,0 +1,107 @@
+.medical .card{
+    border: 1px solid var(--color-neutral-500);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    margin-top: 20px;
+}
+.medical .card .img-box{
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    
+}
+.medical .card .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.medical .card .detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: 0 16px;
+}
+.medical .card .detail p:first-child{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.medical .card .detail p:first-child span{
+    font-size: .75rem;
+}
+.medical .card .detail .tag{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    font-size: .75rem;
+}
+.medical .card .detail .tag span{
+    background-color: var(--color-secondary-purple-100);
+    padding: 0 14px;
+    border-radius: 20px;
+    color: var(--color-secondary-purple-700);
+}
+.medical .card .detail p:nth-child(3){
+    margin-bottom: 10px;
+}
+.medical .card .detail h5{
+    color: var(--color-secondary-purple-700);
+}
+.medical .card:hover{
+    background-color: var(--color-secondary-purple-100);
+    border: 1px solid var(--color-secondary-purple-700);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.medical ul{
+    margin-top: 20px;
+    border: 1px solid var(--color-neutral-500);
+    border-radius: 20px;
+    padding: 10px;
+    list-style: none;
+}
+.medical ul li{
+    padding: 10px 0;
+    border-bottom: 1px solid var(--color-neutral-500);
+}
+.medical ul li a{
+    text-decoration: none;
+}
+.medical ul li a:hover{
+    color: var(--color-secondary-purple-700);
+}
+.medical ul li:last-child{
+    border-bottom: none;
+}
+
+@media screen and (max-width: 440px){
+    .medical .card{
+        flex-direction: column;
+        border: 1px solid var(--color-secondary-purple-700);
+    }
+    .medical .card img{
+        width: 100%;
+    }
+    .medical .card:hover{
+        background-color: var(--color-white);
+        border: 1px solid var(--color-secondary-purple-700);
+    }
+    .medical .card .detail{
+        margin: 0;
+    }
+    .medical .card .img-box{
+        width: 100%;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 14px 14px 0 0;
+        margin-right: 0;
+        margin: 0 0 6px 0;
+    }
+}

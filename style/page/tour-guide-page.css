@@ -138,11 +138,6 @@
     margin: 0 auto;
     border-radius: 40px;
 }
-.content-wrapper img:last-child{
-    position: absolute;
-    z-index: -1;
-    bottom: -20px;
-}
 /* pink */
 .content-wrapper .outer-frame.pink{
     border: 1px solid var(--color-secondary-pink-700);
@@ -184,150 +179,6 @@
     z-index: -1;
 }
 
-.reading a{
-    text-decoration: none;
-}
-.reading .card{
-    border: 1px solid var(--color-neutral-500);
-    padding: 10px;
-    border-radius: 20px;
-    position: relative;
-    /* height: 100%; */
-    margin-top: 40px;
-}
-
-.reading .card img{
-    border-radius: 14px 14px 0 0;
-    width: 100%;
-    display: block;
-}
-.reading .card .title{
-    text-align: center;
-    margin: 12px 0;
-}
-.reading .card .title.pink:hover{
-    color: var(--color-secondary-pink-700);
-}
-.reading .card .title.purple:hover{
-    color: var(--color-secondary-purple-700);
-}
-/* mask */
-.reading .card-mask{
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border-radius: 14px 14px 0 0;
-}
-.reading .card-mask::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-    transition: opacity .7s ease;
-    opacity: 0;
-}
-
-.reading .card-mask .detail{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 35px;
-    z-index: 2;
-    transition: opacity .7s ease;
-    font-size: 0;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    opacity: 0;
-}
-.reading .card-mask .detail p{
-    color: var(--color-white);
-}
-.reading .card-mask .detail .tag{
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 8px;
-}
-.reading .card-mask .tag span{
-    background-color: var(--color-white);
-    display: inline-block;
-    padding: 0 20px;
-    border-radius: 20px;
-    font-size: 16px;
-}
-.reading .card-mask .arrow{
-    z-index: 2;
-    color: var(--color-white);
-    position: absolute;
-    font-size: 1.5rem;
-    transform: translate(5px, -5px);
-    top: 16px;
-    right: 16px;
-    opacity: 0;
-}
-/* hover */
-.reading .card:hover .card-mask::before, 
-.reading .card:hover .card-mask .detail, 
-.reading .card:hover .card-mask .detail .arrow{
-    opacity: 1;
-}
-/* card hover pink */
-.reading.pink .card:hover{
-    border: 1px solid var(--color-secondary-pink-700);
-    background-color: var(--color-secondary-pink-100);
-    transition: .3s;
-}
-/* card hover purple */
-.reading.purple .card:hover{
-    border: 1px solid var(--color-secondary-purple-700);
-    background-color: var(--color-secondary-purple-100);
-    transition: .3s;
-}
-
-/* pink learning */
-.kid-learning .card{
-    border: 1px solid var(--color-neutral-500);
-    border-radius: 20px;
-    display: flex;
-    padding: 24px;
-    margin-top: 40px;
-}
-.kid-learning .card img{
-    border-radius: 12px;
-    margin-right: 24px;
-}
-.kid-learning a{
-    text-decoration: none;
-}
-.kid-learning .card h5{
-    color: var(--color-secondary-pink-700);
-}
-.kid-learning .card .detail{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    
-}
-.kid-learning .card:hover{
-    border: 1px solid var(--color-secondary-pink-700);
-    background-color: var(--color-secondary-pink-100);
-    transition: all .3s;
-}
-/* pink learning card */
-/* 行間距 */
-/* .outer-frame.kid-learning .row:nth-of-type(-n+4){
-    display: flex;
-    margin-bottom: 30px;
-} */
-
 /* orange advanced-course */
 .star .fa-star{
     color: var(--color-neutral-200);
@@ -337,11 +188,6 @@
 }
 
 /* orange paper card */
-/* 行間距 */
-/* .outer-frame.paper .row:nth-of-type(-n+3){
-    display: flex;
-    margin-bottom: 50px;
-} */
 .paper .card{
     border: 1px solid var(--color-neutral-500);
     background-color: var(--color-white);
@@ -443,6 +289,7 @@
 .financial .card-mask div{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .financial ul{
     list-style-position: inside;
@@ -493,58 +340,6 @@
 .scroll-box{
     overflow-x: auto;
 }
-.medical .card{
-    border: 1px solid var(--color-neutral-500);
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    margin-top: 20px;
-}
-.medical .card img{
-    margin-right: 24px;
-    border-radius: 14px;
-}
-.medical .card .detail{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-}
-.medical .card .detail p:nth-child(3){
-    margin-bottom: 20px;
-}
-.medical .card .detail h5{
-    color: var(--color-secondary-purple-700);
-}
-.medical .card:hover{
-    background-color: var(--color-secondary-purple-100);
-    border: 1px solid var(--color-secondary-purple-700);
-    transition: .3s;
-    cursor: pointer;
-}
-.medical .card:hover span{
-    background-color: var(--color-white);
-}
-.medical ul{
-    margin-top: 20px;
-    border: 1px solid var(--color-neutral-500);
-    border-radius: 20px;
-    padding: 20px;
-    list-style: none;
-}
-.medical ul li{
-    padding: 20px 0;
-    border-bottom: 1px solid var(--color-neutral-500);
-}
-.medical ul li a{
-    text-decoration: none;
-}
-.medical ul li a:hover{
-    color: var(--color-secondary-purple-700);
-}
-.medical ul li:last-child{
-    border-bottom: none;
-}
 .tour-guide-pink-bg-w810,
 .tour-guide-orange-bg-w810,
 .tour-guide-purple-bg-w810,
@@ -587,6 +382,11 @@
         width: 100%;
         justify-content: flex-end;
     }
+    .good-books.pink .row .books-list:nth-last-child(-n+2),
+    .good-books.orange .row .books-list:nth-last-child(-n+2),
+    .good-books.purple .row .books-list:nth-last-child(-n+2){
+        display: none;
+    }
 }
 @media screen and (max-width: 810px){
     .pink .tour-guide-pink-bg,
@@ -619,14 +419,7 @@
     .content-wrapper .outer-frame{
         padding: 30px 20px
     }
-    .kid-learning .card img{
-        width: 140px;
-        height: 140px;
-        margin-right: 20px;
-    }
-    .kid-learning .card{
-        padding: 20px;
-    }
+    
     .tour-guide-pink-bg-w810,
     .tour-guide-orange-bg-w810,
     .tour-guide-purple-bg-w810{
@@ -700,28 +493,8 @@
     .content-wrapper{
         padding-bottom: 60px;
     }
-    .kid-learning .card img{
-        width: 100%;
-        height: auto;
-        margin: 0 0 16px 0;
-    }
-    .kid-learning .card{
-        padding: 16px;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    
     .financial .card-mask{
-    padding: 16px;
-}
-    .medical .card{
-        flex-direction: column;
-    }
-    .medical .card img{
-        width: 100%;
-        height: auto;
-        margin: 0 0 16px 0;
+        padding: 16px;
     }
     .tour-guide-pink-bg-w810,
     .tour-guide-orange-bg-w810,
@@ -731,7 +504,6 @@
     .tour-guide-purple-bg-w555{
         display: none;
     }
-    
     .tour-guide-pink-bg-w440,
     .tour-guide-orange-bg-w440,
     .tour-guide-purple-bg-w440{

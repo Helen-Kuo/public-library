@@ -63,14 +63,12 @@
                                 </a>
                             </li>
                         </ul>
-                        <div class="btn-group">
+                        <div class="tool-btn">
                             <a href="#" class="little-btn yellow tour-guide-btn p2">導覽服務</a>
                             <a href="#" class="little-btn green account-btn">
                                 <span class="material-symbols-outlined">login</span>
                                 <span class="p2">我的帳戶</span>
                             </a>
-                        </div>
-                        <div class="tool">
                             <!-- nav字體縮放按鈕 -->
                             <div class="font-scale">
                                 <div>
@@ -83,10 +81,6 @@
                                     <button class="p1" data-size="large">大</button>
                                 </div>
                             </div>
-                            <a href="#" class="little-btn green-line account-btn">
-                                <span class="material-symbols-outlined">login</span>
-                                <p class="p2">我的帳戶</p>
-                            </a>
                         </div>
                     </div>
                     <div class="hb">
@@ -111,22 +105,37 @@
                     </button>
                 </div>
             </div>
-            <div class="swiper" id="hero-swiper">
+            <div class="swiper hero-swiper-w1920" id="hero-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="images/hero-library1.png" alt="公共圖書館">
+                        <picture>
+                            <source media="(max-width: 440px)" srcset="images/hero-library1-w440.png">
+                            <img src="images/hero-library1.png" alt="公共圖書館">
+                        </picture>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/hero-library2.png" alt="公共圖書館">
+                        <picture>
+                            <source media="(max-width: 440px)" srcset="images/hero-library2-w440.png">
+                            <img src="images/hero-library2.png" alt="公共圖書館">
+                        </picture>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/hero-library3.png" alt="公共圖書館">
+                        <picture>
+                            <source media="(max-width: 440px)" srcset="images/hero-library3-w440.png">
+                            <img src="images/hero-library3.png" alt="公共圖書館">
+                        </picture>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/hero-library4.png" alt="公共圖書館">
+                        <picture>
+                            <source media="(max-width: 440px)" srcset="images/hero-library4-w440.png">
+                            <img src="images/hero-library4.png" alt="公共圖書館">
+                        </picture>
                     </div>
                     <div class="swiper-slide">
-                        <img src="images/hero-library5.png" alt="公共圖書館">
+                        <picture>
+                            <source media="(max-width: 440px)" srcset="images/hero-library5-w440.png">
+                            <img src="images/hero-library5.png" alt="公共圖書館">
+                        </picture>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -135,7 +144,7 @@
     </header>
 
     <main>
-        <section class="tour-guide">
+        <section class="tour-guide main">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12 col-3 title reveal-left">
@@ -547,6 +556,30 @@
                     <div class="swiper-slide">
                         <img src="images/best-moments/best-moments-s-08.png" alt="best-moments-08">
                     </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-01.png" alt="best-moments-01">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-02.png" alt="best-moments-02">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-03.png" alt="best-moments-03">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-04.png" alt="best-moments-04">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-05.png" alt="best-moments-05">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-06.png" alt="best-moments-06">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-07.png" alt="best-moments-07">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="images/best-moments/best-moments-s-08.png" alt="best-moments-08">
+                    </div>
                 </div>
             </div>
             <img src="images/bg/index-bg6.png" alt="index-bg6" class="bg">
@@ -636,7 +669,6 @@
                                 <p class="p2">已經有帳號了嗎?</p>
                                 <a href="#" class="p2">我要登入<span
                                         class="material-symbols-outlined">arrow_right_alt</span></a>
-
                             </div>
                         </form>
                         <img src="images/pop-up-window/signup.png" alt="signup image">

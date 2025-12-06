@@ -57,7 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if(accountBtn){
         accountBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log("click");
             loginModal.classList.remove('modalHidden');
             bodyElement.classList.add('open-fixed');
         });

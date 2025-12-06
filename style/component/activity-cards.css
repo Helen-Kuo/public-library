@@ -1,10 +1,3 @@
-/* pink purple activity card */
-/* 行間距 */
-/* .activity .col-4:nth-of-type(-n+3){
-    display: flex;
-    margin-bottom: 50px;
-} */
-
 /* activity mask */
 .activity .card-mask{
     display: block;
@@ -39,8 +32,9 @@
     justify-content: center;
     font-size: 0;
 }
-.activity .card-mask .detail .h5-ch-medium{
+.activity .card-mask .detail .p1{
     border-bottom: 1px solid var(--color-white);
+    padding-bottom: 6px;
     opacity: 0;
 }
 .activity .card-mask .detail p{
@@ -58,7 +52,7 @@
     z-index: 2;
     color: var(--color-white);
     position: absolute;
-    font-size: 2rem;
+    font-size: 1.5rem;
     transform: translate(5px, -5px);
     top: 24px;
     right: 24px;
@@ -76,11 +70,6 @@
     cursor: pointer;
     transition: .3s;
 }
-
-/* .outer-frame.activity .row:nth-of-type(-n+2){
-    display: flex;
-    margin-bottom: 50px;
-} */
 .activity .card{
     border: 1px solid var(--color-neutral-500);
     border-radius: 20px;
@@ -153,6 +142,7 @@
     color: var(--color-white);
     border-radius: 50%;
     text-align: center;
+    line-height: 26px;
 }
 /* pink */
 .activity .card.pink .date{
@@ -176,8 +166,81 @@
     border: 1px solid var(--color-secondary-purple-700);
     background-color: var(--color-secondary-purple-100);
 }
+
 @media screen and (max-width: 440px){
-    /* .activity .col-4:nth-of-type(-n+5){
-        margin-bottom: 50px;
-    } */
+    .activity .card-mask::before,
+    .activity .card-mask .detail .p1,
+    .activity .card-mask .detail p,
+    .activity .card-mask .detail i{
+        opacity: 1;
+    }
+    .activity .card-mask{
+        position: static;
+    }
+    .activity .card-mask::before{
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .activity .card-mask .detail .p1,
+    .activity .card-mask .detail p{
+        color: var(--color-neutral-800);
+        text-align: left;
+        padding: 0 0 0 10px;
+        margin: 0;
+    }
+    .activity .card-mask .detail .p1{
+        padding: 6px 0 6px 10px;
+        margin-bottom: 6px;
+    }
+    .activity .card{
+        position: relative;
+    }
+    .activity .card .text-area{
+        margin-top: 10px;
+    }
+    .activity .pink .card-mask .detail .p1{
+        color: var(--color-secondary-pink-700);
+        border-top: 1px solid var(--color-secondary-pink-700);
+        border-bottom: 1px solid var(--color-secondary-pink-700);
+    }
+    .activity .purple .card-mask .detail .p1{
+        color: var(--color-secondary-purple-700);
+        border-top: 1px solid var(--color-secondary-purple-700);
+        border-bottom: 1px solid var(--color-secondary-purple-700);
+    }
+    .activity .purple .card-mask .detail .p1{
+        background-color: var(--color-secondary-purple-100);
+    }
+    .activity .pink .card-mask .detail .p1{
+        background-color: var(--color-secondary-pink-100);
+    }
+    .activity .card.purple{
+        border: 1px solid var(--color-secondary-purple-700);
+    }
+    .activity .card.pink{
+        border: 1px solid var(--color-secondary-pink-700);
+    }
+
+    .activity .card-mask .detail{
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        bottom:0;
+        padding-bottom: 20px;
+    }
+    .activity .card .tag{
+        top: 20px;
+        left: 20px;
+    }
+    .activity .card .detail{
+        margin-bottom: 120px;
+    }
+    .activity .card.pink:hover{
+        border: 1px solid var(--color-secondary-pink-700);
+        background-color: var(--color-white);
+    }
+    .activity .card.purple:hover{
+        border: 1px solid var(--color-secondary-purple-700);
+        background-color: var(--color-white);
+    }
 }

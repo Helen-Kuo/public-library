@@ -1,0 +1,67 @@
+/* pink learning */
+.kid-learning .card{
+    border: 1px solid var(--color-neutral-500);
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.kid-learning .card .img-box{
+    width: 160px;
+    height: 160px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.kid-learning .card .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.kid-learning a{
+    text-decoration: none;
+}
+.kid-learning .card h5{
+    color: var(--color-secondary-pink-700);
+}
+.kid-learning .card .detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 16px;
+}
+.kid-learning .card:hover{
+    border: 1px solid var(--color-secondary-pink-700);
+    background-color: var(--color-secondary-pink-100);
+    transition: all .3s;
+}
+@media screen and (max-width: 810px){
+    .kid-learning .card img{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 440px){
+    
+    .kid-learning .card{
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .kid-learning .card .img-box{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        overflow: hidden;
+        border-radius: 14px 14px 0 0;
+        margin-right: 0;
+        margin: 0 0 6px 0;
+    }
+    .kid-learning .card img{
+        width: 100%;
+    }
+    .kid-learning .card .detail{
+        margin: 0;
+    }
+}
