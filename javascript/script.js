@@ -173,7 +173,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     sr.reveal('.reveal-item', { 
         origin: 'bottom', 
-        interval: 100
+        interval: 100,
+        duration: 800,
+        delay: 500 ,
+        interval: 300
     });
     sr.reveal('.reveal-left', {
         origin: 'left',

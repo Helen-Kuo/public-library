@@ -37,12 +37,13 @@
 
 /* ==== hero swiper ==== */
 .hero .swiper{
-    height: 100vh;
+    height: 780px;
 }
 .hero .swiper-slide{
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
+    overflow: hidden;
 }
 .hero .swiper-slide img{
     display: block;
@@ -101,7 +102,7 @@
 }
 .tab-btn{
     display: inline-flex;
-    padding: 4px 35px;
+    padding: 4px 32px;
     background-color: var(--color-white);
     border-radius: 30px;
     border: 1px solid var(--color-neutral-500);
@@ -808,8 +809,19 @@
     }
 }
 @media screen and (max-width: 440px){
+    .hero .swiper{
+        height: 780px;
+        overflow: hidden;
+    }
+    .hero .swiper-slide{
+        overflow: hidden;
+    }
+    .search-bar{
+        bottom: 30px;
+    }
     .tab-btn{
-        padding: 4px 24px;
+        padding: 4px 16px;
+        letter-spacing: .1rem;
     }
     .tour-guide{
         padding: 80px 0;

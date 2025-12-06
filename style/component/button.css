@@ -240,16 +240,16 @@
 /* 小按鈕 */
 .little-btn{
     padding: 0 14px;
-    line-height: 45px;
+    height: 45px;
     text-decoration: none;
     border-radius: 30px;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .little-btn span{
     color: var(--color-white);
-    vertical-align: middle;
-    /* margin-right:3px  */
+    margin-right: 3px;
 }
 
 .little-btn.yellow{
