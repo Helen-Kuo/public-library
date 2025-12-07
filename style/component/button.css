@@ -243,7 +243,7 @@
     height: 45px;
     text-decoration: none;
     border-radius: 30px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
 }
@@ -295,34 +295,6 @@
     cursor: default;
 }
 
-/* select-btn */
-.select-btn-group{
-    gap: 10px;
-}
-select{
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    padding: 0 36px 0 12px;
-    border-radius: 30px;
-    cursor: pointer;
-    border: 1px solid var(--color-neutral-500);
-}
-
-.select-btn option{
-    text-align: center;
-}
-.select-wrapper{
-    position: relative;
-    display: inline-block;
-}
-.select-wrapper span{
-    position: absolute;
-    right: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-}
 @media screen and (max-width: 1200px){
     .little-btn.account-btn{
         background-color: var(--color-neutral-800);

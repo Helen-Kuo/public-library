@@ -47,6 +47,7 @@
     text-decoration: none;
     color: var(--color-neutral-800);
     letter-spacing: 1px;
+    cursor: pointer;
 }
 .nav-bar ul a:hover{
     border-bottom: 2px solid var(--color-accent-green-700);
@@ -59,7 +60,6 @@
 .nav-btn li{
     list-style-type: none;
     margin-right: 12px;
-    
 }
 .nav-btn li p span{
     color: var(--color-white);
@@ -71,7 +71,7 @@
 .nav-btn .tool-btn{
     display: flex;
     gap: 10px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
 }
 
 
@@ -206,6 +206,22 @@
 @media screen and (max-width: 1200px){
     .nav-bar .tool-btn .tour-guide-btn{
         display: none;
+    }
+    .tour-guide-sm{
+        max-height:0;
+        overflow: hidden;
+        transition: .3s ease-in-out;
+    }
+    .tour-guide-sm.open{
+        max-height: 150px;
+        transition: .3s ease-in-out;
+    }
+    .tour-guide-toggle .arrow{
+        transition: transform .3s ease;
+        transform: rotate(0deg);
+    }
+    .tour-guide-toggle .arrow.rotated{
+        transform: rotate(180deg);
     }
     .nav-bar .tool-btn{
         margin: 10px 0 0 0;
@@ -342,26 +358,45 @@
     }
     .mobile-menu-content ul li{
         width: 100%;
+        margin-right: 0px;
         border-bottom: 1px solid var(--color-neutral-500);
     }
-    .mobile-menu-content ul li a,
-    .mobile-menu-content ul li p{
+    .mobile-menu-content ul li:last-child{
+        padding-bottom: 10px;
+    }
+
+    .mobile-menu-content ul li .tour-guide-toggle{
+        padding-bottom: 0px;
+    }
+    .mobile-menu-content ul li a{
         display: block;
         padding: 10px 0;
     }
+    .mobile-menu-content .tour-guide-sm a:first-child:hover .text,
+    .mobile-menu-content .tour-guide-sm a:first-child:hover span{
+        color: var(--color-secondary-pink-200);
+    }
+    .mobile-menu-content .tour-guide-sm a:nth-child(2):hover .text,
+    .mobile-menu-content .tour-guide-sm a:nth-child(2):hover span{
+        color: var(--color-secondary-orange-200);
+    }
+    .mobile-menu-content .tour-guide-sm a:nth-child(3):hover .text,
+    .mobile-menu-content .tour-guide-sm a:nth-child(3):hover span{
+        color: var(--color-secondary-purple-200);
+    }
+
     .mobile-menu-content ul li:last-child{
         display: block;
     }
     
     .mobile-menu-content ul li:last-child a{
         display: flex;
-        /* border-bottom: 1px solid var(--color-neutral-500); */
         justify-content: space-between;
     }
-    .mobile-menu-content ul li:last-child a:first-child{
+    /* .mobile-menu-content ul li:last-child .tour-guide-sm a:first-child{
         padding-top: 0;
-    }
-    .mobile-menu-content ul li span{
+    } */
+    .mobile-menu-content ul li .tour-guide-sm span{
         margin-right: 10px;
         padding-left: 10px;
         font-size: 1.8rem;
@@ -375,8 +410,6 @@
     .mobile-menu-content ul li:last-child a span{
         color: var(--color-neutral-200);
     }
-    .mobile-menu-content ul li .arrow,
-    .mobile-menu-content ul li .arrow,
     .mobile-menu-content ul li .arrow{
         color: var(--color-neutral-200);
         transform: translateX(-10px);

@@ -19,6 +19,7 @@
     font-size: 20px;
     line-height: 150%;
     transition: width .3s;
+    text-decoration: none;
 }
 .label-btn span{
     font-size: 2.5rem;
@@ -192,7 +193,7 @@
     border: 1px solid var(--color-neutral-500);
     background-color: var(--color-white);
     border-radius: 20px;
-    padding: 36px;
+    padding: 30px 20px;
     margin-top: 40px;
     cursor: pointer;
 }
@@ -249,22 +250,22 @@
 }
 
 /* orange financial */
-.financial img{
+.financial-news img{
     border-radius: 20px;
     display: block;
     width: 100%;
 }
-.financial .card{
+.financial-news .card{
     position: relative;
     border-radius: 20px;
     overflow: hidden;
     margin: 20px 0;
 }
-.financial .card:hover img{
+.financial-news .card:hover img{
     scale: 1.2;
     transition: .3s;
 }
-.financial .card-mask{
+.financial-news .card-mask{
     position: absolute;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
@@ -274,40 +275,40 @@
     left:0;
     z-index: 1;
 }
-.financial h4 a{
+.financial-news h4 a{
     text-decoration: none;
 }
-.financial h4 a:hover{
+.financial-news h4 a:hover{
     color: var(--color-secondary-orange-700);
 }
-.financial .card-mask h5, 
-.financial .card-mask p{
+.financial-news .card-mask h5, 
+.financial-news .card-mask p{
     color: var(--color-white);
     z-index: 2;
     gap:6px;
 }
-.financial .card-mask div{
+.financial-news .card-mask div{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.financial ul{
+.financial-news ul{
     list-style-position: inside;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
 }
-.financial .btn-mid{
+.financial-news .btn-mid{
     margin-bottom: 0;
 }
-.financial li {
+.financial-news li {
     margin-bottom: 12px;
     list-style: none; 
 }
-.financial li a{
+.financial-news li a{
     text-decoration: none;
 }
-.financial li:hover a{
+.financial-news li:hover a{
     color: var(--color-secondary-orange-700);
 }
 
@@ -316,17 +317,20 @@
 }
 .recommend-list ul{
     list-style: none;
+    display: flex;
+    flex-direction: column;
 }
-
 .recommend-list li{
     border: 1px solid var(--color-neutral-500);
     text-align: center;
     border-radius: 20px;
+    margin-bottom: 12px;
 }
 .recommend-list li a{
     display: block;
     width: 100%;
     padding: 16px;
+    text-decoration: none;
 }
 .recommend-list li:hover{
     background-color: var(--color-secondary-orange-100);
@@ -334,7 +338,7 @@
     color: var(--color-secondary-orange-700);
     text-decoration: none;
 }
-.recommend-list li:hover a{
+.recommend-list .title a{
     text-decoration: none;
 }
 .scroll-box{
@@ -447,6 +451,21 @@
     }
 }
 @media screen and (max-width: 440px){
+    /* .recommend-list .title{
+        margin: 0;
+    } */
+    .recommend-list li{
+        border: none;
+    }
+    .recommend-list li a{
+        padding: 16px 0;
+        border: 1px solid var(--color-neutral-500);
+        margin-bottom: 12px;
+        border-radius: 12px;
+    }
+    .financial li{
+        margin-bottom: 0;
+    }
     .good-books img{
         width: 90%;
     }
@@ -483,7 +502,7 @@
     .content-wrapper .outer-frame.orange,
     .content-wrapper .outer-frame.purple{
         border: 0;
-        padding: 0 20px;
+        padding: 0 10px;
     }
     .title-area.pink,
     .title-area.orange,

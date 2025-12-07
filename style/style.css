@@ -37,13 +37,18 @@
 
 /* ==== hero swiper ==== */
 .hero .swiper{
-    height: 780px;
+    height: 800px;
+    /* position: relative;  */
 }
-.hero .swiper-slide{
+.hero .swiper-wrapper .swiper-slide{
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+}
+.hero .swiper-wrapper .swiper-slide:first-child,
+.hero .swiper-wrapper .swiper-slide:nth-child(2){
+    align-items: end;
 }
 .hero .swiper-slide img{
     display: block;
@@ -60,11 +65,13 @@
 .hero-swiper-w440{
     display: none;
 }
-
+.hero{
+    position: relative;
+}
 /* ===== 搜尋列 ===== */
 .search-bar{
     position: absolute;
-    bottom: 60px;
+    bottom: 40px;
     left: 0;
     right: 0;
 
@@ -102,7 +109,7 @@
 }
 .tab-btn{
     display: inline-flex;
-    padding: 4px 32px;
+    padding: 4px 20px;
     background-color: var(--color-white);
     border-radius: 30px;
     border: 1px solid var(--color-neutral-500);
@@ -113,19 +120,7 @@
     text-decoration: none;
     letter-spacing: 2px;
 }
-/* .tab-btn::after{
-    content: "";
-    width: 60%;
-    height: 4px;
-    background-color: var(--color-accent-green-700);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -9px;
-    border-radius: 4px 4px 0 0;
-    transition: opacity .3s ease, transform .3s ease;
-    opacity: 0;
-} */
+
 .tab-btn:hover{
     border: 1px solid var(--color-accent-green-700);
     background-color: var(--color-accent-green-200);
@@ -191,12 +186,7 @@
     top: 20px;
     font-size: 30px;
 }
-.tour-guide .card:hover .arrow{
-    font-size: 35px;
-    right: 10px;
-    top: 10px;
-    transition: .3s;
-}
+
 .tour-guide .card{
     text-align: center;
     border: 1px solid var(--color-neutral-500);
@@ -207,7 +197,10 @@
     display: flex;
     align-items: center;
     padding:40px 0;
-    min-height: 320px;
+    height: auto;
+}
+.tour-guide .card:hover{
+    padding: 95px 0;
 }
 .tour-guide .card-content{
     display: flex;
@@ -215,10 +208,7 @@
     align-items: center;
     transition: margin .5s ease;
 }
-.tour-guide .card:hover .card-content{
-    margin-top: -30px;
-    transition: margin .5s ease;
-}
+
 .tour-guide .card-content .detail{
     display: flex;
     flex-direction: column;
@@ -242,6 +232,17 @@
 }
 .tour-guide .card .btn-sm-group{
     width: 80%;
+    height: 80px;
+}
+.tour-guide .card:hover .arrow{
+    font-size: 35px;
+    right: 10px;
+    top: 10px;
+    transition: .3s;
+}
+.tour-guide .card:hover .card-content{
+    margin-top: -30px;
+    transition: margin .3s ease;
 }
 .tour-guide .card:hover .h3-eg{
     opacity: 1;
@@ -257,7 +258,7 @@
     opacity: 0;
     visibility: hidden;
     height: 0;
-    transition: height 1s ease, opacity 0s ease, visibility .3s ease;
+    transition: height .3s ease, opacity 0s ease, visibility .3s ease;
     margin: 0;
 }
 .tour-guide .title{
@@ -276,6 +277,7 @@
     border: 1px solid var(--color-accent-green-700);
     border-radius: 25px;
     padding: 5px 16px;
+    line-height: normal;
 }
 
 /* 分眾pink hover效果 */
@@ -669,6 +671,9 @@
     .best-moments .bg{
         left: -360px;
     }
+    .hot-activity .card{
+        border-radius: 0;
+    }
 }
 @media screen and (max-width: 1024px){
     .tour-guide img,
@@ -694,53 +699,37 @@
     }
     .tour-guide .detail .btn-sm-group{
         width: 100%;
+        height: auto;
+    }
+    .tour-guide{
+        padding: 80px 0;
+    }
+    .tour-guide .card:hover{
+        padding: 0 20px;
     }
     .tour-guide .card{
-        min-height: 290px;
-        padding: 20px 0;
+        min-height: 160px;
+        padding: 0 20px;
+        display: flex;
+        margin-bottom: 16px;
     }
-
-    /* 分眾pink效果 */
-    .tour-guide .card.pink .btn-sm-group .btn-sm{
-        border: 1px solid var(--color-secondary-pink-700);
-        background-color: var(--color-white);
+    .tour-guide .card-content{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        justify-content: space-evenly;
     }
-    .tour-guide .card.pink{
-        background-color: var(--color-secondary-pink-100);
-        border: 1px solid var(--color-secondary-pink-700);
+    .tour-guide .card .arrow{
+        right: 10px;
+        top: 10px;
     }
-    .tour-guide .card.pink span, 
-    .tour-guide .card.pink h4,
-    .tour-guide .card.pink .h3-eg{
-        color: var(--color-secondary-pink-700);
+    .tour-guide .card h4{
+        margin-top: 0;
     }
-    /* 分眾orange效果 */
-    .tour-guide .card.orange .btn-sm-group .btn-sm{
-        border: 1px solid var(--color-secondary-orange-700);
-        background-color: var(--color-white);
-    }
-    .tour-guide .card.orange{
-        background-color: var(--color-secondary-orange-100);
-        border: 1px solid var(--color-secondary-orange-700);
-    }
-    .tour-guide .card.orange span, 
-    .tour-guide .card.orange h4,
-    .tour-guide .card.orange .h3-eg{
-        color: var(--color-secondary-orange-700);
-    }
-    /* 分眾purple效果 */
-    .tour-guide .card.purple .btn-sm-group .btn-sm{
-        border: 1px solid var(--color-secondary-purple-700);
-        background-color: var(--color-white);
-    }
-    .tour-guide .card.purple{
-        background-color: var(--color-secondary-purple-100);
-        border: 1px solid var(--color-secondary-purple-700);
-    }
-    .tour-guide .card.purple span, 
-    .tour-guide .card.purple h4,
-    .tour-guide .card.purple .h3-eg{
-        color: var(--color-secondary-purple-700);
+    .tour-guide .card:hover .card-content{
+        margin-top: -10px;
+        transition: margin .3s ease;
     }
     .tour-guide .bg,
     .news .bg{
@@ -813,8 +802,11 @@
         height: 780px;
         overflow: hidden;
     }
-    .hero .swiper-slide{
-        overflow: hidden;
+    .hero .swiper-wrapper .swiper-slide:nth-child(4){
+        align-items: end;
+    }
+    .tour-guide .card-content{
+        gap: 0px;
     }
     .search-bar{
         bottom: 30px;
@@ -822,31 +814,6 @@
     .tab-btn{
         padding: 4px 16px;
         letter-spacing: .1rem;
-    }
-    .tour-guide{
-        padding: 80px 0;
-    }
-    .tour-guide .card{
-        min-height: 160px;
-        margin-bottom: 10px;
-        padding: 20px 30px;
-    }
-    .tour-guide .card-content{
-        display: flex;
-        flex-direction: row;
-        gap: 12px;
-    }
-    .tour-guide .card-content .detail{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .tour-guide .card .arrow{
-        right: 10px;
-        top: 10px;
-    }
-    .tour-guide .card h4{
-        margin-top: 0;
     }
     .newbooks{
         padding: 80px 0;

@@ -95,6 +95,17 @@ document.addEventListener('DOMContentLoaded', function() {
         fontScaleContainer.classList.remove('open');
     });
 
+    //==== hb側邊欄摺疊 ====//
+    const toggleBtn = document.querySelector('.tour-guide-toggle');
+    const dropdownContent = document.querySelector('.tour-guide-sm');
+    const arrowIcon = document.querySelector('.tour-guide-toggle .arrow');
+
+    toggleBtn.addEventListener('click', () => {
+        console.log('click');
+        dropdownContent.classList.toggle('open');
+        arrowIcon.classList.toggle('rotated');
+    });
+
 
     // swiper1.Hero Section Swiper
     const heroSwiper = new Swiper('#hero-swiper', {
@@ -148,6 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //rwd indoor-img swiper
     const indoorImgSwiper = new Swiper('#indoor-img-swiper', {
         loop: true,
+        spaceBetween: 20,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false,
@@ -249,4 +261,71 @@ document.addEventListener('DOMContentLoaded', function() {
             
         })
     });
+
+    //==== select下拉選單 ====//
+    const searchFieldOptions = [
+        { value:'', text:'全文' },
+        { value:'title', text:'題名' },
+        { value:'author', text:'作者' },
+        { value:'subject', text:'主題/標籤' },
+        { value:'isbn', text:'ISBN' },
+        { value:'issn', text:'ISSN' },
+        { value:'barcode', text:'條碼號' },
+        { value:'callnumber', text:'索書號' },
+        { value:'publisher', text:'出版者' },
+        { value:'classnumber', text:'分類號' },
+        { value:'series', text:'叢書名' }
+    ];
+    const typeOptions = [
+        { value:'', text:'全部類型' },
+        { value:'book', text:'圖書' },
+        { value:'periodical', text:'期刊' },
+        { value:'multimedia', text:'多媒體' }
+    ];
+    const branchOption = [
+        { value:'', text:'分館查詢' },
+        { value:'all', text:'不分館別' },
+        { value:'wufeng', text:'五峰' },
+        { value:'beipu', text:'北埔' },
+        { value:'baoshan', text:'寶山' },
+        { value:'jianshi', text:'尖石' },
+        { value:'emei', text:'峨眉' },
+        { value:'culture', text:'文化局' },
+        { value:'culture_mobile', text:'文化局行動書庫' },
+        { value:'xinpu', text:'新埔' },
+        { value:'xinfeng', text:'新豐' },
+        { value:'hengshan', text:'橫山' },
+        { value:'hukou', text:'湖口' },
+        { value:'zhubei_fude', text:'竹北福德分館' },
+        { value:'zhudong', text:'竹東' },
+        { value:'zhudong_mobile', text:'竹東行動書庫' },
+        { value:'county_history', text:'縣史館' },
+        { value:'qionglin', text:'芎林' },
+        { value:'guanxi', text:'關西' }
+    ];
+    
+    /**
+    @param {string} selectId
+    @param {Array<Object>} dataArray
+     */
+
+    function populateSelect(selectId, dataArray){
+        const selectElement = document.getElementById(selectId);
+        if(selectElement){
+            //使用document fragment提升效能，只觸發一次DOM操作
+            const fragment = document.createDocumentFragment();
+            dataArray.forEach(optionData => {
+                const option = document.createElement('option');
+                option.value = optionData.value;
+                option.textContent = optionData.text;
+                fragment.appendChild(option);
+            });
+            selectElement.appendChild(fragment);
+        }
+    }
+
+    // 執行
+    populateSelect('search-field', searchFieldOptions);
+    populateSelect('type-select', typeOptions);
+    populateSelect('branch-select', branchOption);
 });
