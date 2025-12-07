@@ -16,7 +16,8 @@
 .paper .card .title h5,
 .medical .card .detail p:nth-child(3),
 .reading.purple .card .title,
-.financial .card-mask h5{
+.financial .card-mask h5,
+.medical .aside li a{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;

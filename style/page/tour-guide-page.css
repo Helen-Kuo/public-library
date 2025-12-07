@@ -166,6 +166,9 @@
     justify-content: end;
     margin: 50px 0 0 0;
 }
+.outer-frame.medical .page-btn{
+    margin: 30px 0;
+}
 .label{
     position: relative;
     padding: 40px 0 35px 0;
@@ -469,9 +472,9 @@
         border-radius: 12px;
     }
     .recommend-list li:hover{
-        background-color: none;
+        background-color: var(--color-white);
         border: none;
-        color: none;
+        color:  var(--color-white);
         text-decoration: none;
     }
     .financial li{
