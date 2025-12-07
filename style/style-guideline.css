@@ -95,7 +95,7 @@
 }
 .h2-ch{
     font-weight:400; 
-    font-size: clamp(2rem, 1rem + 2.25vw, 2.25rem);
+    font-size: clamp(1rem, 1rem + 2.25vw, 2.25rem);
 }
 .h3-ch{
     font-weight:400; 
@@ -116,19 +116,19 @@
 }
 .h2-ch-medium{
     font-weight:500; 
-    font-size: clamp(2rem, 1rem + 2.25vw, 2.25rem);
+    font-size: clamp(1rem, 1rem + 2.25vw, 2.25rem);
 }
 .h3-ch-medium{
     font-weight:500; 
-    font-size: clamp(1.75rem, .75rem + 2vw, 2rem);
+    font-size: clamp(1rem, .75rem + 2vw, 2rem);
 }
 .h4-ch-medium{
     font-weight:500; 
-    font-size: clamp(1.5rem, .75rem + 1.75vw, 1.75rem);
+    font-size: clamp(1rem, .75rem + 1.75vw, 1.75rem);
 }
 .h5-ch-medium{
     font-weight:500;
-    font-size: clamp(1.25rem, .75rem + 1.5vw, 1.5rem);
+    font-size: clamp(1rem, .75rem + 1.5vw, 1.5rem);
 }
 
 /* Button Text */
@@ -146,7 +146,7 @@
 }
 .btn-lg-blod{
     font-weight:700; 
-    font-size: clamp(1.25rem, .75rem + 1vw, 1.5rem);
+    font-size: clamp(1rem, .75rem + 1vw, 1.5rem);
 }
 .btn-mid-bold{
     font-weight:700; 

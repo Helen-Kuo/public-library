@@ -23,6 +23,8 @@
 .book-info .tool{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .book-info .reserve-btn{
@@ -107,6 +109,7 @@
     .book-info .collect{
         align-items: flex-end;
     }
+    
 }
 @media screen and (max-width: 440px){
     .book-info img.books-detail-bg:first-child{

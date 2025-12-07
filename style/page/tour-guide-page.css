@@ -433,6 +433,11 @@
         left: 0;
         z-index: -1;
     }
+    .good-books.pink .row .books-list:nth-last-child(-n+2),
+    .good-books.orange .row .books-list:nth-last-child(-n+2),
+    .good-books.purple .row .books-list:nth-last-child(-n+2){
+        display: block;
+    }
 }
 @media screen and (max-width: 555px){
     .tour-guide-pink-bg-w810,
@@ -462,6 +467,12 @@
         border: 1px solid var(--color-neutral-500);
         margin-bottom: 12px;
         border-radius: 12px;
+    }
+    .recommend-list li:hover{
+        background-color: none;
+        border: none;
+        color: none;
+        text-decoration: none;
     }
     .financial li{
         margin-bottom: 0;

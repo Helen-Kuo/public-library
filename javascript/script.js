@@ -45,6 +45,21 @@ document.addEventListener('DOMContentLoaded', function() {
         signupImg.classList.remove('imgHidden');
     });
     
+    const switchLogin1 = document.querySelector('#switch-login1');
+    const switchSignup1 = document.querySelector('#switch-signup1');
+    const formWrapper = document.querySelectorAll('.form-wrapper .col-6');
+    switchLogin1.addEventListener('click',(e) => {
+        e.preventDefault();
+        formWrapper.forEach(wrapper => {
+            wrapper.classList.toggle('change');
+        })
+    });
+    switchSignup1.addEventListener('click',(e) => {
+        e.preventDefault();
+        formWrapper.forEach(wrapper => {
+            wrapper.classList.toggle('change');
+        })
+    });
 
     // ==== 跳窗功能 ==== //
     const loginModal = document.querySelector('#account');
@@ -52,24 +67,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeBtns = document.querySelectorAll('.close-btn');
     const tourGuideModal = document.querySelector('#tour-guide');
     const tourGuideBtn = document.querySelectorAll('.tour-guide-btn');
-    const modalOverlay = document.querySelector('.modal-overlay');
+    const allModalOverlays = document.querySelectorAll('.modal-overlay');
 
-    if(accountBtn){
-        accountBtn.addEventListener('click', (e) => {
+    
+    accountBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        loginModal.classList.remove('modalHidden');
+        bodyElement.classList.add('open-fixed');
+    });
+
+    tourGuideBtn.forEach(btn => {
+        btn.addEventListener('click', (e) => {
             e.preventDefault();
-            loginModal.classList.remove('modalHidden');
+            tourGuideModal.classList.remove('modalHidden');
             bodyElement.classList.add('open-fixed');
         });
-    }
-    if(tourGuideBtn){
-        tourGuideBtn.forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                tourGuideModal.classList.remove('modalHidden');
-                bodyElement.classList.add('open-fixed');
-            });
-        });
-    }
+    });
+
+    allModalOverlays.forEach(overlay => {
+        overlay.addEventListener('click', (e) => {
+            if(e.target === overlay){
+                overlay.classList.add('modalHidden');
+            }
+        })
+    })
+    
     closeBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();

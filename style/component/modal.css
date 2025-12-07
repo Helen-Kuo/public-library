@@ -14,8 +14,6 @@
     top:0;
     left: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 20;
 }
 .modal-content{
@@ -59,7 +57,16 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     text-align: left;
+    height: 100%;
+}
+#switch-signup,
+#switch-login{
+    width: 80%;
+}
+.form-wrapper{
+    height: 100%;
 }
 .form-panel form{
     display: flex;
@@ -91,7 +98,7 @@ label:has(input:focus){
 }
 
 .account .modal-content h2{
-    margin-bottom: 24px;
+    /* margin-bottom: 24px; */
     width: 80%;
 }
 .modal-content input{
@@ -101,26 +108,34 @@ label:has(input:focus){
 input:focus{
     outline: none;
 }
-#switch-signup a:hover span{
+#switch-signup a:hover span,
+#switch-signup1 a:hover span{
     color:var(--color-accent-green-700);
     transform: translateX(-6px);
     transition: .3s;
 }
-#switch-login a:hover span{
+#switch-login a:hover span,
+#switch-login1 a:hover span{
     color:var(--color-accent-green-700);
     transform: translateX(6px);
     transition: .3s;
 }
-#switch-signup, #switch-login{
+#switch-signup, #switch-login,
+#switch-signup1, #switch-login1
+{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: end;
     gap: 10px;
 }
-#switch-signup *,#switch-login *{
+#switch-signup *,
+#switch-login *,
+#switch-signup1 *,
+#switch-login1 *{
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 #signup-panel img, #login-panel img{
     transition: opacity 0.5s ease-in-out, visibility 0s 0.5s;
@@ -139,7 +154,10 @@ input:focus{
     border-radius: 0 30px 30px 0;
     transition: .3s;
 }
-
+#switch-login1,
+#switch-signup1{
+    display: none;
+}
 /* 叉叉 */
 .close-btn{
     width:40px;
@@ -175,8 +193,35 @@ input:focus{
 .close-btn span:nth-child(2){
     transform: rotate(135deg);
 }
-@media screen and (max-width: 1200px){
-    /* .modal-overlay{
+@media screen and (max-width: 1024px){
+    .modal-content{
+        width: 340px;
+        overflow: hidden;
+    }
+    .account img{
         display: none;
-    } */
+    }
+    .form-wrapper{
+        width: 720px;
+        height: 100%;
+        transform: translateX(0%);
+        transition: transform .5s ease-in-out;
+    }
+    .modal-content input{
+        border:none;
+        padding: 10px;
+    }
+    #switch-login,
+    #switch-signup{
+        display: none;
+    }
+    #switch-login1,
+    #switch-signup1{
+        display: flex;
+        width: 80%;
+    }
+    .form-wrapper .change{
+        transform: translateX(-100%);
+        /* transition: transform .5s ease-in-out; */
+    }
 }

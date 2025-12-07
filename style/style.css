@@ -215,7 +215,7 @@
     align-items: center;
     transition: all .3s ease-in-out;
 }
-.tour-guide .card-content span:nth-child(1){
+.tour-guide .card-content span:first-child{
     font-size: 6rem;
     color: var(--color-accent-green-700);
 }
@@ -807,6 +807,9 @@
     }
     .tour-guide .card-content{
         gap: 0px;
+    }
+    .tour-guide .card-content span:first-child{
+        font-size: 4rem;
     }
     .search-bar{
         bottom: 30px;

@@ -6,7 +6,9 @@ table{
 .course table{
     min-width: 1200px;
 }
-
+.book-info table{
+    min-width: 850px;
+}
 th, td{
     padding: 20px 0;
     text-align: center;

@@ -41,12 +41,12 @@
                                 <div class="tour-guide-sm">
                                     <a href="student.html" class="h5-ch">
                                         <div class="text">
-                                            <span class="material-symbols-outlined">menu_book</span>兒童與青少年專區
+                                            <span class="material-symbols-outlined">menu_book</span>兒童青少年專區
                                         </div>
                                     </a>
                                     <a href="advanced-course.html" class="h5-ch">
                                         <div class="text">
-                                            <span class="material-symbols-outlined">flag</span>研究與進修專區
+                                            <span class="material-symbols-outlined">flag</span>研究進修專區
                                         </div>
                                     </a>
                                     <a href="senior.html" class="h5-ch">
@@ -120,8 +120,8 @@
                         <div class="btn-group line green reveal-right">
                             <ul>
                                 <li class="active"><button class="btn-sm">全部</button></li>
-                                <li><button class="btn-sm">兒童與青少年</button></li>
-                                <li><button class="btn-sm">研究與進修</button></li>
+                                <li><button class="btn-sm">兒童青少年</button></li>
+                                <li><button class="btn-sm">研究進修</button></li>
                                 <li><button class="btn-sm">樂齡學習</button></li>
                             </ul>
                         </div>
@@ -313,9 +313,9 @@
                         </ul>
                     </div>
                     <div class="tour-guide-group">
-                        <a href="student.html" class="big-btn light pink btn-mid">兒童與青少年專區<span
+                        <a href="student.html" class="big-btn light pink btn-mid">兒童青少年專區<span
                                 class="material-symbols-outlined">arrow_right_alt</span></a>
-                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究與進修專區<span
+                        <a href="advanced-course.html" class="big-btn light orange btn-mid">研究進修專區<span
                                 class="material-symbols-outlined">arrow_right_alt</span></a>
                         <a href="senior.html" class="big-btn light purple btn-mid">樂齡學習專區<span
                                 class="material-symbols-outlined">arrow_right_alt</span></a>
@@ -324,11 +324,11 @@
                     <div class="tour-guide-group-w440">
                         <a href="student.html" class="big-btn light pink btn-mid">
                             <span class="material-symbols-outlined">menu_book</span>
-                            兒童與青少年<br>專區
+                            兒童青少年<br>專區
                         </a>
                         <a href="advanced-course.html" class="big-btn light orange btn-mid">
                             <span class="material-symbols-outlined">flag</span>
-                            研究與進修<br>專區
+                            研究進修<br>專區
                         </a>
                         <a href="senior.html" class="big-btn light purple btn-mid">
                             <span class="material-symbols-outlined">person_play</span>
@@ -359,53 +359,77 @@
     <!-- 會員註冊登入視窗 -->
     <section id="account" class="account modal-overlay modalHidden">
         <div class="container">
-            <div class="modal-content row">
+            <div class="modal-content">
                 <div class="close-btn">
                     <span></span>
                     <span></span>
                 </div>
-                <div class="col-6">
-                    <div class="form-panel" id="signup-panel">
-                        <span class="h2-eg-medium">Sing up</span>
-                        <h2 class="h5-ch">註冊帳號</h2>
-                        <form action="">
-                            <label for="" class="p2">帳號
-                                <input type="text" placeholder="請輸入身分證字號或信箱"></label>
-                            <label for="" class="p2">密碼
-                                <input type="password" placeholder="請輸入密碼"></label>
-                            <label for="" class="p2">確認密碼
-                                <input type="password" placeholder="請再次輸入密碼"></label>
-                            <button type="submit" class="little-btn green-line btn-sm">註冊帳號</button>
+                <div class="form-wrapper row">
+                    <div class="col-6 change">
+                        <div class="form-panel" id="signup-panel">
+
+                            <form action="">
+                                <span class="h2-eg-medium">Sing up
+                                    <h2 class="h5-ch">註冊帳號</h2>
+                                </span>
+                                <label for="" class="p2">帳號
+                                    <input type="text" placeholder="請輸入身分證字號或信箱"></label>
+                                <label for="" class="p2">密碼
+                                    <input type="password" placeholder="請輸入密碼"></label>
+                                <label for="" class="p2">確認密碼
+                                    <input type="password" placeholder="請再次輸入密碼"></label>
+                                <button type="submit" class="little-btn green-line btn-sm">註冊帳號</button>
+                            </form>
+
                             <div id="switch-login">
                                 <p class="p2">已經有帳號了嗎?</p>
-                                <a href="#" class="p2">我要登入<span
-                                        class="material-symbols-outlined">arrow_right_alt</span></a>
-
+                                <a href="#" class="p2">我要登入
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
                             </div>
-                        </form>
-                        <img src="images/pop-up-window/signup.png" alt="signup image">
+                            <!-- 手機版滑動切換按鈕 -->
+                            <div id="switch-login1">
+                                <p class="p2">已經有帳號了嗎?</p>
+                                <a href="#" class="p2">我要登入
+                                    <span class="material-symbols-outlined">arrow_right_alt</span>
+                                </a>
+                            </div>
+                            <img src="images/pop-up-window/signup.png" alt="signup image" class="imgHidden">
+                        </div>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="form-panel" id="login-panel">
-                        <span class="h2-eg-medium">Login</span>
-                        <h2 class="h5-ch">登入帳號</h2>
-                        <form action="">
-                            <label for="" class="p2">帳號
-                                <input type="text" placeholder="請輸入身分證字號或信箱"></label>
-                            <label for="" class="p2">密碼
-                                <input type="password" placeholder="請輸入密碼"></label>
-                            <a href="#" class="p2 forget">忘記密碼?</a>
-                            <button type="submit" class="little-btn green-line btn-sm">登入</button>
+                    <div class="col-6 change">
+                        <div class="form-panel" id="login-panel">
+                            
+                            <form action="">
+                                <span class="h2-eg-medium">Login
+                                    <h2 class="h5-ch">登入帳號</h2>
+                                </span>
+                                <label for="" class="p2">帳號
+                                    <input type="text" placeholder="請輸入身分證字號或信箱"></label>
+                                <label for="" class="p2">密碼
+                                    <input type="password" placeholder="請輸入密碼"></label>
+                                <a href="#" class="p2 forget">忘記密碼?</a>
+                                <button type="submit" class="little-btn green-line btn-sm">登入</button>
+                            </form>
+
                             <div id="switch-signup">
-                                <a href="#" class="p2"><span
-                                        class="material-symbols-outlined">arrow_left_alt</span>註冊新帳號</a>
+                                <a href="#" class="p2">
+                                    <span class="material-symbols-outlined">arrow_left_alt</span>註冊新帳號
+                                </a>
                                 <p class="p2">您還沒有帳號嗎?</p>
                             </div>
-                        </form>
-                        <img src="images/pop-up-window/login.png" alt="login image" class="imgHidden">
+                            <!-- 手機版滑動切換按鈕 -->
+                            <div id="switch-signup1">
+                                <a href="#" class="p2">
+                                    <span class="material-symbols-outlined">arrow_left_alt</span>註冊新帳號
+                                </a>
+                                <p class="p2">您還沒有帳號嗎?</p>
+                            </div>
+                            <img src="images/pop-up-window/login.png" alt="login image">
+                        </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -425,7 +449,7 @@
                             <span class="material-symbols-outlined arrow">north_east</span>
                             <div class="card-content">
                                 <span class="material-symbols-outlined">menu_book</span>
-                                <h4 class="h4-ch">兒童與青少年專區</h4>
+                                <h4 class="h4-ch">兒童青少年專區</h4>
                                 <span class="h3-eg">Kid & Teenager</span>
                                 <div class="btn-sm-group ">
                                     <div class="btn-sm">好書推薦</div>
@@ -441,7 +465,7 @@
                             <span class="material-symbols-outlined arrow">north_east</span>
                             <div class="card-content">
                                 <span class="material-symbols-outlined">flag</span>
-                                <h4 class="h4-ch">研究與進修專區</h4>
+                                <h4 class="h4-ch">研究進修專區</h4>
                                 <span class="h3-eg">Advanced Course</span>
                                 <div class="btn-sm-group ">
                                     <div class="btn-sm">好書推薦</div>
