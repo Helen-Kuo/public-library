@@ -37,7 +37,8 @@
 
 /* ==== hero swiper ==== */
 .hero .swiper{
-    height: 800px;
+    /* height: 800px; */
+    height: 100vh;
     /* position: relative;  */
 }
 .hero .swiper-wrapper .swiper-slide{
@@ -799,7 +800,8 @@
 }
 @media screen and (max-width: 440px){
     .hero .swiper{
-        height: 780px;
+        /* height: 780px; */
+        height: 100vh;
         overflow: hidden;
     }
     .hero .swiper-wrapper .swiper-slide:nth-child(4){
